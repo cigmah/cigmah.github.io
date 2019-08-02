@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2019-08-03 Sat 00:37 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Topics and Puzzle Index</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link href="main.css" rel="stylesheet">
+<link href="../main.css" rel="stylesheet">
+<link href="../../main.css" rel="stylesheet">
+<link rel="shortcut icon" href="./favicon.ico">
+<link rel="shortcut icon" href="../favicon.ico">
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="preamble" class="status">
+<h1 class="title">Topics and Puzzle Index</h1>
+</div>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org4b1c17d">Text Processing</a></li>
+<li><a href="#orgc13cf53">Data Science</a></li>
+<li><a href="#org173a26c">Game Programming and Programming for Interactivity</a></li>
+<li><a href="#orga001ec9">Artificial Intelligence</a></li>
+<li><a href="#org5786ad1">Logic Programming</a></li>
+<li><a href="#orgc0fdf90">App Development</a></li>
+<li><a href="#orgdcd9559">Web Development</a></li>
+</ul>
+</div>
+</div>
+<input type="checkbox" id="sitemap-toggle" role="button" data-target="sitemap"/>
+<label id="sitemap-label" for="sitemap-toggle">map</label>
+<nav id="sitemap">
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-05-29 Wed]    </span></span>    <a href="../index.html">CIGMAH</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-02-20 Wed]    </span></span>    <a href="../resources.html">Resources</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-02-20 Wed]    </span></span>    <a href="../about.html">About</a></li>
+<li>Tutorials/
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-08-02 Fri]    </span></span>    <a href="../tutorials/intro.html">Introduction</a></li>
+<li>Tutorials/Text-Processing/
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-08-02 Fri]    </span></span>    <a href="../tutorials/text-processing/mapping-meningitis.html">Mapping Meningitis</a></li>
+</ul></li>
+</ul></li>
+<li>Features/
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-07-29 Mon]    </span></span>    <a href="../features/chris-wright.html">Prof Chris Wright</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-04-18 Thu]    </span></span>    <a href="../features/kevin-shi.html">Participant Feature: Kevin Shi</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-04-15 Mon]    </span></span>    <a href="../features/chris-bain.html">Prof Chris Bain</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-04-12 Fri]    </span></span>    <a href="../features/yingtong-li.html">Participant Feature: Yingtong Li</a></li>
+</ul></li>
+<li>Misc/
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-08-02 Fri]    </span></span>    <a href="puzzle-index.html">Topics and Puzzle Index</a></li>
+</ul></li>
+<li>Games/
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-07-13 Sat]    </span></span>    <a href="../games/worst-offender.html">Worst Offender</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-07-13 Sat]    </span></span>    <a href="../games/what-dipstick.html">What Dipstick?</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-07-13 Sat]    </span></span>    <a href="../games/sti-bugs-n-drugs.html">STI Bugs 'n' Drugs</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-07-13 Sat]    </span></span>    <a href="../games/base-in-balance.html">Base in Balance</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-06-07 Fri]    </span></span>    <a href="../games/neurologic.html">NeuroLogic</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-05-25 Sat]    </span></span>    <a href="../games/tarsal-tumble.html">Tarsal Tumble</a></li>
+</ul></li>
+<li>Aorta/
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-07-14 Sun]    </span></span>    <a href="../aorta/help_wanted.html">AORTA - FAQ and Help Wanted</a></li>
+</ul></li>
+</ul>
+</nav>
+
+<p>
+This page will be updated with an index of our puzzles, grouped by topic, with
+short introductions of each topic. This page is constantly being updated, so we
+apologise if it's unfinished in several parts.
+</p>
+
+<div id="outline-container-org4b1c17d" class="outline-2">
+<h2 id="org4b1c17d">Text Processing</h2>
+<div class="outline-text-2" id="text-org4b1c17d">
+<details>
+<summary>Manipulating, extracting and creating text.</summary>
+<p>
+<a href="https://en.wikipedia.org/wiki/Text_processing">Text processing</a> is useful for almost everyone, because almost everyone accesses
+text on the computer in some way. On the internet, in databases, through emails,
+through handouts at university, research papers, messages. All of this text is
+electronic <i>data</i> and this is very powerful. Unlike physical texts, we can
+automatically manipulate, analyse, extract and produce texts using computers.
+</p>
+
+<p>
+Some relevant subtopics:
+</p>
+
+<dl class="org-dl">
+<dt><a href="https://en.wikipedia.org/wiki/Regular_expression">Regular expresssions (regex).</a></dt><dd>Regular expressions are a way of matching <i>patterns</i>
+in text. Phone-numbers (e.g. <code>(01) 2345 6789</code>), emails
+(<code>something@something.com</code>), names (<code>John Smith</code>), automated reports
+(<code>something DETECTED</code>), course and unit guides (<code>Objectives: [...]</code>),
+records (<code>History [..] Examination [..]</code>), and it goes on. And it's not
+matching literal patterns or just a glorified search - regex is very
+flexible. Clinicians read and write a heap of text - why not learn about
+how computers represent it?</dd>
+<dt><a href="https://en.wikipedia.org/wiki/Character_encoding">Character encoding</a>.</dt><dd>How
+can text be represented in an electronic format as bunches of 0s and 1s?
+What if things go wrong - have you seen weird symbols or blank white boxes?
+How are different languages represented? It's useful to know what goes on
+under the hood, and you can understand the underlying basis of a lot of
+text representations in software. When dealing with EMR software in a
+multicultural world, English alphanumeric characters are not the only thing
+to be aware of.</dd>
+</dl>
+
+</details>
+</div>
+
+<div id="outline-container-org22a8409" class="outline-3">
+<h3 id="org22a8409">Puzzles</h3>
+<div class="outline-text-3" id="text-org22a8409">
+<ul class="org-ul">
+<li><a href="https://cigmah.github.io/cgmnt/#/puzzles/3">(Beginner) Combo Catcher</a> - find a drug interaction from lists of medications.</li>
+<li><a href="https://cigmah.github.io/cgmnt/#/puzzles/4">(Challenge) Troubled Test</a> - analyse pathology reports to find a
+malfunctioning machine giving too many false positives.</li>
+<li><a href="https://cigmah.github.io/cgmnt/#/puzzles/19">(Challenge) HPV Profiling</a> - analyse HPV screening test results to find a geographical location with the highest HPV16:HPV18 ratio.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc13cf53" class="outline-2">
+<h2 id="orgc13cf53">Data Science</h2>
+<div class="outline-text-2" id="text-orgc13cf53">
+<details>
+<summary>Analysing data.</summary>
+<p>
+Data science is important in biomedicine - particularly because we have so much
+data, and we're getting more of it every day. Being able to analyse data is a
+central part of many advances in research - discovering patterns in data (e.g.
+for patients with this disease, does this drug, compared to this other drug,
+result in better outcomes&#x2026;etc.) is central to evidence-based medicine. And
+it's what drives our clinical guidelines.
+</p>
+
+<p>
+Given that what we learn as medical students is based on data - we think it's
+<i>absolutely crucial</i> that doctors know <i>something</i> about data science. How did
+this data come to be? Who analysed it? How? And, not only that, we think doctors
+could really benefit from getting their hands dirty and trying it for
+themselves - at least to see what sort of analyses lead to our current knowledge.
+</p>
+
+<p>
+Such topics are already taught in some ways in the medical curriculum of many
+medical schools. We think going a step further - into the programming end - is a
+<i>really</i> useful skill. There are many complexities and "realisms" in dealing
+with real data, and no better way to understand than to <i>do</i>. Plus, being able
+to program means you can write your own analyses with all the freedom of the
+computer - you don't have to wait for someone to come up with X-package to
+analyse that data you've obtained.
+</p>
+
+</details>
+</div>
+
+<div id="outline-container-orgd380643" class="outline-3">
+<h3 id="orgd380643">Puzzles</h3>
+<div class="outline-text-3" id="text-orgd380643">
+<ul class="org-ul">
+<li><a href="https://cigmah.github.io/cgmnt/#/puzzles/4">(Challenge) Troubled Test</a> - analyse pathology reports to find a
+malfunctioning machine giving too many false positives (after the text
+processing part, we intend for you to run some statistical tests to determine
+the malfunctioning machine.)</li>
+<li><a href="https://cigmah.github.io/cgmnt/#/puzzles/6">(Beginner) While You're Waiting</a> - classify patients symptoms' of allergic
+rhinitis and count them.</li>
+<li><a href="https://cigmah.github.io/cgmnt/#/puzzles/18">(Beginner) Peak Flow Diary</a> - determine the day when a patient's peak flow, standardised by weekday, was lowest.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org173a26c" class="outline-2">
+<h2 id="org173a26c">Game Programming and Programming for Interactivity</h2>
+<div class="outline-text-2" id="text-org173a26c">
+<details>
+<summary>Making games and interactive materials.</summary>
+<p>
+<i>All</i> video games are made with programs. There are different ways to make these
+programs, some of which don't involve programming yourself, but under the hood,
+that is what must happen. And being able to control things from under the hood
+allows you to do <i>anything</i> (almost).
+</p>
+
+<p>
+We like making small web-based games, and we think being able to make your own
+games is a fun way to learn. Programming doesn't have to be all about work -
+it's a fun hobby! And games are an enjoyable medium of communication.
+</p>
+
+<ul class="org-ul">
+<li><a href="https://explorabl.es/">Explorables</a> are learning tools making full use of the interactive capabilities
+of the web (and by coding, you can make your own to show anything you wish in
+whatever capacity you like). We also like <a href="https://distill.pub/">Distill</a> (highly interactive
+scientific papers about machine learning), <a href="https://ncase.me/">Nicky Case</a> (who publishes many
+very approachable explorables on interesting social topics) and <a href="http://worrydream.com/">Bret Victor</a>
+(who has a number of extremely interesting projects on interaction with
+computers such as <a href="https://dynamicland.org/">Dynamicland</a>).</li>
+</ul>
+
+</details>
+</div>
+
+<div id="outline-container-orgbdbb860" class="outline-3">
+<h3 id="orgbdbb860">Puzzles</h3>
+<div class="outline-text-3" id="text-orgbdbb860">
+<ul class="org-ul">
+<li><a href="https://cigmah.github.io/cgmnt/#/puzzles/5">(Abstract) Out of Sync</a> - manipulate parameters for a 3D cell automata
+ventricle model in real time.</li>
+<li><a href="https://cigmah.github.io/cgmnt/#/puzzles/8">(Abstract) Tarsal Tumble</a> - play a version of the falling blocks game you know
+with tarsal blocks instead of the usual pieces - and build a foot out of them.</li>
+<li><a href="https://cigmah.github.io/cgmnt/#/puzzles/11">(Abstract) NeuroLogic</a> - use logical reasoning to figure out locations of "lesions" on a network of "nerves" based on their result.</li>
+<li><a href="https://cigmah.github.io/cgmnt/#/puzzles/14">(Abstract) Base in Balance</a> - balance a ball on a pH beam given different acid-base disturbances.</li>
+<li><a href="https://cigmah.github.io/cgmnt/#/puzzles/15">(Beginner) Worst Offender</a> - win a trick-taking card game based on side-effect profiles of antipsychotics.</li>
+<li><a href="https://cigmah.github.io/cgmnt/#/puzzles/16">(Challenge) STI Bugs'n'Drugs</a> - play a tile-matching game based on common STI pathogens and their medical treatment of choice.</li>
+<li><a href="https://cigmah.github.io/cgmnt/#/puzzles/17">(Abstract) What Dipstick?</a> - answer questions about expected urine disptick abnormalities using an interactive dipstick.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga001ec9" class="outline-2">
+<h2 id="orga001ec9">Artificial Intelligence</h2>
+<div class="outline-text-2" id="text-orga001ec9">
+<details>
+<summary>Making computers "smart".</summary>
+<p>
+Artificial intelligence gets talked about a lot nowadays. "It's going to take
+our jobs", "it's not going to take our jobs" etc.
+</p>
+
+<p>
+Whether or not AI does anything to our jobs, it's incredible to see what it's
+capable of. Computers can interpret images, reason about diagnoses, outperform
+humans in some cases even. They're replicable. They're fast. They have access to
+more information than anyone could digest in hundreds of lifetimes. And they're
+getting better every day. They're already used today, and chances are, something
+you use is powered by artificial intelligence (have you used Google?)
+</p>
+
+<p>
+Artificial intelligence is a very broad area. Machine learning is one particular
+topic. But it doesn't have to be a nebulous idea - get your hands dirty and know
+what people are talking about by doing some of it yourself. Machine learning
+ranges from the very simple to the very complex, so we can definitely start
+simple. At its heart, you will find familiar concepts from statistics.
+</p>
+
+</details>
+</div>
+<div id="outline-container-org27a5b3c" class="outline-3">
+<h3 id="org27a5b3c">Puzzles</h3>
+<div class="outline-text-3" id="text-org27a5b3c">
+<ul class="org-ul">
+<li><a href="https://cigmah.github.io/cgmnt/#/puzzles/9">(Beginner) Fundal Flow</a> - train your computer to recognise (simulated) fundal
+images to diagnose central retinal artery occlusions. It's worth noting we
+generated these images from scratch using code as well - no external images
+were used and every image is unique!</li>
+<li><a href="https://cigmah.github.io/cgmnt/#/puzzles/10">(Challenge) Bite Cell Scouting</a> - train your computer to detect the locations
+of bite cells in (simulated) blood films containing red blood cells. We also
+generated these image ourselves, though they were much simpler than fundi.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5786ad1" class="outline-2">
+<h2 id="org5786ad1">Logic Programming</h2>
+<div class="outline-text-2" id="text-org5786ad1">
+<details>
+<summary>Building programs that can reason logically.</summary>
+<p>
+Logic programming is a different approach to programming than explicitly giving
+computers instructions and in some ways is more similar to formal logic than
+coding. Logic has ties with the old generation of artificial intelligence: if
+you're interested, check out the <a href="https://en.wikipedia.org/wiki/Fifthgenerationcomputer">Fifth generation computer project</a>, <a href="http://www-compsci.swan.ac.uk/~csphil/CS345/chapts5-9.pdf">MYCIN</a> for a medical
+example, and <a href="https://openreview.net/pdf?id=rJgMlhRctm">uses in modern AI with statistical artificial intelligence</a>.
+</p>
+
+<p>
+Learning logic programming might be a good approach for non-programmers to get
+into programming - often, you tell the computer <i>what</i> you want rather than how
+to get it. And logic and medicine have strong ties - there's lots of logic in
+clinical reasoning.
+</p>
+</details>
+</div>
+
+<div id="outline-container-orgc6cfefd" class="outline-3">
+<h3 id="orgc6cfefd">Puzzles</h3>
+<div class="outline-text-3" id="text-orgc6cfefd">
+<ul class="org-ul">
+<li><a href="https://cigmah.github.io/cgmnt/#/puzzles/7">(Challenge) Infectious Network</a> - determine who brought an infection to an
+isolated population using logic and some automation.</li>
+<li><a href="https://cigmah.github.io/cgmnt/#/puzzles/12">(Beginner) Reschedule All</a> - schedule patient appointments without clashes given their
+availabilities during their day.</li>
+<li><a href="https://cigmah.github.io/cgmnt/#/puzzles/13">(Challenge) Allele Inference</a> - use logical reasoning with Mendelian
+inheritance rules to determine the genotypes of a family tree.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc0fdf90" class="outline-2">
+<h2 id="orgc0fdf90">App Development</h2>
+<div class="outline-text-2" id="text-orgc0fdf90">
+<details>
+<summary>Creating computer applications.</summary>
+<p>
+If you're a medical student, you've probably heard of <a href="https://apps.ankiweb.net/">Anki</a>, the
+spaced-repetition software which a lot of students swear by. Did you know Anki
+is written in <a href="https://www.python.org/">Python</a>? Or, even better, that it's <a href="https://en.wikipedia.org/wiki/Open-source_software">open source</a>? You can view the
+code that Anki is written in on GitHub at <a href="https://github.com/dae/anki">https://github.com/dae/anki</a> - and if
+you know Python, you'll be able to see how it all works in a real application
+many people benefit from today. You can even change the source code, build it on
+your own computer, and make Anki do exactly what you want. Change the algorithm,
+automatically generate cards from PowerPoint slides or PDFs, convert Anki cards
+to a website - one of the joys of open source software.
+</p>
+
+<p>
+Being able to write programs that people can benefit from is very powerful.
+Every piece of software on every computer or piece of technology you've used -
+from Microsoft Word, to Moodle, to Youtube, to Google Maps, to EMR, to your
+phone app, to the university website, to internship matching software, to
+glucometers, to ECGs, to ultrasound equipment - has a team of programmers
+(people!) behind it. These pieces of software or technology didn't come out of thin
+air - people worked, wrote code, tested it, debugged it, made decisions and
+ultimately produced something that helps people. It's amazing when you think
+about how much our lives now depend on software people wrote - and all the more
+reason you should understand the background behind it.
+</p>
+</details>
+</div>
+</div>
+
+<div id="outline-container-orgdcd9559" class="outline-2">
+<h2 id="orgdcd9559">Web Development</h2>
+<div class="outline-text-2" id="text-orgdcd9559">
+<details>
+<summary>Creating websites and applications that run on the web.</summary>
+<p>
+Websites are often made with code. What you're looking at now, for instance, is
+a <i>static website</i> - it's just HTML files (though they're generated from a
+simpler document format, similar to Markdown). Nothing really interactive is
+going on.
+</p>
+
+<p>
+What makes websites like Facebook or Youtube different? They're definitely not
+<i>static</i>. They host huge amounts of data, allow you to interact in real-time
+with other people, change the data around you, view rich media etc. They're
+built with servers in the back which handle all these things in other people's
+computers located around the world and process the information you send through
+your browser.
+</p>
+
+<p>
+Our puzzle hunt website isn't a static website, although it's still
+relatively simple - it's made up out of a server written in Python (which holds
+and hides all the puzzles until they're released, as well as handling logins,
+registrations, and submissions) and a frontend written in Elm (which handles
+user interaction, logins etc.)
+</p>
+
+<p>
+Websites range from very simple to very complex. But <i>a lot</i> of work went into
+making the web what it is today, and there's an absolute ton of complexity
+hidden from what you're doing on the web each day. What's a socket? An HTTP
+request? How does everything <i>just work</i>? How does data get sent from computer
+to computer safely, securely and reliably? We interact with the web every day -
+it's a good idea to learn how it all works so you can make sure you know the
+consequences of things you do (who has your data?) What does the web know about you?
+</p>
+
+<p>
+We can also build things for the web. And not just static websites which host
+content - you can make apps for the web too. Apps which interact with users -
+apps which can host chat in real time, or provide interfaces to run complicated
+programs, or help diagnose illnesses or recommend treatments, or converse with
+users to provide a sounding board.
+</p>
+
+</details>
+</div>
+</div>
+</div>
+</body>
+</html>

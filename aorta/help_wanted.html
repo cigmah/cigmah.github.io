@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2019-08-03 Sat 00:38 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AORTA - FAQ and Help Wanted</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link href="main.css" rel="stylesheet">
+<link href="../main.css" rel="stylesheet">
+<link href="../../main.css" rel="stylesheet">
+<link rel="shortcut icon" href="./favicon.ico">
+<link rel="shortcut icon" href="../favicon.ico">
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="preamble" class="status">
+<h1 class="title">AORTA - FAQ and Help Wanted</h1>
+</div>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orge23128f">What is AORTA?</a></li>
+<li><a href="#orgc9ef571">Where is the code for AORTA?</a></li>
+<li><a href="#orge9f9c0b">What features does AORTA have?</a></li>
+<li><a href="#orgd5cf4d7">What help do you need?</a></li>
+<li><a href="#org76919b3">How do I make an account?</a></li>
+<li><a href="#org6d38308">How do I contribute discussion to topics?</a></li>
+<li><a href="#orgd343da2">How do I add an EMQ?</a></li>
+<li><a href="#org3baa8ef">How do I do questions?</a></li>
+<li><a href="#orgc2d4ad6">Can I use AORTA on mobile?</a></li>
+<li><a href="#orgcc0a3ca">Will AORTA get more features?</a></li>
+<li><a href="#org993b0a2">How is AORTA funded?</a></li>
+</ul>
+</div>
+</div>
+<input type="checkbox" id="sitemap-toggle" role="button" data-target="sitemap"/>
+<label id="sitemap-label" for="sitemap-toggle">map</label>
+<nav id="sitemap">
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-05-29 Wed]    </span></span>    <a href="../index.html">CIGMAH</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-02-20 Wed]    </span></span>    <a href="../resources.html">Resources</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-02-20 Wed]    </span></span>    <a href="../about.html">About</a></li>
+<li>Tutorials/
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-08-02 Fri]    </span></span>    <a href="../tutorials/intro.html">Introduction</a></li>
+<li>Tutorials/Text-Processing/
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-08-02 Fri]    </span></span>    <a href="../tutorials/text-processing/mapping-meningitis.html">Mapping Meningitis</a></li>
+</ul></li>
+</ul></li>
+<li>Features/
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-07-29 Mon]    </span></span>    <a href="../features/chris-wright.html">Prof Chris Wright</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-04-18 Thu]    </span></span>    <a href="../features/kevin-shi.html">Participant Feature: Kevin Shi</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-04-15 Mon]    </span></span>    <a href="../features/chris-bain.html">Prof Chris Bain</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-04-12 Fri]    </span></span>    <a href="../features/yingtong-li.html">Participant Feature: Yingtong Li</a></li>
+</ul></li>
+<li>Misc/
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-08-02 Fri]    </span></span>    <a href="../misc/puzzle-index.html">Topics and Puzzle Index</a></li>
+</ul></li>
+<li>Games/
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-07-13 Sat]    </span></span>    <a href="../games/worst-offender.html">Worst Offender</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-07-13 Sat]    </span></span>    <a href="../games/what-dipstick.html">What Dipstick?</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-07-13 Sat]    </span></span>    <a href="../games/sti-bugs-n-drugs.html">STI Bugs 'n' Drugs</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-07-13 Sat]    </span></span>    <a href="../games/base-in-balance.html">Base in Balance</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-06-07 Fri]    </span></span>    <a href="../games/neurologic.html">NeuroLogic</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-05-25 Sat]    </span></span>    <a href="../games/tarsal-tumble.html">Tarsal Tumble</a></li>
+</ul></li>
+<li>Aorta/
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-07-14 Sun]    </span></span>    <a href="help_wanted.html">AORTA - FAQ and Help Wanted</a></li>
+</ul></li>
+</ul>
+</nav>
+
+<div id="outline-container-orge23128f" class="outline-2">
+<h2 id="orge23128f">What is AORTA?</h2>
+<div class="outline-text-2" id="text-orge23128f">
+<p>
+AORTA, or "an open revision tool for assessments", is a free and open-source web
+app we are developing ourselves. It currently has a notes and EMQ system. We
+hope it can be a free alternative to closed-source question banks and revision
+tools that cost money to use.
+</p>
+
+<p>
+We're currently hosting AORTA at <a href="https://aorta.netlify.com">https://aorta.netlify.com</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc9ef571" class="outline-2">
+<h2 id="orgc9ef571">Where is the code for AORTA?</h2>
+<div class="outline-text-2" id="text-orgc9ef571">
+<p>
+Both the backend and frontend code are available from
+<a href="https://github.com/cigmah/">our GitHub organisation</a> as <code>aorticroot</code> and <code>aorta</code> respectively. They are
+available under a GNU GPL v3.0 license.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge9f9c0b" class="outline-2">
+<h2 id="orge9f9c0b">What features does AORTA have?</h2>
+<div class="outline-text-2" id="text-orge9f9c0b">
+<p>
+If you're logged in, then it has most of the features you'd expect from online
+question tools, including liking, commenting, choice statistics, and adding
+public questions. There's a basic spaced repetition algorithm but it still needs
+testing.
+</p>
+
+<p>
+If you're not logged in, you can view all notes and questions, but your
+responses aren't saved and you can't add new content.
+</p>
+
+<p>
+We're happy to add features and have a few features on our plans for the next
+few months too, mostly involving user accuracy statistics.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd5cf4d7" class="outline-2">
+<h2 id="orgd5cf4d7">What help do you need?</h2>
+<div class="outline-text-2" id="text-orgd5cf4d7">
+<p>
+We've just finished the majority of the codebase, but we don't have much content
+yet. We need help to fill AORTA with some content so it can be a useful free
+alternative to proprietary question banks.
+</p>
+
+<p>
+Adding content is separate to the codebase and doesn't require any coding
+knowledge. You can add content through a regular user account.
+</p>
+
+<p>
+If you'd like to contribute to the main app direction, development
+and "official" notes, then please get in touch with us and we'll add you to our
+internal Slack group.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org76919b3" class="outline-2">
+<h2 id="org76919b3">How do I make an account?</h2>
+<div class="outline-text-2" id="text-org76919b3">
+<p>
+First, generate an account and password token to use with AORTA. You only need
+to provide a username you'd like to use. It is free.
+</p>
+
+<img src="https://i.imgur.com/IXNaqMT.gif">
+
+<p>
+You will be shown a generated password token on screen. Keep this token safe for
+future logins.
+</p>
+
+<p>
+This registration system is currently a temporary measure; if there are issues,
+we may detach it and handle registrations through our Facebook page or CIGMAH
+group.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6d38308" class="outline-2">
+<h2 id="org6d38308">How do I contribute discussion to topics?</h2>
+<div class="outline-text-2" id="text-org6d38308">
+<p>
+To contribute notes, mnemonics, questions or any other discussion to topics,
+click on the contributions tab and enter your note in the box. You will need to be
+logged in.
+</p>
+
+<img src="https://i.imgur.com/tFNHYaQ.gif">
+
+<p>
+You can enter your text normally, or you can optionally format it with Markdown
+and a limited set of HTML tags. Please refer to
+<a href="https://github.com/pablohirafuji/elm-markdown/">the documentation for the Markdown package we are using</a> for a full set of
+formatting markup available to you. We don't currently have a preview option,
+but that is in the works. If you have any issues with your formatting, or would
+like help, then contact us and we can fix it for you.
+</p>
+
+<p>
+The notes that are shown initially on clicking a grid item are added by us
+internally. We need help with adding these. If you are interested, please get in
+touch with us - we'd really appreciate the help.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd343da2" class="outline-2">
+<h2 id="orgd343da2">How do I add an EMQ?</h2>
+<div class="outline-text-2" id="text-orgd343da2">
+<p>
+To add an EMQ, go to the note you want to attach it to and click Add EMQ. You
+will need to be logged in.
+</p>
+
+<img src="https://i.imgur.com/hlVi3Jl.gif">
+
+<p>
+You can also format your stem with Markdown.
+</p>
+
+<p>
+Once you post an EMQ, it will go live immediately. It is public, so you may not
+want to add content that you're not happy for people to freely use.
+</p>
+
+<p>
+<b><b>Please note</b></b> that EMQs must not contain copyrighted material. You can add
+  images, as long as they are available under Creative Commons and you follow
+  the attribution requirements of the license. Any material that is from
+  copyrighted works, including past exams, books or proprietary question banks,
+  will be removed and users may be banned.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3baa8ef" class="outline-2">
+<h2 id="org3baa8ef">How do I do questions?</h2>
+<div class="outline-text-2" id="text-org3baa8ef">
+<p>
+You can do questions either from the Grid items, or from the Test tab.
+</p>
+
+<img src="https://i.imgur.com/2rkdUbN.gif">
+
+<p>
+The Grid items will change colour depending on if there are unknown questions
+(shades of red) or depending on how many questions are known if there are no
+unknown questions (shades of green), if you are logged in. Click on Study EMQs
+to do the items for a grid item - "due" items (as determined by the spaced
+repetition system) will always take precedence.
+</p>
+
+<p>
+You can also do questions using the Test tab. This will probably only become
+useful when we have a sizeable collection of questions, but you can filter by
+specialty, year level, topic and domain.
+</p>
+
+<p>
+If you are not logged in, you can do questions similarly but your responses will
+not be saved.
+</p>
+
+<p>
+When you are on a question, click the choice you think is correct. After you
+have clicked a choice, you can see comments added to that question and can
+click on each choice to see what the creator wrote to explain why the choice was
+right or wrong.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc2d4ad6" class="outline-2">
+<h2 id="orgc2d4ad6">Can I use AORTA on mobile?</h2>
+<div class="outline-text-2" id="text-orgc2d4ad6">
+<p>
+Yes. We've specifically designed the website to be mobile friendly, though some
+of the features are not available (the mobile interface is primarily intended to
+<i>do</i> questions rather than to <i>add</i> them.)
+</p>
+
+<p>
+If you're using Chrome on Android, you can also add AORTA as a Progressive Web
+App, which will package it is an app and pin it to your home screen. It still
+requires internet access though.
+</p>
+
+<img src="https://i.imgur.com/HT24szC.gif">
+</div>
+</div>
+
+
+<div id="outline-container-orgcc0a3ca" class="outline-2">
+<h2 id="orgcc0a3ca">Will AORTA get more features?</h2>
+<div class="outline-text-2" id="text-orgcc0a3ca">
+<p>
+Yes. AORTA is being actively developed by CIGMAH and we are in the process of
+filling in more features. If you are interested in driving the development of
+AORTA, please get in touch with us and we will add you to our internal Slack
+channel.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org993b0a2" class="outline-2">
+<h2 id="org993b0a2">How is AORTA funded?</h2>
+<div class="outline-text-2" id="text-org993b0a2">
+<p>
+AORTA costs the CIGMAH development team $16 a month for hosting and database
+costs. We are currently funding it ourselves as we are very committed to keeping
+this tool free.
+</p>
+
+<p>
+For users, AORTA doesn't cost anything and is free of ads. We aim to keep this
+running as long as possible, and possibly may keep AORTA an internal Monash tool
+depending on whether costs escalate.
+</p>
+
+<p>
+For users, you have additional safety that AORTA is open-source. If we ever turn
+evil, you can just clone the source and host your own instances of the backend
+and frontend. Similarly, you can setup your own private local AORTA server for
+your own revision.
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>

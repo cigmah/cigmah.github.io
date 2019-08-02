@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2019-08-03 Sat 00:37 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Prof Chris Wright</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link href="main.css" rel="stylesheet">
+<link href="../main.css" rel="stylesheet">
+<link href="../../main.css" rel="stylesheet">
+<link rel="shortcut icon" href="./favicon.ico">
+<link rel="shortcut icon" href="../favicon.ico">
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="preamble" class="status">
+<h1 class="title">Prof Chris Wright</h1>
+</div>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org273edca">How did you first begin programming?</a></li>
+<li><a href="#org0343c09">Tell us about your experiences with programming.</a></li>
+<li><a href="#orgf5dc451">What are your thoughts and experiences on how programming applies to medicine?</a></li>
+<li><a href="#org737517c">What interests you about programming?</a></li>
+<li><a href="#org2bbbf28">What is your advice for students interested in programming and medicine?</a></li>
+<li><a href="#org15587ce">What programming languages have you used and what is your favourite?</a></li>
+<li><a href="#orgdbdbc50">What's your favourite Lisp dialect?</a></li>
+<li><a href="#org35255e4">What would you recommend for medical students beginning to learn programming?</a></li>
+<li><a href="#org2506ff4">What's your favourite editor? Favourite OS?</a></li>
+</ul>
+</div>
+</div>
+<input type="checkbox" id="sitemap-toggle" role="button" data-target="sitemap"/>
+<label id="sitemap-label" for="sitemap-toggle">map</label>
+<nav id="sitemap">
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-05-29 Wed]    </span></span>    <a href="../index.html">CIGMAH</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-02-20 Wed]    </span></span>    <a href="../resources.html">Resources</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-02-20 Wed]    </span></span>    <a href="../about.html">About</a></li>
+<li>Tutorials/
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-08-02 Fri]    </span></span>    <a href="../tutorials/intro.html">Introduction</a></li>
+<li>Tutorials/Text-Processing/
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-08-02 Fri]    </span></span>    <a href="../tutorials/text-processing/mapping-meningitis.html">Mapping Meningitis</a></li>
+</ul></li>
+</ul></li>
+<li>Features/
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-07-29 Mon]    </span></span>    <a href="chris-wright.html">Prof Chris Wright</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-04-18 Thu]    </span></span>    <a href="kevin-shi.html">Participant Feature: Kevin Shi</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-04-15 Mon]    </span></span>    <a href="chris-bain.html">Prof Chris Bain</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-04-12 Fri]    </span></span>    <a href="yingtong-li.html">Participant Feature: Yingtong Li</a></li>
+</ul></li>
+<li>Misc/
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-08-02 Fri]    </span></span>    <a href="../misc/puzzle-index.html">Topics and Puzzle Index</a></li>
+</ul></li>
+<li>Games/
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-07-13 Sat]    </span></span>    <a href="../games/worst-offender.html">Worst Offender</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-07-13 Sat]    </span></span>    <a href="../games/what-dipstick.html">What Dipstick?</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-07-13 Sat]    </span></span>    <a href="../games/sti-bugs-n-drugs.html">STI Bugs 'n' Drugs</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-07-13 Sat]    </span></span>    <a href="../games/base-in-balance.html">Base in Balance</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-06-07 Fri]    </span></span>    <a href="../games/neurologic.html">NeuroLogic</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-05-25 Sat]    </span></span>    <a href="../games/tarsal-tumble.html">Tarsal Tumble</a></li>
+</ul></li>
+<li>Aorta/
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-07-14 Sun]    </span></span>    <a href="../aorta/help_wanted.html">AORTA - FAQ and Help Wanted</a></li>
+</ul></li>
+</ul>
+</nav>
+
+<blockquote>
+<p>
+<i>Associate Professor Chris Wright is the Academic Director of Clinical Programs for Monash University's medical course. A/Prof Wright has a wealth of experience as an intensive care physician, programmer, and educator. We were very fortunate to have the chance to ask A/Prof Wright about his experiences in both medicine and programming.</i>
+</p>
+</blockquote>
+
+<div id="outline-container-org273edca" class="outline-2">
+<h2 id="org273edca">How did you first begin programming?</h2>
+<div class="outline-text-2" id="text-org273edca">
+<p>
+The first time I learnt to code was at school in 1971. There was a language
+called <a href="https://stackoverflow.com/questions/36328095/how-do-you-find-sine-cosine-etc-in-minitran">MINITRAN</a> which was a subset of <a href="https://en.wikipedia.org/wiki/Fortran">Fortran</a>. You'd code it with <a href="https://en.wikipedia.org/wiki/Punched_card">punch cards</a>
+which had little squares that you could push out with a paperclip. You first had
+to punch out all the commands and numbers, then you submitted it, and two weeks
+later you'd get a printout which either had one line that said e.g. "Syntax
+error at line 8", or it ran your code. That was my first exposure to coding.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0343c09" class="outline-2">
+<h2 id="org0343c09">Tell us about your experiences with programming.</h2>
+<div class="outline-text-2" id="text-org0343c09">
+</div>
+<div id="outline-container-org68d53c8" class="outline-3">
+<h3 id="org68d53c8">In University</h3>
+<div class="outline-text-3" id="text-org68d53c8">
+<p>
+When I was in university, I was somehow able to get an account on the computer -
+so in 1975, I had an account at Melbourne University on the <a href="https://en.wikipedia.org/wiki/RSTS/E">RSTS/E</a> runtime
+system. The internet was basically a cable that came through the wall back
+then - it was before the web, but we did have email. I used that computer to
+program things like <a href="https://en.wikipedia.org/wiki/Conway's_Game_of_Life">Conway's Game of Life</a> in <a href="https://en.wikipedia.org/wiki/RSTS/E#BASIC-PLUS">RSTS Basic</a>. At first we just had
+printouts, so you'd be coding at a <a href="https://en.wikipedia.org/wiki/Teleprinter">Teletype</a> - a typewriter - and when you ran
+your code, it would print out one line and your pattern would come out, then it
+would think, and the next pattern would come out.
+</p>
+
+<p>
+Then we got terminals, and that was a big deal. And the editor I used there
+was <a href="https://en.wikipedia.org/wiki/Ed_(text_editor)">ed</a>, which was pre-<a href="https://en.wikipedia.org/wiki/Vi">vi</a>, and you got quite good at remembering how many lines
+you had to jump down and delete.
+</p>
+
+<p>
+With that, I coded a subset of <a href="https://models.cellml.org/exposure/e1f152d0dbd1dec4111faa117db85bc0/guyton_circulatory_dynamics_2008.cellml/view">Guyton's circulatory physiology model</a>, and that's
+where I started to get really interested in what mathematical modelling might
+have to do with medicine. Guyton's model allows you to make simple changes to
+the circulation, yet have quite complex insights. It's a good example of a
+<a href="https://en.wikipedia.org/wiki/Spherical_cow">spherical cow</a>, where you're ignoring all the ephemera and just concentrating on
+the core issues.
+</p>
+
+<p>
+But if I put this model in front of a group of final-year medical students or
+even intensive care registrars, I can ask questions of this model which they
+can't answer. There's no pulsatility in the heart in the model and it's got no
+lungs - and you might think "How is that relevant? How can that possibly be
+helpful?" It turns out, if you model the <i>right</i> elements of a system, you can
+gain deep insights into the system. It showed me that a complicated model isn't
+always the best model. So that was very interesting, and I just solved it with
+Eulerian integration.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge457433" class="outline-3">
+<h3 id="orge457433">Career</h3>
+<div class="outline-text-3" id="text-orge457433">
+<p>
+Then I finished medicine after a couple of years, and thought about going into
+computer science for good because there was a bit of a push for it in Melbourne
+at the time. But I decided to keep going. I bought an <a href="https://en.wikipedia.org/wiki/Osborne_1">Osborne 1</a> - that was my
+first computer - and programmed mostly in <a href="https://en.wikipedia.org/wiki/Assembly_language">assembly language</a> and <a href="https://en.wikipedia.org/wiki/Forth_(programming_language)">Forth</a>. And Forth
+is a <i>beautiful</i> language, and should have been around longer. Around that time,
+there was also a book called <a href="https://en.wikipedia.org/wiki/G%C3%B6del,_Escher,_Bach">Godel, Escher, Bach</a> by Douglas Hofstadter, which
+used <a href="https://en.wikipedia.org/wiki/Lisp_(programming_language)">Lisp</a> as its language in parts, and that got me interested in Lisps.
+</p>
+
+<p>
+I went through a succession of computers, including Osbornes and Apples and
+<a href="https://en.wikipedia.org/wiki/Kaypro">Kaypros</a>. Then in 1984 I had a 110-volt Mac - one of the first in the country -
+which you'd program with <a href="https://en.wikipedia.org/wiki/Apple_Pascal">Apple Pascal</a>.
+</p>
+
+<p>
+Soon after, I finished my nephrology training. I did some study at RMIT in
+artificial intelligence, then went to intensive care medicine. And in my
+intensive care work, I worked for 25 years with an intensive care specialist
+named Geoff Parkin.
+</p>
+
+<p>
+Geoff is one of the most innovative and brilliant physiologists I've
+ever met, and he and I spent 25 years doing a whole lot of computer
+work in intensive care. Much of this work was based around open-loop
+and closed-loop control of the circulatory and respiratory systems -
+taking information out of the monitors, processing it, then providing
+therapy directly with or without a human involved. We also did a fair amount 
+of simulation work. Windows wasn't my favourite world, but Windows had <a href="https://en.wikipedia.org/wiki/Component_Object_Model">COM
+objects</a> back then, and the COM objects provided quite good interfaces
+to serial devices and analog devices so you didn't have to do the
+lower-level driver writing.
+</p>
+
+<p>
+I was also involved in the <a href="https://www.hisa.org.au/">Health Informatics Society of Australia</a>. In fact,
+last year the 5 or 6 of us who were around at the start were made life members.
+That was nice.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf5dc451" class="outline-2">
+<h2 id="orgf5dc451">What are your thoughts and experiences on how programming applies to medicine?</h2>
+<div class="outline-text-2" id="text-orgf5dc451">
+<p>
+Here's an example - there was a program called <a href="https://en.wikipedia.org/wiki/Mycin">MYCIN</a> which came out of Stanford. It
+was a rules-based expert system for infectious diseases. And in the 80's, they
+published a <a href="https://jamanetwork.com/journals/jama/article-abstract/366606">paper</a> showing that its advice was about as good as ID consultants.
+</p>
+
+<p>
+So the question we have to ask is why aren't we all using it? At least 30 years
+ago we <i>knew</i> how well computers could do this, so what happened? We're starting
+to use computer systems to help us now and <a href="https://en.wikipedia.org/wiki/Antimicrobial_stewardship">antimicrobial stewardship</a> is a big
+deal, but we've known we could use computers to help for about 30 years. I think
+this really highlights that the cultural context in which we put technology is
+important, and you can't win with good technology alone. You've got to take
+people with you.
+</p>
+
+<p>
+People went off AI back then - it was the "<a href="https://en.wikipedia.org/wiki/AI_winter">AI winter"</a>, AI had overpromised
+and underdelivered - but as soon as the commercial imperative became
+obvious, AI got a role again. And people started getting interested in how we
+might use knowledge to improve care or at least save money. Since then
+there's been a real growth in statistical AI and machine learning. And we're
+starting to see AI having a real effect on healthcare now. It's
+starting to become an okay thing to talk about.
+</p>
+
+<p>
+But I think one of the risks is that when people say AI in medicine, they're
+talking about neural networks and machine learning - but there's a whole <i>world</i>
+of <a href="https://en.wikipedia.org/wiki/Symbolic_artificial_intelligence">symbolic reasoning</a>. Its got its limitations, but so has machine learning. I
+think some hybridisation of both these models will turn out to be good.
+</p>
+
+<p>
+And there's also all these other areas - like <a href="https://en.wikipedia.org/wiki/Health_Level_7">HL-7</a> - which are less "sexy", but
+a requirement for good healthcare systems. The idea behind systems like HL-7 is
+so "Device A" can talk to "Device B" through a shared taxonomy. It's a very
+important idea - people need to work on it - but most people get hung up on
+things like <a href="https://en.wikipedia.org/wiki/AlphaGo">AlphaGo</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org737517c" class="outline-2">
+<h2 id="org737517c">What interests you about programming?</h2>
+<div class="outline-text-2" id="text-org737517c">
+<p>
+I think it started with Guyton's model. I've always liked maths - and
+here was a real chance to do experimental mathematics. Writing some
+maths and seeing it run was very appealing and quite engaging; you
+could increase the systemic vascular resistance and watch the blood
+pressure go up! I thought that if I can make a computer model of a
+problem run, then to some extent I understand the problem. That was
+the key for me.
+</p>
+
+<p>
+I also like solving puzzles, which often involve finding how to represent things
+parsimoniously. And there's the joy of representing something about the world in
+a format which is executable. What you've done is made something explicit so
+other people can share your mindset.
+</p>
+
+<p>
+And it turns out I like programming languages. I was involved in Python back in
+the early days and went to an early Python conference in San Diego. Python
+struck me as a very interesting language early on, and we wrote a lot of the
+ICU code in Python as well. <a href="http://pyfound.blogspot.com/2015/06/mark-hammond-receives-distinguished.html">Mark Hammond</a> wrote a fantastic interface to the
+COM world so you could use Python to call COM objects back in the day.
+</p>
+
+<p>
+I think I also enjoy the intellectual insights that very clever people have had,
+and wonder why we just sort of hack away at JavaScript. For example, Bill
+Atkinson wrote <a href="https://en.wikipedia.org/wiki/HyperCard">HyperCard</a> - which I think is the greatest computer system ever
+written. All those lessons have been lost, and that makes me a bit sad.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2bbbf28" class="outline-2">
+<h2 id="org2bbbf28">What is your advice for students interested in programming and medicine?</h2>
+<div class="outline-text-2" id="text-org2bbbf28">
+<p>
+My advice for this group of people - and they're very important people because
+they'll make a big contribution - is if they're going to do computer science,
+they shouldn't do information procesing. They need to not come out at as
+JavaScript or Java hackers. They need to do either electrical engineering - in
+which case they'll learn <a href="https://www.mathworks.com/products/matlab.html">Matlab</a>, assembly, chips, and will make a huge
+contribution to learning to make better and new devices - or they need to do
+computer science in the <a href="https://mitpress.mit.edu/sites/default/files/sicp/index.html">SICP</a> sense - not in a business information sense. So
+they shouldn't be taught how to use a language by a course where you'll come out
+knowing how to program in Java. That's not what's important for innovation.
+</p>
+
+<p>
+I think there's great merit to learning the stuff that was known in
+the "old days". I'm a big fan of <a href="https://en.wikipedia.org/wiki/Alan_Kay">Alan Kay</a> - Alan Kay worked at <a href="https://en.wikipedia.org/wiki/PARC_(company)">Xerox
+PARC</a>, where they invented <a href="https://en.wikipedia.org/wiki/Object-oriented_programming">object-oriented programming</a>,
+laser printers and the ethernet. Smalltalk came out of PARC.
+</p>
+
+<p>
+Alan has a set of fantastic YouTube videos where he talks about
+software engineering not being engineering yet. He says software
+engineering is a bit like engineering before we discovered the
+arch. What we did with the pyramids was pile bricks on top of one
+another - but once we discovered the arch, it became a principle that
+allowed us to build efficiently and reliably.
+</p>
+
+<p>
+He's also highly critical of what he calls "pop culture computer science" - of
+which there could not possibly be a better example than programming for the web
+in JavaScript. Fortunately, people are starting to get on top of that and
+languages like <a href="https://elm-lang.org/">Elm</a> are starting to have an effect. But it is <i>amazing</i> what
+we've forgotten, and if you get a <a href="https://en.wikipedia.org/wiki/Smalltalk">Smalltalk</a> system out from the 90s and have a
+look at what you could do, it just makes you weep when you compare it to trying
+to work out how to center a <code>&lt;div&gt;</code>.
+</p>
+
+<p>
+So students need to have some historical perspectve too. I thnk one of the
+issues is that we're purely future-looking - back in the day, we already knew
+how to do many things. Elm's a good example - Elm has reinvented Haskell for the web.
+And JavaScript was an attempt to get Scheme on the web. So I would encourage
+these people to look at the old stuff, not just the new stuff.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org15587ce" class="outline-2">
+<h2 id="org15587ce">What programming languages have you used and what is your favourite?</h2>
+<div class="outline-text-2" id="text-org15587ce">
+<p>
+I always have trouble with this; the language I can get something done best with
+is Python, but the language I <i>enjoy</i> programming the most with is <a href="https://en.wikipedia.org/wiki/Scheme_(programming_language)">Scheme</a>.
+</p>
+
+<p>
+Since my interest has always been a bit more in the symbolic reasoning
+area, the languages I've used have always been languages like Lisp,
+Scheme, Forth and Smalltalk rather than the compiled C world. In
+particular, there are two great books - <a href="https://mitpress.mit.edu/sites/default/files/sicp/index.html">Structure and Interpretation
+of Computer Programs (SICP)</a>, and <a href="https://en.wikipedia.org/wiki/Paradigms_of_AI_Programming:_Case_Studies_in_Common_Lisp">Paradigms of AI Programming (PAIP)</a> -
+and they're the two best programming books I've ever read. I really
+enjoyed understanding their ideas, and they were both written using
+Lisps - SICP in Scheme and PAIP in Common Lisp.
+</p>
+
+<p>
+There's another language I've used and liked called <a href="https://www.tcl.tk/">Tcl</a>, though it's dying. The
+reason it's an <i>amazing</i> language is that <a href="https://en.wikipedia.org/wiki/Tk_(software)">Tk</a> is a graphical toolkit and Tcl is a
+scripting language. And it was originally written to be embedded in a C program -
+so you had your compiled C program running and you embedded the Tcl/Tk
+interpreters and libraries in there, and you could call a GUI and script your
+program in Tcl/Tk. It's available on all sorts of platforms, and still
+maintained and still powerful. I don't use it much now, but I have used it in
+the past.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdbdbc50" class="outline-2">
+<h2 id="orgdbdbc50">What's your favourite Lisp dialect?</h2>
+<div class="outline-text-2" id="text-orgdbdbc50">
+<p>
+<a href="https://racket-lang.org/">Racket</a>. I think Racket is a wonderful language, and its libraries are very
+"batteries-included" and complete. There's a good article that I think is a bit
+amusing - <a href="https://dustycloud.org/blog/racket-is-an-acceptable-python/">Racket is an acceptable Python</a>. <a href="https://docs.racket-lang.org/guide/macros.html">Racket's macro system</a> is amazing.
+Common Lisp macros are straightforward and powerful but they're "non-hygienic" -
+you can get into trouble with bindings being captured and scope problems can
+arise. Racket's macros, done well, guarantee a whole lot properties like
+composability and hygiene.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org35255e4" class="outline-2">
+<h2 id="org35255e4">What would you recommend for medical students beginning to learn programming?</h2>
+<div class="outline-text-2" id="text-org35255e4">
+<p>
+I would be put between Python and Scheme. I would want the syntax to get out of
+the way as soon as possible and for there to be minimal surprises. Scheme has no
+syntax almost, but the brackets put people off a bit. Python has a few surprises
+with scope and default parameters.
+</p>
+
+<p>
+I'd give people <a href="https://code.visualstudio.com/">Visual Studio Code</a> - much as I hate to say it - and
+install Python, and Racket (with the DrRacket UI). I'd get them to
+produce a function like an adder. So you're passing around a function.
+</p>
+
+<p>
+For example, in Racket, you can do it like so:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-racket"><span style="color: #ff79c6;">#lang</span> <span style="color: #f8f8f2;">racket</span>
+
+<span style="color: #61bfff;">(</span><span style="color: #ff79c6;">define</span> <span style="color: #ff79c6;">(</span><span style="color: #50fa7b;">adder</span> n<span style="color: #ff79c6;">)</span>
+  <span style="color: #ff79c6;">(</span><span style="color: #ff79c6;">lambda</span> <span style="color: #50fa7b;">(</span>m<span style="color: #50fa7b;">)</span> <span style="color: #50fa7b;">(</span><span style="color: #ffb86c;">+</span> n m<span style="color: #50fa7b;">)</span><span style="color: #ff79c6;">)</span>
+<span style="color: #61bfff;">)</span>
+</pre>
+</div>
+
+<p>
+So if I say:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-racket"><span style="color: #61bfff;">(</span><span style="color: #ff79c6;">define</span> <span style="color: #f8f8f2;">plus-two</span> <span style="color: #ff79c6;">(</span>adder <span style="color: #ff5555; font-weight: bold;">2</span><span style="color: #ff79c6;">)</span><span style="color: #61bfff;">)</span>
+</pre>
+</div>
+
+<p>
+And then say:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-racket"><span style="color: #61bfff;">(</span>plus-two <span style="color: #ff5555; font-weight: bold;">3</span><span style="color: #61bfff;">)</span>
+</pre>
+</div>
+
+<p>
+I get 5. So <code>plus-two</code> has returned a function which is <a href="https://en.wikipedia.org/wiki/Closure_(computer_programming)">closed over</a> <code>n</code>. And if
+I can get medical students to understand that piece of code, I think we're
+getting somewhere.
+</p>
+
+<p>
+So that's what I think we ought to teach - that's the type of computer science I
+think medical students should learn. And if you learn that stuff, you can pick
+up languages, that's not a problem. And I think the particulars like how your
+IDE works are just ephemera.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2506ff4" class="outline-2">
+<h2 id="org2506ff4">What's your favourite editor? Favourite OS?</h2>
+<div class="outline-text-2" id="text-org2506ff4">
+<p>
+My favourite editor is <a href="https://www.gnu.org/software/emacs/">Emacs</a> - <i>except</i> if I'm editing text. I'm a great
+believer of <a href="https://en.wikipedia.org/wiki/Editor_war">"Emacs is a great operating system, lacking only a decent text
+editor"</a>. I use Emacs plus <a href="https://www.emacswiki.org/emacs/Evil">evil</a> - so I get Vim for my text editing and Emacs for
+its customizability and all its modes. And if you're going to program in Lisps,
+Emacs just works better. <a href="https://orgmode.org/">Org mode</a> is also powerful in the Emacs world - I'm a
+believer in reproducible research, and I think that's one of the key issues in
+medicine, so I try to write any analysis code in an <code>org mode</code> document with
+<a href="https://orgmode.org/worg/org-contrib/babel/intro.html">org-babel</a>.
+</p>
+
+<p>
+Evan Misschula has a wonderful <a href="https://www.youtube.com/watch?v=CGnt_PWoM5Y&amp;t=1244s">video</a> on YouTube where he discussed the
+crisis in research that is pushing the reproducible research project.
+<i>Everyone</i> involved in research and the use and development of tools
+needs to watch this.
+</p>
+
+<p>
+In terms of OS - MacOS. It gives me solid apps that I have to use in my work,
+and they just work - Word works, Excel work, Powerpoint works. Some people don't
+like these programs for various reasons, but I think Excel, for example, is a
+very good spreadsheet. And <a href="https://www.libreoffice.org/">LibreOffice</a> just doesn't cut it for me. I've had
+Linux boxes in the past for example, using <a href="http://www.slackware.com/">Slackware</a> - but Mac just gets the
+right balance for me between a Unix environment and a productive office
+environment.
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>

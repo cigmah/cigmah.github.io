@@ -1,0 +1,400 @@
+:root {
+    --background:#ffffff;
+    --background-code: #F7FAFC;
+    --foreground:#0f0f0f;
+    --foreground-lesser: #555555;
+    --hyperlink: #aa0000;
+    --primary: #bb2222
+}
+
+html {
+font-size: 1.2rem;
+line-height: 1.65;
+font-family: "Georgia", "Baskerville", "Garamond", "Palatino Linotype", "Book Antiqua", "Century Schoolbook", "Deja Vu Serif", "Times New Roman", serif;
+}
+
+emph {
+  font-style: italics !important;
+}
+
+p {
+  margin-left: 0px;
+}
+
+a {
+color: var(--hyperlink) !important;
+border-bottom: 1px dotted var(--hyperlink);
+text-decoration: none;
+}
+
+a:hover {
+color: var(--foreground);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  max-width: 42em;
+  margin: auto;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: relative;
+}
+
+
+hr {
+  position: relative;
+  border: none;
+  background: var(--background);
+  overflow: visible;
+  border-top: 6px double var(--foreground-lesser);
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+hr:after {
+  content: "§";
+  background: var(--background);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: relative;
+  top: -0.9em;
+  color: grey;
+}
+
+h1 {
+  font-weight: normal;
+  border-bottom: 6px double var(--foreground-lesser);
+  padding-bottom: 0.25em;
+  margin-top: 0.5em;
+  font-size: 1.75em;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 1.5em;
+  margin-top: 1.5em;
+  border-bottom: 1px dotted var(--foreground-lesser);
+}
+
+h3 {
+  font-weight: normal;
+  font-size: 1.25em;
+  margin-bottom: 0.5em;
+}
+
+.title {
+  text-align: left;
+}
+
+img {
+    display: block;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    max-width: 90%;
+    max-height: 60vh;
+}
+
+summary {
+  cursor: pointer;
+  color: var(--foreground-lesser);
+  margin-top: 1em;
+}
+
+ul {
+  overflow: hidden;
+  zoom: 1;
+  list-style-type: square;
+}
+
+#landing-icon, #landing-icon .figure {
+  padding: 0;
+  width: 50%;
+  margin: auto;
+}
+
+/* CONTENT */
+
+#content {
+  width: 100%;
+}
+
+#table-of-contents * {
+  color: var(--foreground-lessen) !important;
+  font-weight: 300;
+  font-size: 0.9rem;
+  padding-bottom: 0.2rem;
+  text-decoration: none;
+}
+
+#table-of-contents h2 {
+  font-size: 1.5em;
+  border: none;
+  padding-bottom: 0;
+  margin-bottom: 0.5em;
+}
+
+
+blockquote {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+#sitemap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  max-width: 320px;
+  padding: 0;
+  background: var(--background);
+  font-size: 0.8em;
+  line-height: 1.2;
+  padding-left: 1.25em;
+  padding-right: 2em;
+  z-index: 50;
+  box-sizing: border-box;
+  overflow: auto;
+  padding-top: 3.5em;
+  display: none;
+  box-shadow: 0 1px 5px #bbaaaa;
+}
+
+#sitemap:hover {
+  display: block;
+}
+
+#sitemap .timestamp {
+  display: none;
+}
+
+#sitemap li {
+  padding-top: 0.5em;
+  padding-left: 1em;
+  padding-bottom: 0.25em;
+}
+
+#sitemap ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#sitemap > ul {
+  padding-bottom: 1em;
+}
+
+#sitemap-toggle {
+  display: none;
+}
+
+#sitemap-label {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0.25em;
+  font-size: 0.9em;
+  border-bottom-right-radius: 100em;
+  color: var(--foreground-lesser);
+  height: 3em;
+  width: 3em;
+  border-right: dashed 0.5px var(--foreground-lesser);
+  border-bottom: dashed 0.5px var(--foreground-lesser);
+  background: var(--background);
+  cursor: pointer;
+  z-index: 100;
+}
+
+#sitemap-label:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+#sitemap-toggle:checked ~ #sitemap{
+  display: block;
+}
+
+#sitemap-toggle:checked ~ #sitemap-label{
+  background: var(--foreground);
+  color: var(--background);
+}
+
+#sitemap-toggle:hover ~ #sitemap{
+  display: block;
+}
+
+code {
+  background: var(--background-code);
+  border-radius: 1px;
+  padding-left: 0.1em;
+  padding-right: 0.1em;
+  font-family: "Monaco", "Consolas", monospace !important;
+  font-size: 0.8rem;
+}
+
+.src {
+  background: var(--background-code);
+  overflow: auto;
+  border: none;
+  box-shadow: 0 0 10px 1px var(--background);
+  border-radius: 2px;
+  overflow: auto !important;
+  font-family: "Monaco", "Consolas", monospace !important;
+  font-size: 0.6rem;
+}
+
+.src * {
+  font-size: 0.6rem;
+  font-family: "Monaco", "Consolas", monospace !important;
+}
+
+pre.src:before {
+  top: 3px;
+  right: 3px;
+  background-color: var(--background-code);
+  border: none;
+}
+
+table {
+  border-color: var(--foreground-lesser);
+  margin: auto;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+table * {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+h2.footnotes {
+  margin-bottom: 1em;
+  padding-top: 1em;
+  margin-top: 1em;
+}
+
+details {
+  margin-top: 0.5em;
+}
+
+.timestamp {
+  font-family: "Consolas", "Lucida Console", monospace;
+  color: var(--foreground-lesser);
+  font-size: 0.75em
+}
+
+.outline-3 {
+  padding-left: 1em;
+}
+
+
+
+
+/* MOBILE */
+
+@media only screen and (max-width: 720px) {
+
+  html {
+    font-size: 1rem;
+  }
+  body {
+    margin: 0;
+    margin-top: 1em;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  h3 {
+    font-size: 1.1em;
+  }
+
+
+  #content {
+    margin: 0;
+    width: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-right: 5px;
+  }
+
+  blockquote {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+
+  li {
+    margin-bottom: 0.4em;
+  }
+
+  li .timestamp {
+    display: block;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  ol {
+    padding-left: 20px;
+  }
+
+  .outline-3 {
+    padding-left: 1em;
+  }
+
+  .src {
+    font-size: 0.7rem;
+  }
+
+  .src * {
+    font-size: 0.7rem;
+  }
+
+  .org-src-container pre {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #table-of-contents h2 {
+    font-size: 1.3em;
+  }
+
+  #sitemap-label {
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    text-transform: uppercase;
+    padding: 1em;
+    height: auto;
+    color: var(--primary);
+  }
+
+  #sitemap-toggle:checked ~ #sitemap-label {
+    background: var(--background);
+    color: var(--primary);
+    border-bottom: 1px solid var(--primary) !important;
+  }
+
+  #sitemap {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    bottom: auto;
+    max-width: none;
+    font-size: 1.2em;
+    padding-left: 0;
+    padding-bottom: 4em;
+  }
+
+}
