@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-08-03 Sat 00:37 -->
+<!-- 2019-08-03 Sat 01:07 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Prof Chris Wright</title>
@@ -623,11 +623,11 @@ For example, in Racket, you can do it like so:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-racket"><span style="color: #ff79c6;">#lang</span> <span style="color: #f8f8f2;">racket</span>
+<pre class="src src-racket"><span style="color: #e45649;">#lang</span> <span style="color: #6a1868;">racket</span>
 
-<span style="color: #61bfff;">(</span><span style="color: #ff79c6;">define</span> <span style="color: #ff79c6;">(</span><span style="color: #50fa7b;">adder</span> n<span style="color: #ff79c6;">)</span>
-  <span style="color: #ff79c6;">(</span><span style="color: #ff79c6;">lambda</span> <span style="color: #50fa7b;">(</span>m<span style="color: #50fa7b;">)</span> <span style="color: #50fa7b;">(</span><span style="color: #ffb86c;">+</span> n m<span style="color: #50fa7b;">)</span><span style="color: #ff79c6;">)</span>
-<span style="color: #61bfff;">)</span>
+<span style="color: #4078f2;">(</span><span style="color: #e45649;">define</span> <span style="color: #a626a4;">(</span><span style="color: #a626a4;">adder</span> n<span style="color: #a626a4;">)</span>
+  <span style="color: #a626a4;">(</span><span style="color: #e45649;">lambda</span> <span style="color: #50a14f;">(</span>m<span style="color: #50a14f;">)</span> <span style="color: #50a14f;">(</span><span style="color: #a626a4;">+</span> n m<span style="color: #50a14f;">)</span><span style="color: #a626a4;">)</span>
+<span style="color: #4078f2;">)</span>
 </pre>
 </div>
 
@@ -636,7 +636,7 @@ So if I say:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-racket"><span style="color: #61bfff;">(</span><span style="color: #ff79c6;">define</span> <span style="color: #f8f8f2;">plus-two</span> <span style="color: #ff79c6;">(</span>adder <span style="color: #ff5555; font-weight: bold;">2</span><span style="color: #ff79c6;">)</span><span style="color: #61bfff;">)</span>
+<pre class="src src-racket"><span style="color: #4078f2;">(</span><span style="color: #e45649;">define</span> <span style="color: #6a1868;">plus-two</span> <span style="color: #a626a4;">(</span>adder <span style="color: #da8548; font-weight: bold;">2</span><span style="color: #a626a4;">)</span><span style="color: #4078f2;">)</span>
 </pre>
 </div>
 
@@ -645,7 +645,7 @@ And then say:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-racket"><span style="color: #61bfff;">(</span>plus-two <span style="color: #ff5555; font-weight: bold;">3</span><span style="color: #61bfff;">)</span>
+<pre class="src src-racket"><span style="color: #4078f2;">(</span>plus-two <span style="color: #da8548; font-weight: bold;">3</span><span style="color: #4078f2;">)</span>
 </pre>
 </div>
 
