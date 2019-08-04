@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2019-08-03 Sat 23:29 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contraindicated</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link href="main.css" rel="stylesheet">
+<link href="../main.css" rel="stylesheet">
+<link href="../../main.css" rel="stylesheet">
+<link rel="shortcut icon" href="./favicon.ico">
+<link rel="shortcut icon" href="../favicon.ico">
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="preamble" class="status">
+<h1 class="title">Contraindicated</h1>
+</div>
+<div id="content">
+<input type="checkbox" id="sitemap-toggle" role="button" data-target="sitemap"/>
+<label id="sitemap-label" for="sitemap-toggle">map</label>
+<nav id="sitemap">
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-05-29 Wed]    </span></span>    <a href="../../index.html">CIGMAH</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-02-20 Wed]    </span></span>    <a href="../../resources.html">Resources</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-02-20 Wed]    </span></span>    <a href="../../about.html">About</a></li>
+<li>Tutorials/
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-08-02 Fri]    </span></span>    <a href="../intro.html">Introduction</a></li>
+<li>Tutorials/Text-And-Data/
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-08-03 Sat]    </span></span>    <a href="02-contraindicated.html">Contraindicated</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-08-03 Sat]    </span></span>    <a href="01-mood-diary.html">Mood Diary</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-08-02 Fri]    </span></span>    <a href="04-mapping-meningitis.html">Mapping Meningitis</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-08-02 Fri]    </span></span>    <a href="03-transfusion-tracing.html">Transfusion Tracing</a></li>
+</ul></li>
+</ul></li>
+<li>Features/
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-07-29 Mon]    </span></span>    <a href="../../features/chris-wright.html">Prof Chris Wright</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-04-18 Thu]    </span></span>    <a href="../../features/kevin-shi.html">Participant Feature: Kevin Shi</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-04-15 Mon]    </span></span>    <a href="../../features/chris-bain.html">Prof Chris Bain</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-04-12 Fri]    </span></span>    <a href="../../features/yingtong-li.html">Participant Feature: Yingtong Li</a></li>
+</ul></li>
+<li>Misc/
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-08-02 Fri]    </span></span>    <a href="../../misc/puzzle-index.html">Topics and Puzzle Index</a></li>
+</ul></li>
+<li>Games/
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-07-13 Sat]    </span></span>    <a href="../../games/worst-offender.html">Worst Offender</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-07-13 Sat]    </span></span>    <a href="../../games/what-dipstick.html">What Dipstick?</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-07-13 Sat]    </span></span>    <a href="../../games/sti-bugs-n-drugs.html">STI Bugs 'n' Drugs</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-07-13 Sat]    </span></span>    <a href="../../games/base-in-balance.html">Base in Balance</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-06-07 Fri]    </span></span>    <a href="../../games/neurologic.html">NeuroLogic</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-05-25 Sat]    </span></span>    <a href="../../games/tarsal-tumble.html">Tarsal Tumble</a></li>
+</ul></li>
+<li>Aorta/
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-07-14 Sun]    </span></span>    <a href="../../aorta/help_wanted.html">AORTA - FAQ and Help Wanted</a></li>
+</ul></li>
+</ul>
+</nav>
+
+<br>
+
+<div id="outline-container-orga61ab48" class="outline-2">
+<h2 id="orga61ab48">Problem</h2>
+<div class="outline-text-2" id="text-orga61ab48">
+<p>
+<a href="https://www1.health.gov.au/internet/main/publishing.nsf/Content/chronic-cardio">"Cardiovascular disease is the leading cause of death and disease burden in
+Australia"</a>. One of the risk factors for cardiovascular disease is high blood
+pressure (hypertension), which can be managed through non-pharmacological or
+pharmacological approaches.
+</p>
+
+<p>
+The Heart Foundation publishes a set of clinical guidelines relating to the
+management of various cardiovascular conditions, including a <a href="https://www.heartfoundation.org.au/images/uploads/publications/PRO-167_Hypertension-guideline-2016_WEB.pdf">management
+guideline for hypertension in adults</a>. This guideline outlines the important
+clinical information for health professionals managing patients with high blood
+pressure.
+</p>
+
+<p>
+On Page 38 (Table 6.3), a number of compelling contraindications for four
+classes of anti-hypertensive medications are listed. Here is an abridged version
+of the table with <i>selected</i> "compelling" contraindications.
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Drug Class</th>
+<th scope="col" class="org-left">Selected Compelling Contraindications</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">ACE inhibitors or ARBs</td>
+<td class="org-left">Renal artery stenosis (bilateral)</td>
+</tr>
+
+<tr>
+<td class="org-left">Dihydropyridine calciucm channel blockers</td>
+<td class="org-left">N/A</td>
+</tr>
+
+<tr>
+<td class="org-left">Diuretics</td>
+<td class="org-left">Gout</td>
+</tr>
+
+<tr>
+<td class="org-left">Beta blockers (not first-line)</td>
+<td class="org-left">Asthma, bradycardia or A-V block</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+As an audit of prescribing practices for hypertension, your clinical
+supervisor has collated abridged and deidentified clinical records of 9999
+patients. Here is the first record.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-text">Patient ID: 0001
+Antihypertensive: Carvedilol
+PMHx:
+  - Hyperthyroidism
+  - Migraine
+  - Recurrent UTIs
+</pre>
+</div>
+
+<p>
+Each is in the same format, and each patient in this collection has only been
+prescribed one-antihypertensive. The PMHx list for each patient varies in size;
+some may be blank (though the word <code>PMHx:</code> will always appear).
+</p>
+
+<p>
+<b>Your task</b> is:
+</p>
+
+<ol class="org-ol">
+<li>Given a list of 9999 patients, determine the <b>ONE</b> patient who has been
+prescribed an anti-hypertensive which is in contention with their PMHx; i.e,
+determine the ID of the patient who has a compelling contraindication to the
+antihypertensive they have been prescribed.</li>
+</ol>
+
+<p>
+You need only consider the selected compelling contraindications in the table we
+have provided above.
+</p>
+
+<details><summary>Click to show the medications appearing in this dataset</summary>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Drug Class</th>
+<th scope="col" class="org-left">Medications</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">ACE inhibitors/ ARBs</td>
+<td class="org-left">Captopril, Ramipril, Perindopril, Trandolapril, Candesartan</td>
+</tr>
+
+<tr>
+<td class="org-left">Beta blockers</td>
+<td class="org-left">Atenolol, Carvedilol, Metoprolol, Propranolol</td>
+</tr>
+
+<tr>
+<td class="org-left">Calcium channel blockers</td>
+<td class="org-left">Amlodipine, Nifedipine</td>
+</tr>
+
+<tr>
+<td class="org-left">Diuretics</td>
+<td class="org-left">Hydrochlorothiazide, Indapamide</td>
+</tr>
+</tbody>
+</table>
+</details>
+
+<p>
+<a href="./input-contraindicated.txt">Click here to download your text input. (1,803KB, .txt)</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org40ca077" class="outline-2">
+<h2 id="org40ca077">Solution</h2>
+<div class="outline-text-2" id="text-org40ca077">
+<p>
+Solution incoming.
+</p>
+</div>
+
+<div id="outline-container-orgf360d3c" class="outline-3">
+<h3 id="orgf360d3c">Data Generation</h3>
+<div class="outline-text-3" id="text-orgf360d3c">
+<details><summary>Click here to show the data generation code.</summary>
+<blockquote>
+<p>
+This data was generated with the <a href="https://www.jsoftware.com/#/">J programming language</a>. J is a descendent of
+the <a href="https://en.wikipedia.org/wiki/APL_(programming_language)">APL programming language family</a>, infamous for being terse and apparently
+unreadable. APL and J make very heavy use of symbols to expose useful primitive
+operations on arrays - similar in many ways to Matlab or Python's Numpy. Though
+the symbolism may look like obfuscation, it's not intentional. One of the core
+ideas of the APL family is about operating on collections of data as a whole
+rather than using conditional or looping structures, and the notation is simply
+a way to express these operations compactly.
+</p>
+
+<p>
+If you are interested in the APL/J/K family of languages, then we are always
+very happy to have a chat to explain more about them. K (similar to J) is
+apparently used quite heavily in the financial industry - so even though the
+languages may appear unreadable, they <i>are</i> used in real-life.
+</p>
+</blockquote>
+
+<p>
+First, we initiate an array containing boxed items representing the drug names.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-j"><span style="color: #6a1868;">DrugAs</span> <span style="color: #000000;">=:</span> <span style="color: #50a14f;">'Captopril'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'Ramipril'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'Perindopril'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'Trandolapril'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'Candesartan'</span>
+<span style="color: #6a1868;">DrugBs</span> <span style="color: #000000;">=:</span> <span style="color: #50a14f;">'Atenolol'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'Carvedilol'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'Metoprolol'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'Propranolol'</span>
+<span style="color: #6a1868;">DrugCs</span> <span style="color: #000000;">=:</span> <span style="color: #50a14f;">'Amlodipine'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'Nifedipine'</span>
+<span style="color: #6a1868;">DrugDs</span> <span style="color: #000000;">=:</span> <span style="color: #50a14f;">'Hydrochlorothiazide'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'Indapamide'</span>
+<span style="color: #6a1868;">DrugsAll</span> <span style="color: #000000;">=:</span> DrugAs<span style="color: #ff0000;">;</span>DrugBs<span style="color: #ff0000;">;</span>DrugCs<span style="color: #ff0000;">;&lt;</span>DrugDs
+</pre>
+</div>
+
+<p>
+We then initiate an array containing the corresponding contraindications to each
+drug class, and a general array containing a mixture of other non-listed conditions.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-j"><span style="color: #6a1868;">CIAs</span> <span style="color: #000000;">=:</span> <span style="color: #ff0000;">&lt;</span><span style="color: #50a14f;">'Renal artery stenosis'</span>
+<span style="color: #6a1868;">CIBs</span> <span style="color: #000000;">=:</span> <span style="color: #50a14f;">'Asthma'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'Bradycardia'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'A-V block'</span>
+<span style="color: #6a1868;">CIDs</span> <span style="color: #000000;">=:</span> <span style="color: #ff0000;">&lt;</span><span style="color: #50a14f;">'Gout'</span>
+<span style="color: #6a1868;">Conds</span> <span style="color: #000000;">=:</span> <span style="color: #50a14f;">'GORD'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'Osteoarthritis'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'Osteoporosis'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'SLE'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'Migraine'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'HLD'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'Generalised anxiety disorder'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'Parkinson''s disease'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'Depression'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'Obesity'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'Rheumatoid arthritis'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'Recurrent UTIs'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'Hyperthyroidism'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'Allergic rhinitis'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'Psoriasis'</span>
+<span style="color: #6a1868;">CondsAll</span> <span style="color: #000000;">=:</span> CIAs<span style="color: #ff0000;">;</span>CIBs<span style="color: #ff0000;">;</span>(0<span style="color: #ff0000;">$</span>0)<span style="color: #ff0000;">;</span>CIDs<span style="color: #ff0000;">;&lt;</span>Conds
+</pre>
+</div>
+
+<p>
+Next, we define some pure functions that will select and randomly choose from
+these lists.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-j"><span style="color: #6a1868;">iselect</span> <span style="color: #000000;">=:</span> <span style="color: #ff0000;">[:</span> <span style="color: #ff0000;">&gt;</span><span style="color: #0000ff;">@</span>(<span style="color: #ff0000;">]</span> <span style="color: #ff0000;">{</span><span style="color: #00ff00;">~</span> <span style="color: #ff0000;">?</span><span style="color: #0000ff;">@</span><span style="color: #ff0000;">#</span>) <span style="color: #ff0000;">]</span> <span style="color: #ff0000;">&gt;</span><span style="color: #0000ff;">@:</span><span style="color: #ff0000;">{</span> <span style="color: #ff0000;">[</span>                           <span style="color: #9ca0a4;">NB. </span><span style="color: #9ca0a4;">random select from x at index y</span>
+<span style="color: #6a1868;">censor</span>  <span style="color: #000000;">=:</span> dyad <span style="color: #ff0000;">:</span><span style="color: #50a14f;">';(&lt;0$0) (y}) x'</span>                             <span style="color: #9ca0a4;">NB. </span><span style="color: #9ca0a4;">remove from x at index y</span>
+<span style="color: #6a1868;">choose</span>  <span style="color: #000000;">=:</span> <span style="color: #ff0000;">]{</span><span style="color: #00ff00;">~</span><span style="color: #ff0000;">?</span><span style="color: #0000ff;">@</span>(<span style="color: #ff0000;">[:&lt;.</span>3<span style="color: #ff0000;">%</span><span style="color: #00ff00;">~</span><span style="color: #ff0000;">#</span>)<span style="color: #ff0000;">?#</span>                                  <span style="color: #9ca0a4;">NB. </span><span style="color: #9ca0a4;">randomly choose item</span>
+<span style="color: #6a1868;">makesafe</span> <span style="color: #000000;">=:</span> <span style="color: #ff0000;">&lt;</span><span style="color: #0000ff;">@</span>(DrugsAll<span style="color: #0000ff;">&amp;</span>iselect) <span style="color: #ff0000;">;</span> <span style="color: #ff0000;">&lt;</span><span style="color: #0000ff;">@</span>choose<span style="color: #0000ff;">@</span>(CondsAll<span style="color: #0000ff;">&amp;</span>censor)
+<span style="color: #6a1868;">makeunsafe</span> <span style="color: #000000;">=:</span> <span style="color: #ff0000;">&lt;</span><span style="color: #0000ff;">@</span>(DrugsAll<span style="color: #0000ff;">&amp;</span>iselect)<span style="color: #ff0000;">;</span>(<span style="color: #ff0000;">[:&lt;</span><span style="color: #0000ff;">@</span>((<span style="color: #ff0000;">#?#</span>)<span style="color: #ff0000;">{]</span>)((<span style="color: #ff0000;">?</span><span style="color: #0000ff;">@</span><span style="color: #ff0000;">#{]</span>)CIBs)<span style="color: #ff0000;">,</span>choose<span style="color: #0000ff;">@</span>(CondsAll<span style="color: #0000ff;">&amp;</span>censor))
+</pre>
+</div>
+
+<p>
+We then create the list of patients - 9998 patients without a contraindication
+to their corresponding antihypertensive, and one with a contraindication.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-j"><span style="color: #6a1868;">Safe</span> <span style="color: #000000;">=:</span> makesafe each <span style="color: #ff0000;">?</span> 9998 <span style="color: #ff0000;">#</span> 4
+<span style="color: #6a1868;">Unsafe</span> <span style="color: #000000;">=:</span> <span style="color: #ff0000;">&lt;</span> makeunsafe 1
+<span style="color: #6a1868;">All</span> <span style="color: #000000;">=:</span> ((<span style="color: #ff0000;">#?#</span>)<span style="color: #ff0000;">{]</span>) Safe <span style="color: #ff0000;">,</span> Unsafe
+</pre>
+</div>
+
+<p>
+We then define how each patient's generated data should be formatted by defining
+some pure formatting functions.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-j"><span style="color: #6a1868;">fmtfirst</span> <span style="color: #000000;">=:</span> LF<span style="color: #ff0000;">,</span><span style="color: #00ff00;">~</span><span style="color: #50a14f;">'Antihypertensive: '</span><span style="color: #ff0000;">,&gt;</span><span style="color: #0000ff;">@</span><span style="color: #ff0000;">&gt;</span><span style="color: #0000ff;">@</span>(0<span style="color: #0000ff;">&amp;</span><span style="color: #ff0000;">{</span>)                <span style="color: #9ca0a4;">NB. </span><span style="color: #9ca0a4;">format antihypertensive</span>
+<span style="color: #6a1868;">fmtsecond</span> <span style="color: #000000;">=:</span> (<span style="color: #50a14f;">'PMHx:'</span><span style="color: #ff0000;">,</span>LF)<span style="color: #ff0000;">,[:;[:</span>(<span style="color: #50a14f;">'  - '</span><span style="color: #ff0000;">,</span>LF<span style="color: #ff0000;">,</span><span style="color: #00ff00;">~</span><span style="color: #ff0000;">]</span>)<span style="color: #0000ff;">&amp;.</span><span style="color: #ff0000;">&gt;&gt;</span><span style="color: #0000ff;">@</span>(1<span style="color: #0000ff;">&amp;</span><span style="color: #ff0000;">{</span>)       <span style="color: #9ca0a4;">NB. </span><span style="color: #9ca0a4;">format medication list</span>
+<span style="color: #6a1868;">pad</span> <span style="color: #000000;">=:</span> <span style="color: #ff0000;">[:;=</span><span style="color: #0000ff;">&amp;</span><span style="color: #50a14f;">' '</span><span style="color: #ff0000;">{</span>each<span style="color: #ff0000;">,</span><span style="color: #0000ff;">&amp;</span><span style="color: #50a14f;">'0'</span>each
+<span style="color: #6a1868;">fmtid</span> <span style="color: #000000;">=:</span> LF<span style="color: #ff0000;">,</span><span style="color: #00ff00;">~</span><span style="color: #50a14f;">'Patient ID: '</span><span style="color: #ff0000;">,</span>pad<span style="color: #0000ff;">@</span>(4<span style="color: #0000ff;">&amp;</span><span style="color: #ff0000;">":</span>)
+<span style="color: #6a1868;">fmt</span> <span style="color: #000000;">=:</span> fmtid<span style="color: #0000ff;">@</span><span style="color: #ff0000;">[,</span>fmtfirst<span style="color: #0000ff;">@</span><span style="color: #ff0000;">],</span>fmtsecond<span style="color: #0000ff;">@</span><span style="color: #ff0000;">]</span>
+</pre>
+</div>
+
+<p>
+Finally, we format the data we've generated and write it to a file.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-j"><span style="color: #6a1868;">Data</span> <span style="color: #000000;">=:</span> <span style="color: #ff0000;">;</span>(<span style="color: #ff0000;">&lt;</span>LF<span style="color: #ff0000;">,</span>LF<span style="color: #ff0000;">,</span><span style="color: #00ff00;">~</span>LF<span style="color: #ff0000;">,</span><span style="color: #00ff00;">~</span>80<span style="color: #ff0000;">#</span><span style="color: #50a14f;">'-'</span>)<span style="color: #ff0000;">,</span>each((1<span style="color: #ff0000;">+i.</span><span style="color: #0000ff;">@</span><span style="color: #ff0000;">#</span>) fmt each <span style="color: #ff0000;">]</span>) All
+Data fwrite <span style="color: #50a14f;">'input-contraindicated.txt'</span>
+</pre>
+</div>
+</details>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
