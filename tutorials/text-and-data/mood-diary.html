@@ -1,0 +1,1047 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2019-08-04 Sun 19:33 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>2 Mood Diary</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link href="main.css" rel="stylesheet">
+<link href="../main.css" rel="stylesheet">
+<link href="../../main.css" rel="stylesheet">
+<link rel="shortcut icon" href="./favicon.ico">
+<link rel="shortcut icon" href="../favicon.ico">
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="preamble" class="status">
+<h1 class="title">2 Mood Diary</h1>
+</div>
+<div id="content">
+<input type="checkbox" id="sitemap-toggle" role="button" data-target="sitemap"/>
+<label id="sitemap-label" for="sitemap-toggle">map</label>
+<nav id="sitemap">
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-02-20 Wed]    </span></span>    <a href="../../about.html">About</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-05-29 Wed]    </span></span>    <a href="../../index.html">CIGMAH</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-02-20 Wed]    </span></span>    <a href="../../resources.html">Resources</a></li>
+<li>Aorta/
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-07-14 Sun]    </span></span>    <a href="../../aorta/help_wanted.html">AORTA - FAQ and Help Wanted</a></li>
+</ul></li>
+<li>Features/
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-04-18 Thu]    </span></span>    <a href="../../features/kevin-shi.html">Participant Feature: Kevin Shi</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-04-12 Fri]    </span></span>    <a href="../../features/yingtong-li.html">Participant Feature: Yingtong Li</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-04-15 Mon]    </span></span>    <a href="../../features/chris-bain.html">Prof Chris Bain</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-07-29 Mon]    </span></span>    <a href="../../features/chris-wright.html">Prof Chris Wright</a></li>
+</ul></li>
+<li>Games/
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-07-13 Sat]    </span></span>    <a href="../../games/base-in-balance.html">Base in Balance</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-06-07 Fri]    </span></span>    <a href="../../games/neurologic.html">NeuroLogic</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-07-13 Sat]    </span></span>    <a href="../../games/sti-bugs-n-drugs.html">STI Bugs 'n' Drugs</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-05-25 Sat]    </span></span>    <a href="../../games/tarsal-tumble.html">Tarsal Tumble</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-07-13 Sat]    </span></span>    <a href="../../games/what-dipstick.html">What Dipstick?</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-07-13 Sat]    </span></span>    <a href="../../games/worst-offender.html">Worst Offender</a></li>
+</ul></li>
+<li>Misc/
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-08-02 Fri]    </span></span>    <a href="../../misc/puzzle-index.html">Topics and Puzzle Index</a></li>
+</ul></li>
+<li>Tutorials/
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-08-02 Fri]    </span></span>    <a href="../intro.html">Introduction</a></li>
+<li>Tutorials/Text-And-Data/
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-08-05 Mon]    </span></span>    <a href="introduction.html">1 Introduction to Text and Data</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-08-04 Sun]    </span></span>    <a href="mood-diary.html">2 Mood Diary</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-08-03 Sat]    </span></span>    <a href="contraindicated.html">3 Contraindicated</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-08-02 Fri]    </span></span>    <a href="transfusion-tracing.html">4 Transfusion Tracing</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2019-08-01 Thu]    </span></span>    <a href="mapping-meningitis.html">5 Mapping Meningitis</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+
+
+<div class="figure">
+<p><img src="../../static/icons/png/psych.png" alt="psych.png" />
+</p>
+</div>
+
+<p>
+We touch on:
+</p>
+
+<ol class="org-ol">
+<li>File input/output</li>
+<li>Regular expressions</li>
+<li>Tuples, Lists and Dictionaries</li>
+<li>Datetimes</li>
+<li>Plotting with <code>matplotlib</code></li>
+<li>Very basic usage of <code>pandas</code> for data analysis</li>
+</ol>
+
+<div id="outline-container-org0decbdd" class="outline-2">
+<h2 id="org0decbdd">Problem</h2>
+<div class="outline-text-2" id="text-org0decbdd">
+<p>
+Kennedy, a 26 year old male, has been struggling with depression. On your
+advice, he has started tracking and reflecting on his mood every day for the
+past two years from 1st January 2020 to 31st December 2021 inclusive.
+</p>
+
+<p>
+To track his mood, he used a (fictional) mobile app - Mood Diary. Every day,
+Mood Diary would send him a push notification asking him to select one of five
+moods. Each mood corresponds to one of five mood levels, and is drawn randomly
+from a descriptor pool for that level. Here are the descriptors Mood Diary uses:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">Mood Level</th>
+<th scope="col" class="org-left">Descriptors</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-left">Depressed, very low, hopeless, bleak</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-left">Low, sad, teary, flat, tired, stressed</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-left">So-so, okay, fine, not bad, satisfied</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-left">Good, refreshed, happy, joyful</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-left">On top of the world, ecstatic, elated, elevated, amazing, brilliant, fantastic</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+For example, on a given day, Mood Diary might present the five words
+"Depressed", "Tired", "Fine", "Refreshed" and "Amazing". Kennedy then selects
+one of those five moods for that day.
+</p>
+
+<p>
+Kennedy has exported his mood results and would like you to help him interpret
+them. The exported data consists of one line per day - a date, four spaces, then
+a sentence which Mood Diary uses to represent each day ("I feel {MOOD} today.").
+The mood is as described in the table above, but in capital letters.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-text">2020/01/01    I feel SAD today.
+</pre>
+</div>
+
+<p>
+<b>Your task</b> is to:
+</p>
+
+<ol class="org-ol">
+<li>Process Kennedy's exported Mood Diary text and classify each day into a mood
+level.</li>
+<li>Plot Kennedy's mood level over the 2 years.</li>
+<li>Identify approximately when (to the nearest month) Kennedy's mood level
+pattern changed.</li>
+</ol>
+
+<p>
+<a href="./input-mood-diary.txt">Click here to download your text input. (26KB, .txt).</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4b67348" class="outline-2">
+<h2 id="org4b67348">Solution</h2>
+<div class="outline-text-2" id="text-org4b67348">
+<details><summary>Click to show the answer.</summary>
+<p>
+Kennedy's mood level changed, to the nearest month, in <b>April 2021</b>.
+</p>
+</details>
+
+<details><summary>Click to show the solution.</summary>
+
+<p>
+First, we need to read the file data into a variable so we can refer to it in
+Python. We'll read the file into a string with the <code>read()</code> method. Reading and
+writing files is something you'll have to do very often, so it's good to get
+familiar with this.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #6a1868;">FILEPATH</span> = <span style="color: #50a14f;">"./input-mood-diary.txt"</span> <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Set variable FILEPATH to the file location</span>
+
+<span style="color: #e45649;">with</span> <span style="color: #a626a4;">open</span>(FILEPATH) <span style="color: #e45649;">as</span> infile:      <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Open the file and put its handle into variable infile</span>
+    <span style="color: #6a1868;">RAW</span> = infile.read()             <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Call read() on the handle to read the contents</span>
+</pre>
+</div>
+
+<p>
+The variable <code>RAW</code> now contains a big <a href="https://en.wikipedia.org/wiki/String_(computer_science)">string</a> of the entire file contents. Let's
+read the first 40 characters.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #e45649;">print</span>(RAW[:<span style="color: #da8548; font-weight: bold;">40</span>])
+</pre>
+</div>
+
+<pre class="example">
+2020/01/01    I feel SAD today.
+2020/01/
+</pre>
+
+
+<p>
+Let's try and extract just the date, and the word between "feel" and "today"
+from each line in <code>RAW</code>. A very useful tool to do this with is <a href="https://en.wikipedia.org/wiki/Regular_expression">regular
+expressions</a>. Regular expressions (regexs) are a very compact way to define how
+to extract certain elements from a piece of text with a well-defined structure.
+</p>
+
+<p>
+For each line in the file, we notice that it's formatted like so:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-text">YYYY/MM/DD    I feel MOOD today.
+</pre>
+</div>
+
+<p>
+We can write a regular expression that will match this as the following:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-text">(.*)\s{4}I feel (.*) today.
+</pre>
+</div>
+
+<p>
+This might look a bit confusing if you're not familiar with regular expressions.
+The first part, <code>.*</code>, will match any character (<code>.</code>) zero or more times (<code>*</code>).
+This will match the date as a whole (we'll split it up later). The second part,
+<code>\s{4}</code>, will match any whitespace character (<code>\s</code>) (e.g. spaces!) exactly 4
+times. The third part, <code>I feel (.*) today.</code> will match the phrase "I feel MOOD
+today.", where <code>MOOD</code> can any character (<code>.</code>) occuring zero or more times (<code>*</code>).
+We choose to match any character rather than say just letters, because we know
+that some of the moods have spaces or a hyphen in them. Finally, anything
+enclosed in brackets will actually be extracted from the string.
+</p>
+
+<p>
+In Python, we can compile and use regular expressions with the <code>re</code> library,
+which is part of Python's standard set of modules. We will use the <code>findall()</code>
+method to find every line which matches the regular expression we've defined and
+extracts the date and mood from each line.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #e45649;">import</span> re                                      <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Import re library</span>
+
+<span style="color: #6a1868;">MATCH_RE</span> = r<span style="color: #50a14f;">'(.*)\s{4}I feel (.*) today.'</span>      <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Define the regex</span>
+<span style="color: #6a1868;">MATCHER</span> = re.<span style="color: #a626a4;">compile</span>(MATCH_RE)                 <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">"Compile" the regex</span>
+
+<span style="color: #6a1868;">SPLIT</span> = MATCHER.findall(RAW)                   <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Apply matcher to all lines</span>
+</pre>
+</div>
+
+<p>
+Let's look at the first item of the list <code>SPLIT</code>, which contains all our
+extracted data.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #e45649;">print</span>(SPLIT[<span style="color: #da8548; font-weight: bold;">0</span>])
+</pre>
+</div>
+
+<pre class="example">
+('2020/01/01', 'SAD')
+</pre>
+
+
+<p>
+This is a <a href="https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences">tuple</a> which contains two elements, both of which are strings. The list
+<code>SPLIT</code> contains a list of these tuples.
+</p>
+
+<p>
+Now that we've split the file contents into a list of the strings we're
+interested, let's now try to convert each of them to something numerical we can
+plot.
+</p>
+
+<p>
+Let's first try and create a list containing a <code>datetime</code> object for each of the
+first items in the list <code>SPLIT</code>, which is a more "date and time"-aware version
+of the string-form of the date.
+</p>
+
+<p>
+Python's standard library comes with a <a href="https://docs.python.org/3.7/library/datetime.html">datetime library</a> which handles a large
+variety of datetime operations. As we want to parse a datetime string into a
+datetime object, we'll use the <code>strptime()</code> (think "string parse time") method.
+</p>
+
+<p>
+To parse the string into a datetime, we need to define the datetime
+specification. <a href="https://docs.python.org/3.7/library/datetime.html#strftime-and-strptime-behavior">The documentation</a> provides a good explanation of how to define
+this specification. The format of datestrings in this data is particularly
+common, and we'll specify it as <code>%Y/%m/%d</code> - i.e. a 4-digit year (<code>%Y</code>), a
+forward slash, a 2-digit month (<code>%m</code>), a forward slash, then a 2-digit day
+(<code>%d</code>). Many more flexible specifications are possible though!
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #e45649;">from</span> datetime <span style="color: #e45649;">import</span> datetime
+
+<span style="color: #6a1868;">DATETIMES</span> = [datetime.strptime(string[<span style="color: #da8548; font-weight: bold;">0</span>], <span style="color: #50a14f;">'%Y/%m/%d'</span>) <span style="color: #e45649;">for</span> string <span style="color: #e45649;">in</span> SPLIT]
+</pre>
+</div>
+
+<p>
+Datetime is a bit of an unusual module in that the module is called <code>datetime</code>,
+which contains a class also called <code>datetime</code>. Don't worry too much about it for
+now.
+</p>
+
+<p>
+The last line is called a <a href="https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions">list comprehension</a>. List comprehensions are
+<i>extremely</i> useful in Python and let you define operations on the entirety of a
+list in a very concise manner. In this example, we take the first element of
+each list item (in Python and many other programming languages, the first item
+corresponds to the index at 0, the second at 1 etc.) (<code>string[0]</code>), and we parse
+it with the specification we've described using <code>strptime</code>, and we do so for
+every item in the SPLIT list (<code>for string in SPLIT</code>). We then store all those
+datetimes in the <code>DATETIMES</code> variable.
+</p>
+
+<p>
+Here's the first item of DATETIMES.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #e45649;">print</span>(DATETIMES[<span style="color: #da8548; font-weight: bold;">0</span>].)
+</pre>
+</div>
+
+<pre class="example">
+datetime.datetime(2020, 1, 1, 0, 0)
+</pre>
+
+
+<p>
+We can see it's been parsed into a <code>datetime</code> object with actual numbers.
+</p>
+
+<p>
+We now want to translate each of the mood level words into a level. We can do
+this with a <a href="https://docs.python.org/3/tutorial/datastructures.html#dictionaries">dictionary</a> in Python, which you can think of as just like a
+dictionary in real-life - something that tells us how to map one item to
+another. In other languages, these are sometimes called <a href="https://en.wikipedia.org/wiki/Hash_table">hash maps</a> or hash
+tables. In this case, we want to map each mood word into a mood level.
+</p>
+
+<p>
+We'll define it explicitly below. This isn't the most elegant way, but it is
+certainly the most obvious way and a quick way to get introduced to
+dictionaries! We'll basically translate the table verbatim.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #6a1868;">MOOD_DICT</span> = {
+    <span style="color: #50a14f;">"DEPRESSED"</span>: <span style="color: #da8548; font-weight: bold;">1</span>,
+    <span style="color: #50a14f;">"VERY LOW"</span>: <span style="color: #da8548; font-weight: bold;">1</span>,
+    <span style="color: #50a14f;">"HOPELESS"</span>: <span style="color: #da8548; font-weight: bold;">1</span>,
+    <span style="color: #50a14f;">"BLEAK"</span>: <span style="color: #da8548; font-weight: bold;">1</span>,
+    <span style="color: #50a14f;">"LOW"</span>: <span style="color: #da8548; font-weight: bold;">2</span>,
+    <span style="color: #50a14f;">"SAD"</span>: <span style="color: #da8548; font-weight: bold;">2</span>,
+    <span style="color: #50a14f;">"TEARY"</span>: <span style="color: #da8548; font-weight: bold;">2</span>,
+    <span style="color: #50a14f;">"FLAT"</span>: <span style="color: #da8548; font-weight: bold;">2</span>,
+    <span style="color: #50a14f;">"TIRED"</span>: <span style="color: #da8548; font-weight: bold;">2</span>,
+    <span style="color: #50a14f;">"STRESSED"</span>: <span style="color: #da8548; font-weight: bold;">2</span>,
+    <span style="color: #50a14f;">"SO-SO"</span>: <span style="color: #da8548; font-weight: bold;">3</span>,
+    <span style="color: #50a14f;">"OKAY"</span>: <span style="color: #da8548; font-weight: bold;">3</span>,
+    <span style="color: #50a14f;">"FINE"</span>: <span style="color: #da8548; font-weight: bold;">3</span>,
+    <span style="color: #50a14f;">"NOT BAD"</span>: <span style="color: #da8548; font-weight: bold;">3</span>,
+    <span style="color: #50a14f;">"SATISFIED"</span>: <span style="color: #da8548; font-weight: bold;">3</span>,
+    <span style="color: #50a14f;">"GOOD"</span>: <span style="color: #da8548; font-weight: bold;">4</span>,
+    <span style="color: #50a14f;">"REFRESHED"</span>: <span style="color: #da8548; font-weight: bold;">4</span>,
+    <span style="color: #50a14f;">"HAPPY"</span>: <span style="color: #da8548; font-weight: bold;">4</span>,
+    <span style="color: #50a14f;">"JOYFUL"</span>: <span style="color: #da8548; font-weight: bold;">4</span>,
+    <span style="color: #50a14f;">"ON TOP OF THE WORLD"</span>: <span style="color: #da8548; font-weight: bold;">5</span>,
+    <span style="color: #50a14f;">"ECSTATIC"</span>: <span style="color: #da8548; font-weight: bold;">5</span>,
+    <span style="color: #50a14f;">"ELATED"</span>: <span style="color: #da8548; font-weight: bold;">5</span>,
+    <span style="color: #50a14f;">"ELEVATED"</span>: <span style="color: #da8548; font-weight: bold;">5</span>,
+    <span style="color: #50a14f;">"AMAZING"</span>: <span style="color: #da8548; font-weight: bold;">5</span>,
+    <span style="color: #50a14f;">"BRILLIANT"</span>: <span style="color: #da8548; font-weight: bold;">5</span>,
+    <span style="color: #50a14f;">"FANTASTIC"</span>: <span style="color: #da8548; font-weight: bold;">5</span>,
+}
+</pre>
+</div>
+
+<blockquote>
+<p>
+As an alternative, you could parse the table into this dictionary rather than
+writing it out by hand, which would save you typing it out and avoid
+transcription errors. This would be the preferable option but, for now, don't
+worry too much about it.
+</p>
+</blockquote>
+
+<p>
+We can now write a list comprehension to translate each of the mood descriptors
+into their corresponding number.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #6a1868;">MOOD_LEVELS</span> = [MOOD_DICT[string[<span style="color: #da8548; font-weight: bold;">1</span>]] <span style="color: #e45649;">for</span> string <span style="color: #e45649;">in</span> SPLIT]
+</pre>
+</div>
+
+<p>
+Let's now see the first 5 items of <code>MOOD_LEVELS</code>.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #e45649;">print</span>(MOOD_LEVELS[:<span style="color: #da8548; font-weight: bold;">5</span>])
+</pre>
+</div>
+
+<pre class="example">
+[2, 1, 3, 1, 2]
+</pre>
+
+
+<p>
+We now have all the datetimes and the mood levels in numerical (or number-aware)
+formats. We can now plot the data.
+</p>
+
+<p>
+One of the most often-used libraries for plotting in Python is <a href="https://matplotlib.org/">matplotlib</a>.
+Matplotlib is very powerful and used for all sorts of different types of plots.
+Python doesn't come with <code>matplotlib</code> by default - if you're using vanilla
+Python, you'll have to install it with <code>pip</code>. If you're using the Anaconda
+distribution, you should already have it available.
+</p>
+
+<p>
+To plot with matplotlib, the easiest interface is through <code>pyplot</code>, which makes
+plotting as easy as calling a single function. It is convention to import
+<code>pyplot</code> as a shorter name, <code>plt</code>. Let's first try a very naive scatter plot -
+because this is discrete data with only 5 levels, it won't look very nice, so
+we'll plot another representation after.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Don't worry about these two lines - these are for us making the tutorial!</span>
+<span style="color: #e45649;">import</span> matplotlib
+matplotlib.use(<span style="color: #50a14f;">'Agg'</span>)
+
+<span style="color: #e45649;">from</span> matplotlib <span style="color: #e45649;">import</span> pyplot <span style="color: #e45649;">as</span> plt
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #6a1868;">fig</span> = plt.figure()
+
+<span style="color: #6a1868;">xs</span> = [d.toordinal() <span style="color: #e45649;">for</span> d <span style="color: #e45649;">in</span> DATETIMES]                         <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Convert datetimes to numbers</span>
+<span style="color: #6a1868;">xticks</span> = [datetime.strftime(d, <span style="color: #50a14f;">'%Y/%m/%d'</span>) <span style="color: #e45649;">for</span> d <span style="color: #e45649;">in</span> DATETIMES]  <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Convert datetimes to strings</span>
+
+plt.scatter(             <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Call the scatterplot function</span>
+    x=xs,                <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">With the ordinal dates as x values</span>
+    y=MOOD_LEVELS,       <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">And the mood levels as y values</span>
+)
+plt.xticks(xs[::<span style="color: #da8548; font-weight: bold;">56</span>], xticks[::<span style="color: #da8548; font-weight: bold;">56</span>], rotation=<span style="color: #da8548; font-weight: bold;">90</span>)    <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Set the x ticks to every 56th date</span>
+plt.yticks(<span style="color: #a626a4;">range</span>(<span style="color: #da8548; font-weight: bold;">1</span>,<span style="color: #da8548; font-weight: bold;">6</span>), <span style="color: #a626a4;">range</span>(<span style="color: #da8548; font-weight: bold;">1</span>,<span style="color: #da8548; font-weight: bold;">6</span>))                 <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Set the y ticks to 1-5 (range excludes last val)</span>
+plt.title(<span style="color: #50a14f;">'Scatter Plot of Mood Levels over Time'</span>) <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Set the title</span>
+plt.ylabel(<span style="color: #50a14f;">'Mood Level'</span>)                           <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Set the y axis label</span>
+plt.xlabel(<span style="color: #50a14f;">'Date'</span>)                                 <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Set the x axis label</span>
+plt.tight_layout()                                 <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Squeeze the layout</span>
+</pre>
+</div>
+
+<pre class="example">
+Text(0.5, -42.22777777777778, 'Date')
+</pre>
+
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Save the figure - don't worry about this part, this is for our use!</span>
+<span style="color: #6a1868;">PLOT_FILENAME</span> = <span style="color: #50a14f;">"mood-diary-plot.png"</span>
+plt.savefig(PLOT_FILENAME)
+PLOT_FILENAME
+</pre>
+</div>
+
+
+<div class="figure">
+<p><img src="mood-diary-plot.png" alt="mood-diary-plot.png" />
+</p>
+</div>
+
+<p>
+Although the plot itself isn't a very good choice of representing the data, we
+can see a clear shift roughly aroud April 2021 in Kennedy's mood. There's a lot
+going on in the plot code if you haven't used <code>matplotlib</code> before - but it makes
+scripting plots very easy, and very easily modifiable. The plotting interface is
+very well documented, so that would be our recommendation if you have trouble as
+a first port of call (or, Google! Many people have used matplotlib before and
+will have likely encountered the same problems as you have).
+</p>
+
+<p>
+Can we represent this data in a nicer graphical format? There are some
+interesting ways we can plot categorical, ordinal data over a time series. We'll
+choose a very simple way - a rolling average with a width of 28 days. We can
+already see a trend, but given that the data only has 5 levels, the trend would
+probably be easier to visualise with smoothing. We can also see there appears to
+be cyclical changes in mood given that it appears to go up and down a lot,
+though the period of this cycle appears to be quite short.
+</p>
+
+<p>
+<a href="https://pandas.pydata.org/">Pandas</a> is a data analysis library for Python and one that tends to get a lot of
+praise in the data science community as one of Python's premier strengths.
+Pandas makes a lot of basic data analysis operations very simple by abstracting
+them out into callable functions. Pandas can also encapsulate data into a
+spreadsheet-like data structure, known as <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html">Data Frames</a>. Data Frames are a bit
+like a transparent, (more-easily) programmable Excel document.
+</p>
+
+<p>
+Again, if you are using vanilla Python, you'll need to install <code>Pandas</code> through
+<code>pip</code>. If you are using Anaconda, it should already be included.
+</p>
+
+<p>
+Let's import Pandas and load the data into a dataframe. By convention, pandas is
+often imported in to Python under a shorter name, <code>pd</code>.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #e45649;">import</span> pandas <span style="color: #e45649;">as</span> pd
+
+<span style="color: #6a1868;">DATAFRAME</span> = pd.DataFrame(                  <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Create a dataframe</span>
+    <span style="color: #a626a4;">zip</span>(DATETIMES, MOOD_LEVELS),           <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">With the data</span>
+    columns=[<span style="color: #50a14f;">'datetimes'</span>, <span style="color: #50a14f;">'mood_levels'</span>],  <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">With these column names</span>
+)
+DATAFRAME.set_index(<span style="color: #50a14f;">'datetimes'</span>, inplace=<span style="color: #b751b6;">True</span>) <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Set the index to datetime column</span>
+</pre>
+</div>
+
+<p>
+Pandas will convert a list of lists into a 2D spreadsheet-like DataFrame - we
+use <code>zip</code> here to "zip" the two lists <code>DATETIMES</code> and <code>MOOD_LEVELS</code> into a list
+of lists. Here's the first 3 rows of <code>DATAFRAME</code>:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">DATAFRAME[:<span style="color: #da8548; font-weight: bold;">3</span>]
+</pre>
+</div>
+
+<pre class="example">
+            mood_levels
+datetimes
+2020-01-01            2
+2020-01-02            1
+2020-01-03            3
+</pre>
+
+
+<p>
+Pandas already implements a <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.rolling.html">rolling</a> function to do rolling window calculations,
+which we can apply to calculate a rolling average.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #6a1868;">ROLLED</span> = DATAFRAME.rolling(  <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Perform a rolling window calculation</span>
+    window=<span style="color: #da8548; font-weight: bold;">28</span>,               <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">With a window size of 28 (days)</span>
+    center=<span style="color: #b751b6;">True</span>,             <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Centered at each day</span>
+).mean()                     <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">And take the mean of each window</span>
+</pre>
+</div>
+
+<p>
+Let's look at the results at the 14th to 17th index. The first 14 values will be
+<code>NaN</code> because the a window of width 28 can only start fitting into the data at
+the 14th index.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">ROLLED[<span style="color: #da8548; font-weight: bold;">14</span>:<span style="color: #da8548; font-weight: bold;">17</span>]
+</pre>
+</div>
+
+<pre class="example">
+            mood_levels
+datetimes
+2020-01-15     2.607143
+2020-01-16     2.571429
+2020-01-17     2.607143
+</pre>
+
+
+<p>
+Each of these values now represents the average mood level of in the 14 days
+prior to and 14 days after the listed date.
+</p>
+
+<p>
+Pandas exposes a very convenient <a href="https://pandas.pydata.org/pandas-docs/version/0.22/generated/pandas.DataFrame.plot.html">plot method on Data Frames</a> which means you can
+plot the Data Frame directly. Let's use it.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #6a1868;">fig</span> = plt.figure() <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Create a new figure</span>
+
+<span style="color: #6a1868;">ax</span> = ROLLED.plot(  <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Plot the dataframe</span>
+    kind=<span style="color: #50a14f;">'line'</span>,   <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">As a line plot</span>
+    title=<span style="color: #50a14f;">'Rolling Mood Level over Time (window = 28d)'</span>,
+    rot=<span style="color: #da8548; font-weight: bold;">90</span>,        <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Rotate the xlabels</span>
+)
+
+ax.set_xlabel(<span style="color: #50a14f;">'Central Date'</span>)
+ax.set_ylabel(<span style="color: #50a14f;">'Average Mood Level during Window'</span>)
+plt.tight_layout()
+</pre>
+</div>
+
+<pre class="example">
+Text(42.597222222222214, 0.5, 'Average Mood Level during Window')
+</pre>
+
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Save the figure - don't worry about this part, this is for our use!</span>
+<span style="color: #6a1868;">PLOT_FILENAME</span> = <span style="color: #50a14f;">"mood-diary-plot-rolling.png"</span>
+plt.savefig(PLOT_FILENAME)
+PLOT_FILENAME
+</pre>
+</div>
+
+
+
+<div class="figure">
+<p><img src="mood-diary-plot-rolling.png" alt="mood-diary-plot-rolling.png" />
+</p>
+</div>
+
+<p>
+With this, the cyclical nature of the graph is clear and he jump in mood level
+is also made very apparent. We could choose different windows - for example, to
+smooth out each cycle - but already, it should be very clear that Kennedy's mood
+level pattern changed in approximately <b>April 2021</b>.
+</p>
+
+<p>
+This has been quite a long discussion of how to get here - but once you get used
+to it, this sort of task becomes very quick. We haven't used very complicated
+means of processing the data, and were able to plot it almost directly once we'd
+processed the text.
+</p>
+
+</details>
+</div>
+
+<div id="outline-container-orgafe6ed9" class="outline-3">
+<h3 id="orgafe6ed9">Data Generation</h3>
+<div class="outline-text-3" id="text-orgafe6ed9">
+<details><summary>Click here to show the data generation code.</summary>
+<blockquote>
+<p>
+This data was generated with the <a href="https://www.jsoftware.com/#/">J programming language</a>. J is a descendent of
+the <a href="https://en.wikipedia.org/wiki/APL_(programming_language)">APL programming language family</a>, infamous for being terse and apparently
+unreadable. APL and J make very heavy use of symbols to expose useful primitive
+operations on arrays - similar in many ways to Matlab or Python's Numpy. Though
+the symbolism may look like obfuscation, it's not intentional. One of the core
+ideas of the APL family is about operating on collections of data as a whole
+rather than using conditional or looping structures, and the notation is simply
+a way to express these operations compactly.
+</p>
+
+<p>
+If you are interested in the APL/J/K family of languages, then we are always
+very happy to have a chat to explain more about them. K (similar to J) is
+apparently used quite heavily in the financial industry - so even though the
+languages may appear unreadable, they <i>are</i> used in real-life.
+</p>
+</blockquote>
+
+<p>
+First, we define the qualitative words and their groupings into mood levels.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-j"><span style="color: #6a1868;">Level1</span> <span style="color: #000000;">=:</span> <span style="color: #50a14f;">'DEPRESSED'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'VERY LOW'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'HOPELESS'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'BLEAK'</span>
+<span style="color: #6a1868;">Level2</span> <span style="color: #000000;">=:</span> <span style="color: #50a14f;">'LOW'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'SAD'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'TEARY'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'FLAT'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'TIRED'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'STRESSED'</span>
+<span style="color: #6a1868;">Level3</span> <span style="color: #000000;">=:</span> <span style="color: #50a14f;">'SO-SO'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'OKAY'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'FINE'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'NOT BAD'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'SATISFIED'</span>
+<span style="color: #6a1868;">Level4</span> <span style="color: #000000;">=:</span> <span style="color: #50a14f;">'GOOD'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'REFRESHED'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'HAPPY'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'JOYFUL'</span>
+<span style="color: #6a1868;">Level5</span> <span style="color: #000000;">=:</span> <span style="color: #50a14f;">'ON TOP OF THE WORLD'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'ECSTATIC'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'ELATED'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'ELEVATED'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'AMAZING'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'BRILLIANT'</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'FANTASTIC'</span>
+<span style="color: #6a1868;">Levels</span> <span style="color: #000000;">=:</span> Level1<span style="color: #ff0000;">;</span>Level2<span style="color: #ff0000;">;</span>Level3<span style="color: #ff0000;">;</span>Level4<span style="color: #ff0000;">;&lt;</span>Level5
+</pre>
+</div>
+
+<p>
+Next, we define important dates for the data.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-j"><span style="color: #6a1868;">StartDate</span> <span style="color: #000000;">=:</span> 2020 1 1
+<span style="color: #6a1868;">EndDate</span> <span style="color: #000000;">=:</span> 2022 1 1
+<span style="color: #6a1868;">ChangeDate</span> <span style="color: #000000;">=:</span> 2021 4 3
+</pre>
+</div>
+
+<p>
+We will model the mood with a low-amplitude sine wave with random perturbations, then
+round it to one of the five levels. We'll give the sine function a period of 4
+weeks and an amplitude of 1.5, and translate it so that it averages around
+Level2 (or index 1 of the <code>Levels</code> array). We'll also add some random noise as a
+uniform distribution between -1 and 1, and make sure to keep it between 0 and 4.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-j"><span style="color: #6a1868;">mood1</span> <span style="color: #000000;">=:</span> dyad <span style="color: #ff0000;">:</span><span style="color: #50a14f;">'&lt;.0&gt;.(1-~2*x)+1+1.5*1&amp;o.28%~o.y'</span>
+</pre>
+</div>
+
+<p>
+After <code>ChangeDate</code>, we'll translate the the mood so it averages around Level 4
+(index 3), with an amplitude of 0.8 and lower random noise.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-j"><span style="color: #6a1868;">mood2</span> <span style="color: #000000;">=:</span> dyad <span style="color: #ff0000;">:</span><span style="color: #50a14f;">'&lt;.5&lt;.0&gt;.(0.5-~x)+3+0.8*1&amp;o.28%~o.y'</span>
+</pre>
+</div>
+
+<p>
+We'll now create the numerical data.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-j"><span style="color: #6a1868;">NumData1</span> <span style="color: #000000;">=:</span> (<span style="color: #ff0000;">?</span><span style="color: #0000ff;">@:</span><span style="color: #ff0000;">#</span><span style="color: #0000ff;">&amp;</span>0 mood1 <span style="color: #ff0000;">i.</span>) ChangeDate(todayno<span style="color: #0000ff;">@</span><span style="color: #ff0000;">[-</span>todayno<span style="color: #0000ff;">@</span><span style="color: #ff0000;">]</span>)StartDate
+<span style="color: #6a1868;">NumData2</span> <span style="color: #000000;">=:</span> (<span style="color: #ff0000;">?</span><span style="color: #0000ff;">@:</span><span style="color: #ff0000;">#</span><span style="color: #0000ff;">&amp;</span>0 mood2 <span style="color: #ff0000;">i.</span>) EndDate(todayno<span style="color: #0000ff;">@</span><span style="color: #ff0000;">[-</span>todayno<span style="color: #0000ff;">@</span><span style="color: #ff0000;">]</span>)ChangeDate
+<span style="color: #6a1868;">NumData</span> <span style="color: #000000;">=:</span> NumData1<span style="color: #ff0000;">,</span>NumData2
+</pre>
+</div>
+
+<p>
+Next, we define a function to index into levels using <code>NumData</code> and choose a
+random word at the corresponding level.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-j"><span style="color: #6a1868;">pick</span> <span style="color: #000000;">=:</span> <span style="color: #ff0000;">[:</span>(<span style="color: #ff0000;">?</span><span style="color: #0000ff;">@</span><span style="color: #ff0000;">#{]</span>)<span style="color: #ff0000;">&gt;</span><span style="color: #0000ff;">@:</span><span style="color: #ff0000;">{</span><span style="color: #0000ff;">&amp;</span>Levels
+</pre>
+</div>
+
+<p>
+We can then convert the numerical data into boxed descriptors.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-j"><span style="color: #6a1868;">WordData</span> <span style="color: #000000;">=:</span> <span style="color: #ff0000;">;</span> pick each NumData
+</pre>
+</div>
+
+<p>
+And convert the dates to corresponding strings.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-j"><span style="color: #6a1868;">Days</span> <span style="color: #000000;">=:</span> (todayno StartDate)<span style="color: #0000ff;">&amp;</span><span style="color: #ff0000;">+</span> <span style="color: #ff0000;">i.</span> EndDate(todayno<span style="color: #0000ff;">@</span><span style="color: #ff0000;">[-</span>todayno<span style="color: #0000ff;">@</span><span style="color: #ff0000;">]</span>)StartDate
+<span style="color: #6a1868;">pad</span> <span style="color: #000000;">=:</span> 4 2 2<span style="color: #0000ff;">&amp;</span>(((<span style="color: #ff0000;">[</span><span style="color: #0000ff;">@</span>(<span style="color: #50a14f;">'0'</span><span style="color: #ff0000;">#</span><span style="color: #00ff00;">~</span><span style="color: #ff0000;">[-#</span><span style="color: #0000ff;">@</span><span style="color: #ff0000;">]</span>)<span style="color: #ff0000;">,]</span>) <span style="color: #ff0000;">":</span><span style="color: #0000ff;">@</span><span style="color: #ff0000;">]</span>) each)
+<span style="color: #6a1868;">Dates</span> <span style="color: #000000;">=:</span> (pad<span style="color: #0000ff;">@</span>todate) each Days
+</pre>
+</div>
+
+<p>
+Finally, we define a function to format the data.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-j"><span style="color: #6a1868;">fmtword</span> <span style="color: #000000;">=:</span> (<span style="color: #50a14f;">'I feel '</span><span style="color: #ff0000;">,</span>LF<span style="color: #ff0000;">,</span><span style="color: #00ff00;">~</span><span style="color: #50a14f;">' today.'</span><span style="color: #ff0000;">,</span><span style="color: #00ff00;">~</span><span style="color: #ff0000;">]</span>)
+<span style="color: #6a1868;">fmtdate</span> <span style="color: #000000;">=:</span> 1<span style="color: #ff0000;">}.</span><span style="color: #0000ff;">&amp;:</span><span style="color: #ff0000;">;</span><span style="color: #50a14f;">'/'</span><span style="color: #ff0000;">,</span>each<span style="color: #ff0000;">]</span>
+<span style="color: #6a1868;">fmt</span> <span style="color: #000000;">=:</span> dyad <span style="color: #ff0000;">:</span><span style="color: #50a14f;">'(fmtdate x),''    '',(fmtword y)'</span>
+</pre>
+</div>
+
+<p>
+We then format the data and save it.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-j"><span style="color: #6a1868;">DataString</span> <span style="color: #000000;">=:</span> <span style="color: #ff0000;">;</span> Dates fmt each WordData
+DataString fwrite <span style="color: #ff0000;">&lt;</span> <span style="color: #50a14f;">'input-mood-diary.txt'</span>
+</pre>
+</div>
+</details>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

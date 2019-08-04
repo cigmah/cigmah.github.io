@@ -223,10 +223,6 @@ blockquote {
   color: var(--background);
 }
 
-#sitemap-toggle:hover ~ #sitemap{
-  display: block;
-}
-
 code {
   background: var(--background-code);
   border-radius: 1px;
@@ -234,6 +230,16 @@ code {
   padding-right: 0.1em;
   font-family: "Monaco", "Consolas", monospace !important;
   font-size: 0.8rem;
+}
+
+pre {
+  border: var(--foreground-lesser);
+  overflow: auto;
+  box-shadow: 0 0 10px 1px var(--background);
+  border-radius: 2px;
+  overflow: auto !important;
+  font-family: "Monaco", "Consolas", monospace !important;
+  font-size: 0.6rem;
 }
 
 .src {
@@ -295,6 +301,12 @@ details {
 
 
 /* MOBILE */
+@media only screen and (min-width:720px) {
+  #sitemap-toggle:hover ~ #sitemap{
+    display: block;
+  }
+
+}
 
 @media only screen and (max-width: 720px) {
 
@@ -392,7 +404,7 @@ details {
     height: 100vh;
     bottom: auto;
     max-width: none;
-    font-size: 1.2em;
+    font-size: 1em;
     padding-left: 0;
     padding-bottom: 4em;
   }
