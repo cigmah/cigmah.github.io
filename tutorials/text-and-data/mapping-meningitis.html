@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-08-04 Sun 19:33 -->
+<!-- 2019-08-05 Mon 20:28 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>5 Mapping Meningitis</title>
@@ -357,16 +357,22 @@ problem.
 <h2 id="org759edd7">Solution</h2>
 <div class="outline-text-2" id="text-org759edd7">
 <details><summary>Click here to show the answer.</summary>
+
 <p>
-Here's a plot of cases by latitude and longitude. We haven't put a legend on
-here yet, but red indicates bacterial meningitis, green indicates viral, and
-blue indicates fungal (grey indicates none). Transparencies indicate time - the
-earliest cases are most transparent, later cases are more opaque.
+<span class="timestamp-wrapper"><span class="timestamp">[2019-08-05 Mon 17:03] </span></span> - Updated with GIF.
+</p>
+
+<p>
+Here's a plot of cases by latitude and longitude as an animated GIF with steps
+of one week. We haven't put a legend on here yet, but red indicates bacterial
+meningitis, green indicates viral, and blue indicates fungal (grey indicates
+none). Transparencies indicate time - the earliest cases are most transparent,
+later cases are more opaque.
 </p>
 
 
 <div class="figure">
-<p><img src="./mapping-meningitis.png" alt="mapping-meningitis.png" />
+<p><img src="./mapping-meningitis.gif" alt="mapping-meningitis.gif" />
 </p>
 </div>
 
@@ -387,126 +393,158 @@ it stands at the moment. A more detailed explanation will appear shortly.
 </blockquote>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #6a1868;">SEPARATOR</span> = <span style="color: #50a14f;">'-'</span> * <span style="color: #da8548; font-weight: bold;">80</span>
+<pre class="src src-python"><span style="color: #ff79c6;">import</span> re
+<span style="color: #ff79c6;">import</span> pandas <span style="color: #ff79c6;">as</span> pd
+<span style="color: #ff79c6;">import</span> PIL
+<span style="color: #ff79c6;">import</span> glob
+<span style="color: #ff79c6;">from</span> enum <span style="color: #ff79c6;">import</span> Enum
+<span style="color: #ff79c6;">from</span> datetime <span style="color: #ff79c6;">import</span> datetime, timedelta
+<span style="color: #ff79c6;">from</span> matplotlib <span style="color: #ff79c6;">import</span> pyplot <span style="color: #ff79c6;">as</span> plt
+<span style="color: #ff79c6;">from</span> matplotlib <span style="color: #ff79c6;">import</span> colors
+<span style="color: #ff79c6;">from</span> typing <span style="color: #ff79c6;">import</span> List, Tuple
 
-<span style="color: #e45649;">with</span> <span style="color: #a626a4;">open</span>(<span style="color: #50a14f;">'input-mapping-meningitis.txt'</span>) <span style="color: #e45649;">as</span> infile:
-    <span style="color: #6a1868;">RAW</span> = infile.read().split(SEPARATOR)
+<span style="color: #f8f8f2;">SEPARATOR</span> = <span style="color: #f1fa8c;">'-'</span> * <span style="color: #ff5555; font-weight: bold;">80</span>
 
-<span style="color: #e45649;">import</span> re
+<span style="color: #ff79c6;">with</span> <span style="color: #ffb86c;">open</span>(<span style="color: #f1fa8c;">'input-mapping-meningitis.txt'</span>) <span style="color: #ff79c6;">as</span> infile:
+    <span style="color: #f8f8f2;">RAW</span> = infile.read().split(SEPARATOR)
 
-<span style="color: #6a1868;">MATCH_RE</span> = (
-    <span style="color: #50a14f;">'ID:\s+(\d+).*'</span>
-    <span style="color: #50a14f;">'ON:\s+\((.*?),(.*?)\).*'</span>
-    <span style="color: #50a14f;">'MP:\s+([\d\-]*).*'</span>
-    <span style="color: #50a14f;">'NT:\s+([\.\d]*).*'</span>
-    <span style="color: #50a14f;">'\((.*)\).*'</span>
-    <span style="color: #50a14f;">'SE:\s+([\.\d]*).*'</span>
-    <span style="color: #50a14f;">'TE:\s+([\.\d]*).*'</span>
-    <span style="color: #50a14f;">'IN:\s+([\.\d]*).*'</span>
+<span style="color: #f8f8f2;">MATCH_RE</span> = (
+    <span style="color: #f1fa8c;">'ID:\s+(\d+).*'</span>
+    <span style="color: #f1fa8c;">'ON:\s+\((.*?),(.*?)\).*'</span>
+    <span style="color: #f1fa8c;">'MP:\s+([\d\-]*).*'</span>
+    <span style="color: #f1fa8c;">'NT:\s+([\.\d]*).*'</span>
+    <span style="color: #f1fa8c;">'\((.*)\).*'</span>
+    <span style="color: #f1fa8c;">'SE:\s+([\.\d]*).*'</span>
+    <span style="color: #f1fa8c;">'TE:\s+([\.\d]*).*'</span>
+    <span style="color: #f1fa8c;">'IN:\s+([\.\d]*).*'</span>
 )
 
-<span style="color: #6a1868;">MATCHER</span> = re.<span style="color: #a626a4;">compile</span>(MATCH_RE, re.DOTALL)
+<span style="color: #f8f8f2;">MATCHER</span> = re.<span style="color: #ffb86c;">compile</span>(MATCH_RE, re.DOTALL)
 
-<span style="color: #6a1868;">DATA</span> = [MATCHER.findall(record)[<span style="color: #da8548; font-weight: bold;">0</span>] <span style="color: #e45649;">for</span> record <span style="color: #e45649;">in</span> RAW]
+<span style="color: #f8f8f2;">DATA</span> = [MATCHER.findall(record)[<span style="color: #ff5555; font-weight: bold;">0</span>] <span style="color: #ff79c6;">for</span> record <span style="color: #ff79c6;">in</span> RAW]
 
-<span style="color: #e45649;">import</span> pandas <span style="color: #e45649;">as</span> pd
-
-<span style="color: #e45649;">from</span> datetime <span style="color: #e45649;">import</span> datetime
-
-<span style="color: #6a1868;">DATAFRAME</span> = pd.DataFrame(
+<span style="color: #f8f8f2;">DATAFRAME</span> = pd.DataFrame(
     DATA,
     columns=[
-        <span style="color: #50a14f;">'patient_id'</span>,
-        <span style="color: #50a14f;">'latitude'</span>,
-        <span style="color: #50a14f;">'longitude'</span>,
-        <span style="color: #50a14f;">'date'</span>,
-        <span style="color: #50a14f;">'cell_count'</span>,
-        <span style="color: #50a14f;">'predominance'</span>,
-        <span style="color: #50a14f;">'glucose'</span>,
-        <span style="color: #50a14f;">'lactate'</span>,
-        <span style="color: #50a14f;">'protein'</span>,
+        <span style="color: #f1fa8c;">'patient_id'</span>,
+        <span style="color: #f1fa8c;">'latitude'</span>,
+        <span style="color: #f1fa8c;">'longitude'</span>,
+        <span style="color: #f1fa8c;">'date'</span>,
+        <span style="color: #f1fa8c;">'cell_count'</span>,
+        <span style="color: #f1fa8c;">'predominance'</span>,
+        <span style="color: #f1fa8c;">'glucose'</span>,
+        <span style="color: #f1fa8c;">'lactate'</span>,
+        <span style="color: #f1fa8c;">'protein'</span>,
     ]
 )
 
-<span style="color: #6a1868;">DATAFRAME</span> = DATAFRAME.astype({
-    <span style="color: #50a14f;">'latitude'</span>: <span style="color: #a626a4;">float</span>,
-    <span style="color: #50a14f;">'longitude'</span>: <span style="color: #a626a4;">float</span>,
-    <span style="color: #50a14f;">'cell_count'</span>: <span style="color: #a626a4;">float</span>,
-    <span style="color: #50a14f;">'glucose'</span>: <span style="color: #a626a4;">float</span>,
-    <span style="color: #50a14f;">'lactate'</span>: <span style="color: #a626a4;">float</span>,
-    <span style="color: #50a14f;">'protein'</span>: <span style="color: #a626a4;">float</span>
+<span style="color: #f8f8f2;">DATAFRAME</span> = DATAFRAME.astype({
+    <span style="color: #f1fa8c;">'latitude'</span>: <span style="color: #ffb86c;">float</span>,
+    <span style="color: #f1fa8c;">'longitude'</span>: <span style="color: #ffb86c;">float</span>,
+    <span style="color: #f1fa8c;">'cell_count'</span>: <span style="color: #ffb86c;">float</span>,
+    <span style="color: #f1fa8c;">'glucose'</span>: <span style="color: #ffb86c;">float</span>,
+    <span style="color: #f1fa8c;">'lactate'</span>: <span style="color: #ffb86c;">float</span>,
+    <span style="color: #f1fa8c;">'protein'</span>: <span style="color: #ffb86c;">float</span>
 })
 
-<span style="color: #6a1868;">DATAFRAME</span>[<span style="color: #50a14f;">'date'</span>] = pd.to_datetime(DATAFRAME[<span style="color: #50a14f;">'date'</span>])
+<span style="color: #f8f8f2;">DATAFRAME</span>[<span style="color: #f1fa8c;">'date'</span>] = pd.to_datetime(DATAFRAME[<span style="color: #f1fa8c;">'date'</span>])
 
-<span style="color: #e45649;">from</span> enum <span style="color: #e45649;">import</span> Enum
+<span style="color: #ff79c6;">class</span> <span style="color: #61bfff;">ResultType</span>(Enum):
+    <span style="color: #f8f8f2;">NOT_MENINGITIS</span> = <span style="color: #ff5555; font-weight: bold;">0</span>
+    <span style="color: #f8f8f2;">BACTERIAL</span> = <span style="color: #ff5555; font-weight: bold;">1</span>
+    <span style="color: #f8f8f2;">VIRAL</span> = <span style="color: #ff5555; font-weight: bold;">2</span>
+    <span style="color: #f8f8f2;">FUNGAL</span> = <span style="color: #ff5555; font-weight: bold;">3</span>
 
-<span style="color: #e45649;">class</span> <span style="color: #986801;">ResultType</span>(Enum):
-    <span style="color: #6a1868;">NOT_MENINGITIS</span> = <span style="color: #da8548; font-weight: bold;">0</span>
-    <span style="color: #6a1868;">BACTERIAL</span> = <span style="color: #da8548; font-weight: bold;">1</span>
-    <span style="color: #6a1868;">VIRAL</span> = <span style="color: #da8548; font-weight: bold;">2</span>
-    <span style="color: #6a1868;">FUNGAL</span> = <span style="color: #da8548; font-weight: bold;">3</span>
+<span style="color: #6272a4;"># </span><span style="color: #6272a4;">Simplified, based on RCPA manual</span>
+<span style="color: #ff79c6;">def</span> <span style="color: #50fa7b;">classify</span>(row) -&gt; ResultType:
+    <span style="color: #ff79c6;">if</span> row.cell_count &gt; <span style="color: #ff5555; font-weight: bold;">5</span>:
+        <span style="color: #ff79c6;">if</span> row.glucose &lt; <span style="color: #ff5555; font-weight: bold;">2.8</span>:
+            <span style="color: #ff79c6;">if</span> <span style="color: #f1fa8c;">'polymorphonuclear'</span> <span style="color: #ff79c6;">in</span> row.predominance:
+                <span style="color: #ff79c6;">return</span> ResultType.BACTERIAL
+            <span style="color: #ff79c6;">elif</span> <span style="color: #f1fa8c;">'lymphocytic'</span> <span style="color: #ff79c6;">in</span> row.predominance:
+                <span style="color: #ff79c6;">return</span> ResultType.FUNGAL
+            <span style="color: #ff79c6;">else</span>:
+                <span style="color: #ff79c6;">return</span> ResultType.NOT_MENINGITIS
+        <span style="color: #ff79c6;">else</span>:
+            <span style="color: #ff79c6;">if</span> <span style="color: #f1fa8c;">'lymphocytic'</span> <span style="color: #ff79c6;">in</span> row.predominance:
+                <span style="color: #ff79c6;">return</span> ResultType.VIRAL
+            <span style="color: #ff79c6;">else</span>:
+                <span style="color: #ff79c6;">return</span> ResultType.NOT_MENINGITIS
+    <span style="color: #ff79c6;">else</span>:
+        <span style="color: #ff79c6;">return</span> ResultType.NOT_MENINGITIS
 
-<span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Simplified, based on RCPA manual</span>
-<span style="color: #e45649;">def</span> <span style="color: #a626a4;">classify</span>(row):
-    <span style="color: #e45649;">if</span> row.cell_count &gt; <span style="color: #da8548; font-weight: bold;">5</span>:
-        <span style="color: #e45649;">if</span> row.glucose &lt; <span style="color: #da8548; font-weight: bold;">2.8</span>:
-            <span style="color: #e45649;">if</span> <span style="color: #50a14f;">'polymorphonuclear'</span> <span style="color: #e45649;">in</span> row.predominance:
-                <span style="color: #e45649;">return</span> ResultType.BACTERIAL
-            <span style="color: #e45649;">elif</span> <span style="color: #50a14f;">'lymphocytic'</span> <span style="color: #e45649;">in</span> row.predominance:
-                <span style="color: #e45649;">return</span> ResultType.FUNGAL
-            <span style="color: #e45649;">else</span>:
-                <span style="color: #e45649;">return</span> ResultType.NOT_MENINGITIS
-        <span style="color: #e45649;">else</span>:
-            <span style="color: #e45649;">if</span> <span style="color: #50a14f;">'lymphocytic'</span> <span style="color: #e45649;">in</span> row.predominance:
-                <span style="color: #e45649;">return</span> ResultType.VIRAL
-            <span style="color: #e45649;">else</span>:
-                <span style="color: #e45649;">return</span> ResultType.NOT_MENINGITIS
-    <span style="color: #e45649;">else</span>:
-        <span style="color: #e45649;">return</span> ResultType.NOT_MENINGITIS
+<span style="color: #f8f8f2;">DATAFRAME</span>[<span style="color: #f1fa8c;">'classification'</span>] = DATAFRAME.<span style="color: #ffb86c;">apply</span>(classify, axis=<span style="color: #ff5555; font-weight: bold;">1</span>)
 
-<span style="color: #6a1868;">DATAFRAME</span>[<span style="color: #50a14f;">'classification'</span>] = DATAFRAME.<span style="color: #a626a4;">apply</span>(classify, axis=<span style="color: #da8548; font-weight: bold;">1</span>)
+<span style="color: #f8f8f2;">ORDINAL_DAYS</span> = DATAFRAME[<span style="color: #f1fa8c;">"date"</span>].<span style="color: #ffb86c;">apply</span>(<span style="color: #ff79c6;">lambda</span> x: x.toordinal())
+<span style="color: #f8f8f2;">INTENSITIES</span> = (ORDINAL_DAYS - <span style="color: #ffb86c;">min</span>(ORDINAL_DAYS)) / <span style="color: #ffb86c;">max</span>(ORDINAL_DAYS - <span style="color: #ffb86c;">min</span>(ORDINAL_DAYS))
 
-<span style="color: #e45649;">from</span> matplotlib <span style="color: #e45649;">import</span> pyplot <span style="color: #e45649;">as</span> plt
-<span style="color: #e45649;">from</span> matplotlib <span style="color: #e45649;">import</span> colors
+<span style="color: #ff79c6;">def</span> <span style="color: #50fa7b;">result_type_to_color</span>(result_type: ResultType) -&gt; Tuple[<span style="color: #ffb86c;">float</span>, <span style="color: #ffb86c;">float</span>, <span style="color: #ffb86c;">float</span>]:
+    <span style="color: #ff79c6;">if</span> result_type == ResultType.NOT_MENINGITIS:
+        <span style="color: #ff79c6;">return</span> (<span style="color: #ff5555; font-weight: bold;">0</span>, <span style="color: #ff5555; font-weight: bold;">0</span>, <span style="color: #ff5555; font-weight: bold;">0.7</span>)
+    <span style="color: #ff79c6;">elif</span> result_type == ResultType.BACTERIAL:
+        <span style="color: #ff79c6;">return</span> (<span style="color: #ff5555; font-weight: bold;">0</span>, <span style="color: #ff5555; font-weight: bold;">0.8</span>, <span style="color: #ff5555; font-weight: bold;">0.8</span>)
+    <span style="color: #ff79c6;">elif</span> result_type == ResultType.VIRAL:
+        <span style="color: #ff79c6;">return</span> (<span style="color: #ff5555; font-weight: bold;">0.33</span>, <span style="color: #ff5555; font-weight: bold;">0.8</span>, <span style="color: #ff5555; font-weight: bold;">0.8</span>)
+    <span style="color: #ff79c6;">else</span>:
+        <span style="color: #ff79c6;">return</span> (<span style="color: #ff5555; font-weight: bold;">0.66</span>, <span style="color: #ff5555; font-weight: bold;">0.8</span>, <span style="color: #ff5555; font-weight: bold;">0.8</span>)
 
-<span style="color: #6a1868;">ORDINAL_DAYS</span> = DATAFRAME[<span style="color: #50a14f;">"date"</span>].<span style="color: #a626a4;">apply</span>(<span style="color: #e45649;">lambda</span> x: x.toordinal())
-<span style="color: #6a1868;">INTENSITIES</span> = (ORDINAL_DAYS - <span style="color: #a626a4;">min</span>(ORDINAL_DAYS)) / <span style="color: #a626a4;">max</span>(ORDINAL_DAYS - <span style="color: #a626a4;">min</span>(ORDINAL_DAYS))
+<span style="color: #ff79c6;">def</span> <span style="color: #50fa7b;">make_colors</span>(cases: pd.DataFrame) -&gt; List[Tuple[<span style="color: #ffb86c;">float</span>, <span style="color: #ffb86c;">float</span>, <span style="color: #ffb86c;">float</span>]]:
+    <span style="color: #ff79c6;">return</span> [
+        colors.hsv_to_rgb(result_type_to_color(result))
+        <span style="color: #ff79c6;">for</span> result <span style="color: #ff79c6;">in</span> cases[<span style="color: #f1fa8c;">"classification"</span>]
+    ]
 
-<span style="color: #e45649;">def</span> <span style="color: #a626a4;">result_type_to_color</span>(result_type):
-    <span style="color: #e45649;">if</span> result_type == ResultType.NOT_MENINGITIS:
-        <span style="color: #e45649;">return</span> (<span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">0.7</span>)
-    <span style="color: #e45649;">elif</span> result_type == ResultType.BACTERIAL:
-        <span style="color: #e45649;">return</span> (<span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">0.8</span>, <span style="color: #da8548; font-weight: bold;">0.8</span>)
-    <span style="color: #e45649;">elif</span> result_type == ResultType.VIRAL:
-        <span style="color: #e45649;">return</span> (<span style="color: #da8548; font-weight: bold;">0.33</span>, <span style="color: #da8548; font-weight: bold;">0.8</span>, <span style="color: #da8548; font-weight: bold;">0.8</span>)
-    <span style="color: #e45649;">else</span>:
-        <span style="color: #e45649;">return</span> (<span style="color: #da8548; font-weight: bold;">0.66</span>, <span style="color: #da8548; font-weight: bold;">0.8</span>, <span style="color: #da8548; font-weight: bold;">0.8</span>)
+<span style="color: #f8f8f2;">MIN_LAT</span>, <span style="color: #f8f8f2;">MAX_LAT</span> = DATAFRAME.latitude.<span style="color: #ffb86c;">min</span>(), DATAFRAME.latitude.<span style="color: #ffb86c;">max</span>()
+<span style="color: #f8f8f2;">MIN_LONG</span>, <span style="color: #f8f8f2;">MAX_LONG</span> = DATAFRAME.longitude.<span style="color: #ffb86c;">min</span>(), DATAFRAME.longitude.<span style="color: #ffb86c;">max</span>()
 
-<span style="color: #6a1868;">COLORS</span> = [
-    colors.hsv_to_rgb(result_type_to_color(result))
-    <span style="color: #e45649;">for</span> result <span style="color: #e45649;">in</span> DATAFRAME[<span style="color: #50a14f;">"classification"</span>]
-]
+<span style="color: #f8f8f2;">DATE_MIN</span> = DATAFRAME.date.<span style="color: #ffb86c;">min</span>()
+<span style="color: #f8f8f2;">DATE_MAX</span> = DATAFRAME.date.<span style="color: #ffb86c;">max</span>()
 
-<span style="color: #6a1868;">RGBA_COLOURS</span> = [
-    (c[<span style="color: #da8548; font-weight: bold;">0</span>], c[<span style="color: #da8548; font-weight: bold;">1</span>], c[<span style="color: #da8548; font-weight: bold;">2</span>], alpha)
-    <span style="color: #e45649;">for</span> c, alpha <span style="color: #e45649;">in</span> <span style="color: #a626a4;">zip</span>(COLORS, INTENSITIES)
-]
+<span style="color: #f8f8f2;">current_date</span> = DATE_MIN
 
-<span style="color: #6a1868;">fig</span>, <span style="color: #6a1868;">ax</span> = plt.subplots()
-<span style="color: #6a1868;">scatterplot</span> = ax.scatter(
-    DATAFRAME[<span style="color: #50a14f;">'longitude'</span>],
-    DATAFRAME[<span style="color: #50a14f;">'latitude'</span>],
-    c=RGBA_COLOURS,
-    s=<span style="color: #da8548; font-weight: bold;">3</span>,
+<span style="color: #ff79c6;">for</span> i_day <span style="color: #ff79c6;">in</span> <span style="color: #ffb86c;">range</span>(<span style="color: #ff5555; font-weight: bold;">0</span>, (DATE_MAX - DATE_MIN).days, <span style="color: #ff5555; font-weight: bold;">7</span>):
+    <span style="color: #f8f8f2;">last_date</span> = current_date
+    <span style="color: #f8f8f2;">current_date</span> = DATE_MIN + timedelta(days=i_day)
+    <span style="color: #f8f8f2;">cases_today</span> = DATAFRAME[(DATAFRAME.date &gt; last_date) &amp; (DATAFRAME.date &lt;= current_date)]
+    <span style="color: #f8f8f2;">cases_prior</span> = DATAFRAME[DATAFRAME.date &lt;= last_date]
+    <span style="color: #f8f8f2;">fig</span>, <span style="color: #f8f8f2;">ax</span> = plt.subplots()
+    ax.scatter(
+        cases_today[<span style="color: #f1fa8c;">'longitude'</span>],
+        cases_today[<span style="color: #f1fa8c;">'latitude'</span>],
+        c=make_colors(cases_today),
+        s=<span style="color: #ff5555; font-weight: bold;">3</span>,
+    )
+    ax.scatter(
+        cases_prior[<span style="color: #f1fa8c;">'longitude'</span>],
+        cases_prior[<span style="color: #f1fa8c;">'latitude'</span>],
+        c=make_colors(cases_prior),
+        s=<span style="color: #ff5555; font-weight: bold;">2</span>,
+        alpha=<span style="color: #ff5555; font-weight: bold;">0.2</span>
+    )
+    ax.set_xlim((MIN_LONG, MAX_LONG))
+    ax.set_ylim((MIN_LAT, MAX_LAT))
+    plt.ylabel(<span style="color: #f1fa8c;">'Latitude'</span>)
+    plt.xlabel(<span style="color: #f1fa8c;">'Longitude'</span>)
+    plt.title(f<span style="color: #f1fa8c;">'Meningitis Cases until Date {current_date:%Y-%m-%d}'</span>)
+    plt.tight_layout()
+    plt.savefig(f<span style="color: #f1fa8c;">'mapping-meningitis/{current_date:%Y-%m-%d}.png'</span>)
+    plt.close()
+
+<span style="color: #f8f8f2;">frame_filenames</span> = glob.glob(<span style="color: #f1fa8c;">'./mapping-meningitis/*.png'</span>)
+frame_filenames.sort()
+<span style="color: #f8f8f2;">frames</span> = [PIL.Image.<span style="color: #ffb86c;">open</span>(<span style="color: #ffb86c;">file</span>) <span style="color: #ff79c6;">for</span> <span style="color: #ffb86c;">file</span> <span style="color: #ff79c6;">in</span> frame_filenames]
+
+frames[<span style="color: #ff5555; font-weight: bold;">0</span>].save(
+    <span style="color: #f1fa8c;">'mapping-meningitis.gif'</span>,
+    <span style="color: #ffb86c;">format</span>=<span style="color: #f1fa8c;">'GIF'</span>,
+    append_images=[frames[<span style="color: #ff5555; font-weight: bold;">0</span>]]*<span style="color: #ff5555; font-weight: bold;">10</span> + frames + [frames[-<span style="color: #ff5555; font-weight: bold;">1</span>]] * <span style="color: #ff5555; font-weight: bold;">10</span>,
+    save_all=<span style="color: #8be9fd;">True</span>,
+    duration=<span style="color: #ff5555; font-weight: bold;">100</span>,
+    loop=<span style="color: #ff5555; font-weight: bold;">0</span>
 )
-plt.ylabel(<span style="color: #50a14f;">'Latitude'</span>)
-plt.xlabel(<span style="color: #50a14f;">'Longitude'</span>)
-plt.title(<span style="color: #50a14f;">'Meningitis Cases by Location, Classification and Time'</span>)
-plt.tight_layout()
-plt.savefig(<span style="color: #50a14f;">'mapping-meningitis.png'</span>)
 </pre>
 </div>
+
 
 </details>
 </div>
@@ -539,22 +577,22 @@ report.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #e45649;">from</span> enum <span style="color: #e45649;">import</span> Enum
+<pre class="src src-python"><span style="color: #ff79c6;">from</span> enum <span style="color: #ff79c6;">import</span> Enum
 
-<span style="color: #e45649;">class</span> <span style="color: #986801;">Appearance</span>(Enum):
-    <span style="color: #84888b; font-style: italic;">""" Enumerates possible macroscopic appearances of CSF.</span>
-<span style="color: #84888b; font-style: italic;">    """</span>
-    <span style="color: #6a1868;">CLEAR</span> = <span style="color: #50a14f;">"Clear and colourless."</span>
-    <span style="color: #6a1868;">TURBID</span> = <span style="color: #50a14f;">"Turbid."</span>
-    <span style="color: #6a1868;">XANTHOCHROMIC</span> = <span style="color: #50a14f;">"Xanthrochromic."</span>
-    <span style="color: #6a1868;">BLOODY</span> = <span style="color: #50a14f;">"Grossly bloody."</span>
+<span style="color: #ff79c6;">class</span> <span style="color: #61bfff;">Appearance</span>(Enum):
+    <span style="color: #8995ba;">""" Enumerates possible macroscopic appearances of CSF.</span>
+<span style="color: #8995ba;">    """</span>
+    <span style="color: #f8f8f2;">CLEAR</span> = <span style="color: #f1fa8c;">"Clear and colourless."</span>
+    <span style="color: #f8f8f2;">TURBID</span> = <span style="color: #f1fa8c;">"Turbid."</span>
+    <span style="color: #f8f8f2;">XANTHOCHROMIC</span> = <span style="color: #f1fa8c;">"Xanthrochromic."</span>
+    <span style="color: #f8f8f2;">BLOODY</span> = <span style="color: #f1fa8c;">"Grossly bloody."</span>
 
-<span style="color: #e45649;">class</span> <span style="color: #986801;">Predominance</span>(Enum):
-    <span style="color: #84888b; font-style: italic;">""" Enumerates possible cell predominances of CSF.</span>
-<span style="color: #84888b; font-style: italic;">    """</span>
-    <span style="color: #6a1868;">NEITHER</span> = <span style="color: #50a14f;">"predominance unspecified"</span>
-    <span style="color: #6a1868;">NEUTROPHILS</span> = <span style="color: #50a14f;">"polymorphonuclear predominance"</span>
-    <span style="color: #6a1868;">LYMPHOCYTES</span> = <span style="color: #50a14f;">"lymphocytic predominance"</span>
+<span style="color: #ff79c6;">class</span> <span style="color: #61bfff;">Predominance</span>(Enum):
+    <span style="color: #8995ba;">""" Enumerates possible cell predominances of CSF.</span>
+<span style="color: #8995ba;">    """</span>
+    <span style="color: #f8f8f2;">NEITHER</span> = <span style="color: #f1fa8c;">"predominance unspecified"</span>
+    <span style="color: #f8f8f2;">NEUTROPHILS</span> = <span style="color: #f1fa8c;">"polymorphonuclear predominance"</span>
+    <span style="color: #f8f8f2;">LYMPHOCYTES</span> = <span style="color: #f1fa8c;">"lymphocytic predominance"</span>
 
 </pre>
 </div>
@@ -568,43 +606,43 @@ should look like.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #e45649;">from</span> datetime <span style="color: #e45649;">import</span> datetime
-<span style="color: #e45649;">from</span> dataclasses <span style="color: #e45649;">import</span> dataclass
-<span style="color: #e45649;">from</span> typing <span style="color: #e45649;">import</span> Tuple
+<pre class="src src-python"><span style="color: #ff79c6;">from</span> datetime <span style="color: #ff79c6;">import</span> datetime
+<span style="color: #ff79c6;">from</span> dataclasses <span style="color: #ff79c6;">import</span> dataclass
+<span style="color: #ff79c6;">from</span> typing <span style="color: #ff79c6;">import</span> Tuple
 
-<span style="color: #986801;">@dataclass</span>
-<span style="color: #e45649;">class</span> <span style="color: #986801;">CSFResult</span>:
-    <span style="color: #84888b; font-style: italic;">""" Dataclass to hold cerebrospinal fluid results.</span>
-<span style="color: #84888b; font-style: italic;">    """</span>
+<span style="color: #61bfff;">@dataclass</span>
+<span style="color: #ff79c6;">class</span> <span style="color: #61bfff;">CSFResult</span>:
+    <span style="color: #8995ba;">""" Dataclass to hold cerebrospinal fluid results.</span>
+<span style="color: #8995ba;">    """</span>
 
-    patient_id: <span style="color: #a626a4;">int</span>
+    patient_id: <span style="color: #ffb86c;">int</span>
     sample_datetime: datetime
-    location: Tuple[<span style="color: #a626a4;">float</span>, <span style="color: #a626a4;">float</span>] <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">latitude, longitude</span>
+    location: Tuple[<span style="color: #ffb86c;">float</span>, <span style="color: #ffb86c;">float</span>] <span style="color: #6272a4;"># </span><span style="color: #6272a4;">latitude, longitude</span>
     appearance: Appearance
-    cell_count: <span style="color: #a626a4;">float</span> <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Units e6/L</span>
+    cell_count: <span style="color: #ffb86c;">float</span> <span style="color: #6272a4;"># </span><span style="color: #6272a4;">Units e6/L</span>
     predominance: Predominance
-    glucose: <span style="color: #a626a4;">float</span> <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Units mmol/L</span>
-    lactate: <span style="color: #a626a4;">float</span> <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Units mmol/L</span>
-    protein: <span style="color: #a626a4;">float</span> <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Units g/L</span>
+    glucose: <span style="color: #ffb86c;">float</span> <span style="color: #6272a4;"># </span><span style="color: #6272a4;">Units mmol/L</span>
+    lactate: <span style="color: #ffb86c;">float</span> <span style="color: #6272a4;"># </span><span style="color: #6272a4;">Units mmol/L</span>
+    protein: <span style="color: #ffb86c;">float</span> <span style="color: #6272a4;"># </span><span style="color: #6272a4;">Units g/L</span>
 
-    <span style="color: #e45649;">def</span> <span style="color: #a626a4;">to_string</span>(<span style="color: #e45649;">self</span>) -&gt; <span style="color: #a626a4;">str</span>:
-        <span style="color: #84888b; font-style: italic;">"""</span>
-<span style="color: #84888b; font-style: italic;">        Converts a CSF result into a string.</span>
-<span style="color: #84888b; font-style: italic;">        """</span>
+    <span style="color: #ff79c6;">def</span> <span style="color: #50fa7b;">to_string</span>(<span style="color: #ff79c6;">self</span>) -&gt; <span style="color: #ffb86c;">str</span>:
+        <span style="color: #8995ba;">"""</span>
+<span style="color: #8995ba;">        Converts a CSF result into a string.</span>
+<span style="color: #8995ba;">        """</span>
 
-        <span style="color: #6a1868;">result_string</span> = (
-            f<span style="color: #50a14f;">"\nPATIENT ID: {self.patient_id:06}\n"</span>
-            f<span style="color: #50a14f;">"LOCATION: ({','.join(map(lambda x: f'{x:.6f}', self.location))})\n"</span>
-            f<span style="color: #50a14f;">"SAMPLE TIMESTAMP: {self.sample_datetime:%Y-%m-%d}\n\n"</span>
-            f<span style="color: #50a14f;">"RESULTS:\n"</span>
-            f<span style="color: #50a14f;">"{self.appearance.value}\n\n"</span>
-            f<span style="color: #50a14f;">"CELL COUNT:  {self.cell_count:.2f}  x 10^6 / L ({self.predominance.value})\n"</span>
-            f<span style="color: #50a14f;">"GLUCOSE:     {self.glucose:.2f}  mmol/L\n"</span>
-            f<span style="color: #50a14f;">"LACTATE:     {self.lactate:.2f}  mmol/L\n"</span>
-            f<span style="color: #50a14f;">"PROTEIN:     {self.protein:.2f}  g/L\n"</span>
+        <span style="color: #f8f8f2;">result_string</span> = (
+            f<span style="color: #f1fa8c;">"\nPATIENT ID: {self.patient_id:06}\n"</span>
+            f<span style="color: #f1fa8c;">"LOCATION: ({','.join(map(lambda x: f'{x:.6f}', self.location))})\n"</span>
+            f<span style="color: #f1fa8c;">"SAMPLE TIMESTAMP: {self.sample_datetime:%Y-%m-%d}\n\n"</span>
+            f<span style="color: #f1fa8c;">"RESULTS:\n"</span>
+            f<span style="color: #f1fa8c;">"{self.appearance.value}\n\n"</span>
+            f<span style="color: #f1fa8c;">"CELL COUNT:  {self.cell_count:.2f}  x 10^6 / L ({self.predominance.value})\n"</span>
+            f<span style="color: #f1fa8c;">"GLUCOSE:     {self.glucose:.2f}  mmol/L\n"</span>
+            f<span style="color: #f1fa8c;">"LACTATE:     {self.lactate:.2f}  mmol/L\n"</span>
+            f<span style="color: #f1fa8c;">"PROTEIN:     {self.protein:.2f}  g/L\n"</span>
         )
 
-        <span style="color: #e45649;">return</span> result_string
+        <span style="color: #ff79c6;">return</span> result_string
 </pre>
 </div>
 
@@ -622,13 +660,13 @@ First, we enumerate the types of results.
 
 <div class="org-src-container">
 <pre class="src src-python">
-<span style="color: #e45649;">class</span> <span style="color: #986801;">ResultType</span>(Enum):
-    <span style="color: #84888b; font-style: italic;">""" Enumerates the possible CSF result types.</span>
-<span style="color: #84888b; font-style: italic;">    """</span>
-    <span style="color: #6a1868;">NORMAL</span> = <span style="color: #da8548; font-weight: bold;">0</span>
-    <span style="color: #6a1868;">BACTERIAL</span> = <span style="color: #da8548; font-weight: bold;">1</span>
-    <span style="color: #6a1868;">VIRAL</span> = <span style="color: #da8548; font-weight: bold;">2</span>
-    <span style="color: #6a1868;">FUNGAL</span> = <span style="color: #da8548; font-weight: bold;">3</span>
+<span style="color: #ff79c6;">class</span> <span style="color: #61bfff;">ResultType</span>(Enum):
+    <span style="color: #8995ba;">""" Enumerates the possible CSF result types.</span>
+<span style="color: #8995ba;">    """</span>
+    <span style="color: #f8f8f2;">NORMAL</span> = <span style="color: #ff5555; font-weight: bold;">0</span>
+    <span style="color: #f8f8f2;">BACTERIAL</span> = <span style="color: #ff5555; font-weight: bold;">1</span>
+    <span style="color: #f8f8f2;">VIRAL</span> = <span style="color: #ff5555; font-weight: bold;">2</span>
+    <span style="color: #f8f8f2;">FUNGAL</span> = <span style="color: #ff5555; font-weight: bold;">3</span>
 
 </pre>
 </div>
@@ -639,70 +677,70 @@ Next, we specify a generation function which takes a <code>ResultType</code> and
 </p>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #e45649;">from</span> random <span style="color: #e45649;">import</span> choices, gauss, uniform
+<pre class="src src-python"><span style="color: #ff79c6;">from</span> random <span style="color: #ff79c6;">import</span> choices, gauss, uniform
 
-<span style="color: #e45649;">def</span> <span style="color: #a626a4;">generate_result</span>(result_type: ResultType, **kwargs) -&gt; CSFResult:
-    <span style="color: #84888b; font-style: italic;">""" Generates a CSFResult instance based on result_type.</span>
+<span style="color: #ff79c6;">def</span> <span style="color: #50fa7b;">generate_result</span>(result_type: ResultType, **kwargs) -&gt; CSFResult:
+    <span style="color: #8995ba;">""" Generates a CSFResult instance based on result_type.</span>
 
-<span style="color: #84888b; font-style: italic;">    Most of the generation is defining parameters for random selection.</span>
+<span style="color: #8995ba;">    Most of the generation is defining parameters for random selection.</span>
 
-<span style="color: #84888b; font-style: italic;">    For randomly selecting Appearance, the order of defining weights is:</span>
-<span style="color: #84888b; font-style: italic;">        [CLEAR, TURBID, XANTHROCHROMIC, BLOODY]</span>
+<span style="color: #8995ba;">    For randomly selecting Appearance, the order of defining weights is:</span>
+<span style="color: #8995ba;">        [CLEAR, TURBID, XANTHROCHROMIC, BLOODY]</span>
 
-<span style="color: #84888b; font-style: italic;">    For randomly selecting Predominance, the order of defining weights is:</span>
-<span style="color: #84888b; font-style: italic;">        [NEITHER, NEUTROPHILS, LYMPHOCYTES]</span>
+<span style="color: #8995ba;">    For randomly selecting Predominance, the order of defining weights is:</span>
+<span style="color: #8995ba;">        [NEITHER, NEUTROPHILS, LYMPHOCYTES]</span>
 
-<span style="color: #84888b; font-style: italic;">    Parameters</span>
-<span style="color: #84888b; font-style: italic;">    ----------</span>
-<span style="color: #84888b; font-style: italic;">    result_type: ResultType</span>
-<span style="color: #84888b; font-style: italic;">        One of ResultType.BACTERIAL, ResultType.VIRAL or ResultType.FUNGAL.</span>
-<span style="color: #84888b; font-style: italic;">    **kwargs</span>
-<span style="color: #84888b; font-style: italic;">        Extra kwargs passed to CSFResult constructor. It should include</span>
-<span style="color: #84888b; font-style: italic;">        patient_id, sample_datetime and location.</span>
+<span style="color: #8995ba;">    Parameters</span>
+<span style="color: #8995ba;">    ----------</span>
+<span style="color: #8995ba;">    result_type: ResultType</span>
+<span style="color: #8995ba;">        One of ResultType.BACTERIAL, ResultType.VIRAL or ResultType.FUNGAL.</span>
+<span style="color: #8995ba;">    **kwargs</span>
+<span style="color: #8995ba;">        Extra kwargs passed to CSFResult constructor. It should include</span>
+<span style="color: #8995ba;">        patient_id, sample_datetime and location.</span>
 
 
-<span style="color: #84888b; font-style: italic;">    """</span>
-    <span style="color: #e45649;">if</span> result_type == ResultType.NORMAL:
-        <span style="color: #6a1868;">result</span> = CSFResult(
+<span style="color: #8995ba;">    """</span>
+    <span style="color: #ff79c6;">if</span> result_type == ResultType.NORMAL:
+        <span style="color: #f8f8f2;">result</span> = CSFResult(
             appearance=Appearance.CLEAR,
-            cell_count=<span style="color: #a626a4;">max</span>(<span style="color: #da8548; font-weight: bold;">0.1</span>, gauss(<span style="color: #da8548; font-weight: bold;">2.5</span>, <span style="color: #da8548; font-weight: bold;">2.5</span>)),
+            cell_count=<span style="color: #ffb86c;">max</span>(<span style="color: #ff5555; font-weight: bold;">0.1</span>, gauss(<span style="color: #ff5555; font-weight: bold;">2.5</span>, <span style="color: #ff5555; font-weight: bold;">2.5</span>)),
             predominance=Predominance.NEITHER,
-            glucose=<span style="color: #a626a4;">max</span>(<span style="color: #da8548; font-weight: bold;">2.5</span>, gauss(<span style="color: #da8548; font-weight: bold;">3.6</span>, <span style="color: #da8548; font-weight: bold;">0.4</span>)),
-            lactate=<span style="color: #a626a4;">max</span>(<span style="color: #da8548; font-weight: bold;">1.0</span>, gauss(<span style="color: #da8548; font-weight: bold;">2.0</span>, <span style="color: #da8548; font-weight: bold;">0.4</span>)),
-            protein=<span style="color: #a626a4;">max</span>(<span style="color: #da8548; font-weight: bold;">0.1</span>, gauss(<span style="color: #da8548; font-weight: bold;">0.3</span>, <span style="color: #da8548; font-weight: bold;">0.1</span>)),
+            glucose=<span style="color: #ffb86c;">max</span>(<span style="color: #ff5555; font-weight: bold;">2.5</span>, gauss(<span style="color: #ff5555; font-weight: bold;">3.6</span>, <span style="color: #ff5555; font-weight: bold;">0.4</span>)),
+            lactate=<span style="color: #ffb86c;">max</span>(<span style="color: #ff5555; font-weight: bold;">1.0</span>, gauss(<span style="color: #ff5555; font-weight: bold;">2.0</span>, <span style="color: #ff5555; font-weight: bold;">0.4</span>)),
+            protein=<span style="color: #ffb86c;">max</span>(<span style="color: #ff5555; font-weight: bold;">0.1</span>, gauss(<span style="color: #ff5555; font-weight: bold;">0.3</span>, <span style="color: #ff5555; font-weight: bold;">0.1</span>)),
             **kwargs,
         )
-    <span style="color: #e45649;">elif</span> result_type == ResultType.BACTERIAL:
-        <span style="color: #6a1868;">result</span> = CSFResult(
-            appearance=choices(<span style="color: #a626a4;">list</span>(Appearance), [<span style="color: #da8548; font-weight: bold;">1</span>, <span style="color: #da8548; font-weight: bold;">10</span>, <span style="color: #da8548; font-weight: bold;">0.01</span>, <span style="color: #da8548; font-weight: bold;">0.1</span>])[<span style="color: #da8548; font-weight: bold;">0</span>],
-            cell_count=<span style="color: #a626a4;">max</span>(<span style="color: #da8548; font-weight: bold;">10</span>, gauss(<span style="color: #da8548; font-weight: bold;">5000</span>, <span style="color: #da8548; font-weight: bold;">4000</span>)),
+    <span style="color: #ff79c6;">elif</span> result_type == ResultType.BACTERIAL:
+        <span style="color: #f8f8f2;">result</span> = CSFResult(
+            appearance=choices(<span style="color: #ffb86c;">list</span>(Appearance), [<span style="color: #ff5555; font-weight: bold;">1</span>, <span style="color: #ff5555; font-weight: bold;">10</span>, <span style="color: #ff5555; font-weight: bold;">0.01</span>, <span style="color: #ff5555; font-weight: bold;">0.1</span>])[<span style="color: #ff5555; font-weight: bold;">0</span>],
+            cell_count=<span style="color: #ffb86c;">max</span>(<span style="color: #ff5555; font-weight: bold;">10</span>, gauss(<span style="color: #ff5555; font-weight: bold;">5000</span>, <span style="color: #ff5555; font-weight: bold;">4000</span>)),
             predominance=Predominance.NEUTROPHILS,
-            glucose=<span style="color: #a626a4;">max</span>(<span style="color: #da8548; font-weight: bold;">0.1</span>, gauss(<span style="color: #da8548; font-weight: bold;">1.0</span>, <span style="color: #da8548; font-weight: bold;">0.5</span>)),
-            lactate=<span style="color: #a626a4;">max</span>(<span style="color: #da8548; font-weight: bold;">1.2</span>, gauss(<span style="color: #da8548; font-weight: bold;">3.5</span>, <span style="color: #da8548; font-weight: bold;">1.0</span>)),
-            protein=<span style="color: #a626a4;">max</span>(<span style="color: #da8548; font-weight: bold;">0.2</span>, gauss(<span style="color: #da8548; font-weight: bold;">2.5</span>, <span style="color: #da8548; font-weight: bold;">1.0</span>)),
+            glucose=<span style="color: #ffb86c;">max</span>(<span style="color: #ff5555; font-weight: bold;">0.1</span>, gauss(<span style="color: #ff5555; font-weight: bold;">1.0</span>, <span style="color: #ff5555; font-weight: bold;">0.5</span>)),
+            lactate=<span style="color: #ffb86c;">max</span>(<span style="color: #ff5555; font-weight: bold;">1.2</span>, gauss(<span style="color: #ff5555; font-weight: bold;">3.5</span>, <span style="color: #ff5555; font-weight: bold;">1.0</span>)),
+            protein=<span style="color: #ffb86c;">max</span>(<span style="color: #ff5555; font-weight: bold;">0.2</span>, gauss(<span style="color: #ff5555; font-weight: bold;">2.5</span>, <span style="color: #ff5555; font-weight: bold;">1.0</span>)),
             **kwargs,
         )
-    <span style="color: #e45649;">elif</span> result_type == ResultType.VIRAL:
-        <span style="color: #6a1868;">result</span> = CSFResult(
-            appearance=choices(<span style="color: #a626a4;">list</span>(Appearance), [<span style="color: #da8548; font-weight: bold;">4</span>, <span style="color: #da8548; font-weight: bold;">6</span>, <span style="color: #da8548; font-weight: bold;">0.01</span>, <span style="color: #da8548; font-weight: bold;">0.1</span>])[<span style="color: #da8548; font-weight: bold;">0</span>],
-            cell_count=<span style="color: #a626a4;">max</span>(<span style="color: #da8548; font-weight: bold;">10</span>, gauss(<span style="color: #da8548; font-weight: bold;">100</span>, <span style="color: #da8548; font-weight: bold;">50</span>)),
+    <span style="color: #ff79c6;">elif</span> result_type == ResultType.VIRAL:
+        <span style="color: #f8f8f2;">result</span> = CSFResult(
+            appearance=choices(<span style="color: #ffb86c;">list</span>(Appearance), [<span style="color: #ff5555; font-weight: bold;">4</span>, <span style="color: #ff5555; font-weight: bold;">6</span>, <span style="color: #ff5555; font-weight: bold;">0.01</span>, <span style="color: #ff5555; font-weight: bold;">0.1</span>])[<span style="color: #ff5555; font-weight: bold;">0</span>],
+            cell_count=<span style="color: #ffb86c;">max</span>(<span style="color: #ff5555; font-weight: bold;">10</span>, gauss(<span style="color: #ff5555; font-weight: bold;">100</span>, <span style="color: #ff5555; font-weight: bold;">50</span>)),
             predominance=Predominance.LYMPHOCYTES,
-            glucose=<span style="color: #a626a4;">max</span>(<span style="color: #da8548; font-weight: bold;">2.5</span>, gauss(<span style="color: #da8548; font-weight: bold;">3.6</span>, <span style="color: #da8548; font-weight: bold;">0.4</span>)),
-            lactate=<span style="color: #a626a4;">max</span>(<span style="color: #da8548; font-weight: bold;">1.0</span>, gauss(<span style="color: #da8548; font-weight: bold;">2.0</span>, <span style="color: #da8548; font-weight: bold;">0.4</span>)),
-            protein=<span style="color: #a626a4;">max</span>(<span style="color: #da8548; font-weight: bold;">0.1</span>, gauss(<span style="color: #da8548; font-weight: bold;">0.3</span>, <span style="color: #da8548; font-weight: bold;">0.1</span>)),
+            glucose=<span style="color: #ffb86c;">max</span>(<span style="color: #ff5555; font-weight: bold;">2.5</span>, gauss(<span style="color: #ff5555; font-weight: bold;">3.6</span>, <span style="color: #ff5555; font-weight: bold;">0.4</span>)),
+            lactate=<span style="color: #ffb86c;">max</span>(<span style="color: #ff5555; font-weight: bold;">1.0</span>, gauss(<span style="color: #ff5555; font-weight: bold;">2.0</span>, <span style="color: #ff5555; font-weight: bold;">0.4</span>)),
+            protein=<span style="color: #ffb86c;">max</span>(<span style="color: #ff5555; font-weight: bold;">0.1</span>, gauss(<span style="color: #ff5555; font-weight: bold;">0.3</span>, <span style="color: #ff5555; font-weight: bold;">0.1</span>)),
             **kwargs,
         )
-    <span style="color: #e45649;">elif</span> result_type == ResultType.FUNGAL:
-        <span style="color: #6a1868;">result</span> = CSFResult(
-            appearance=choices(<span style="color: #a626a4;">list</span>(Appearance), [<span style="color: #da8548; font-weight: bold;">1</span>, <span style="color: #da8548; font-weight: bold;">10</span>, <span style="color: #da8548; font-weight: bold;">0.01</span>, <span style="color: #da8548; font-weight: bold;">0.1</span>])[<span style="color: #da8548; font-weight: bold;">0</span>],
-            cell_count=<span style="color: #a626a4;">max</span>(<span style="color: #da8548; font-weight: bold;">10</span>, gauss(<span style="color: #da8548; font-weight: bold;">400</span>, <span style="color: #da8548; font-weight: bold;">300</span>)),
+    <span style="color: #ff79c6;">elif</span> result_type == ResultType.FUNGAL:
+        <span style="color: #f8f8f2;">result</span> = CSFResult(
+            appearance=choices(<span style="color: #ffb86c;">list</span>(Appearance), [<span style="color: #ff5555; font-weight: bold;">1</span>, <span style="color: #ff5555; font-weight: bold;">10</span>, <span style="color: #ff5555; font-weight: bold;">0.01</span>, <span style="color: #ff5555; font-weight: bold;">0.1</span>])[<span style="color: #ff5555; font-weight: bold;">0</span>],
+            cell_count=<span style="color: #ffb86c;">max</span>(<span style="color: #ff5555; font-weight: bold;">10</span>, gauss(<span style="color: #ff5555; font-weight: bold;">400</span>, <span style="color: #ff5555; font-weight: bold;">300</span>)),
             predominance=Predominance.LYMPHOCYTES,
-            glucose=<span style="color: #a626a4;">max</span>(<span style="color: #da8548; font-weight: bold;">0.1</span>, gauss(<span style="color: #da8548; font-weight: bold;">1.0</span>, <span style="color: #da8548; font-weight: bold;">0.5</span>)),
-            lactate=<span style="color: #a626a4;">max</span>(<span style="color: #da8548; font-weight: bold;">1.2</span>, gauss(<span style="color: #da8548; font-weight: bold;">2.5</span>, <span style="color: #da8548; font-weight: bold;">2.0</span>)),
-            protein=<span style="color: #a626a4;">max</span>(<span style="color: #da8548; font-weight: bold;">0.2</span>, gauss(<span style="color: #da8548; font-weight: bold;">1.5</span>, <span style="color: #da8548; font-weight: bold;">1.0</span>)),
+            glucose=<span style="color: #ffb86c;">max</span>(<span style="color: #ff5555; font-weight: bold;">0.1</span>, gauss(<span style="color: #ff5555; font-weight: bold;">1.0</span>, <span style="color: #ff5555; font-weight: bold;">0.5</span>)),
+            lactate=<span style="color: #ffb86c;">max</span>(<span style="color: #ff5555; font-weight: bold;">1.2</span>, gauss(<span style="color: #ff5555; font-weight: bold;">2.5</span>, <span style="color: #ff5555; font-weight: bold;">2.0</span>)),
+            protein=<span style="color: #ffb86c;">max</span>(<span style="color: #ff5555; font-weight: bold;">0.2</span>, gauss(<span style="color: #ff5555; font-weight: bold;">1.5</span>, <span style="color: #ff5555; font-weight: bold;">1.0</span>)),
             **kwargs,
         )
-    <span style="color: #e45649;">return</span> result
+    <span style="color: #ff79c6;">return</span> result
 </pre>
 </div>
 
@@ -721,64 +759,64 @@ guaranteed. For simpliciy, we've also made the
 </p>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #e45649;">from</span> datetime <span style="color: #e45649;">import</span> timedelta
-<span style="color: #e45649;">from</span> random <span style="color: #e45649;">import</span> sample
-<span style="color: #e45649;">from</span> typing <span style="color: #e45649;">import</span> Tuple
-<span style="color: #e45649;">import</span> numpy <span style="color: #e45649;">as</span> np
+<pre class="src src-python"><span style="color: #ff79c6;">from</span> datetime <span style="color: #ff79c6;">import</span> timedelta
+<span style="color: #ff79c6;">from</span> random <span style="color: #ff79c6;">import</span> sample
+<span style="color: #ff79c6;">from</span> typing <span style="color: #ff79c6;">import</span> Tuple
+<span style="color: #ff79c6;">import</span> numpy <span style="color: #ff79c6;">as</span> np
 
-<span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Define constant parameters</span>
-<span style="color: #6a1868;">SOURCE_LAT</span>, <span style="color: #6a1868;">SOURCE_LONG</span> = (-<span style="color: #da8548; font-weight: bold;">37.8180</span>, <span style="color: #da8548; font-weight: bold;">144.9691</span>)
-<span style="color: #6a1868;">SPREAD</span> = <span style="color: #da8548; font-weight: bold;">0.003</span> <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">per day</span>
-<span style="color: #6a1868;">DURATION</span> = <span style="color: #da8548; font-weight: bold;">168</span> <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">in days, i.e. 24 weeks</span>
-<span style="color: #6a1868;">NUM_SAMPLES</span> = <span style="color: #da8548; font-weight: bold;">1000</span>
-<span style="color: #6a1868;">START_DATE</span> = datetime(<span style="color: #da8548; font-weight: bold;">2020</span>, <span style="color: #da8548; font-weight: bold;">3</span>, <span style="color: #da8548; font-weight: bold;">1</span>)
-<span style="color: #6a1868;">NUM_ABERRANT</span> = <span style="color: #da8548; font-weight: bold;">300</span> <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">number of "aberrant" cases</span>
-<span style="color: #6a1868;">BOUND_LAT</span>, <span style="color: #6a1868;">BOUND_LONG</span> = (<span style="color: #da8548; font-weight: bold;">1.0</span>, <span style="color: #da8548; font-weight: bold;">1.0</span>) <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">bounds of map</span>
+<span style="color: #6272a4;"># </span><span style="color: #6272a4;">Define constant parameters</span>
+<span style="color: #f8f8f2;">SOURCE_LAT</span>, <span style="color: #f8f8f2;">SOURCE_LONG</span> = (-<span style="color: #ff5555; font-weight: bold;">37.8180</span>, <span style="color: #ff5555; font-weight: bold;">144.9691</span>)
+<span style="color: #f8f8f2;">SPREAD</span> = <span style="color: #ff5555; font-weight: bold;">0.003</span> <span style="color: #6272a4;"># </span><span style="color: #6272a4;">per day</span>
+<span style="color: #f8f8f2;">DURATION</span> = <span style="color: #ff5555; font-weight: bold;">168</span> <span style="color: #6272a4;"># </span><span style="color: #6272a4;">in days, i.e. 24 weeks</span>
+<span style="color: #f8f8f2;">NUM_SAMPLES</span> = <span style="color: #ff5555; font-weight: bold;">1000</span>
+<span style="color: #f8f8f2;">START_DATE</span> = datetime(<span style="color: #ff5555; font-weight: bold;">2020</span>, <span style="color: #ff5555; font-weight: bold;">3</span>, <span style="color: #ff5555; font-weight: bold;">1</span>)
+<span style="color: #f8f8f2;">NUM_ABERRANT</span> = <span style="color: #ff5555; font-weight: bold;">300</span> <span style="color: #6272a4;"># </span><span style="color: #6272a4;">number of "aberrant" cases</span>
+<span style="color: #f8f8f2;">BOUND_LAT</span>, <span style="color: #f8f8f2;">BOUND_LONG</span> = (<span style="color: #ff5555; font-weight: bold;">1.0</span>, <span style="color: #ff5555; font-weight: bold;">1.0</span>) <span style="color: #6272a4;"># </span><span style="color: #6272a4;">bounds of map</span>
 
-<span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Generate random time deltas from day 0</span>
-<span style="color: #6a1868;">day_deltas</span> = choices(<span style="color: #a626a4;">range</span>(DURATION), k=NUM_SAMPLES)
+<span style="color: #6272a4;"># </span><span style="color: #6272a4;">Generate random time deltas from day 0</span>
+<span style="color: #f8f8f2;">day_deltas</span> = choices(<span style="color: #ffb86c;">range</span>(DURATION), k=NUM_SAMPLES)
 
-<span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Create dates from day_deltas (randomly ordered)</span>
-<span style="color: #6a1868;">dates</span> = [START_DATE + timedelta(days=day_delta) <span style="color: #e45649;">for</span> day_delta <span style="color: #e45649;">in</span> day_deltas]
+<span style="color: #6272a4;"># </span><span style="color: #6272a4;">Create dates from day_deltas (randomly ordered)</span>
+<span style="color: #f8f8f2;">dates</span> = [START_DATE + timedelta(days=day_delta) <span style="color: #ff79c6;">for</span> day_delta <span style="color: #ff79c6;">in</span> day_deltas]
 
-<span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Extract the first 600 as "aberrant" cases and make locations</span>
-<span style="color: #e45649;">def</span> <span style="color: #a626a4;">make_spread</span>(delta: <span style="color: #a626a4;">int</span>) -&gt; Tuple[<span style="color: #a626a4;">float</span>, <span style="color: #a626a4;">float</span>]:
-    <span style="color: #6a1868;">radius</span> = gauss(delta, <span style="color: #da8548; font-weight: bold;">2</span>*SPREAD) * SPREAD
-    <span style="color: #6a1868;">angle</span> = uniform(<span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">2</span> * np.pi)
-    <span style="color: #6a1868;">new_lat</span> = SOURCE_LAT + radius * np.sin(angle)
-    <span style="color: #6a1868;">new_long</span> = SOURCE_LONG + radius * np.cos(angle)
-    <span style="color: #e45649;">return</span> (new_lat, new_long)
+<span style="color: #6272a4;"># </span><span style="color: #6272a4;">Extract the first 600 as "aberrant" cases and make locations</span>
+<span style="color: #ff79c6;">def</span> <span style="color: #50fa7b;">make_spread</span>(delta: <span style="color: #ffb86c;">int</span>) -&gt; Tuple[<span style="color: #ffb86c;">float</span>, <span style="color: #ffb86c;">float</span>]:
+    <span style="color: #f8f8f2;">radius</span> = gauss(delta, <span style="color: #ff5555; font-weight: bold;">2</span>*SPREAD) * SPREAD
+    <span style="color: #f8f8f2;">angle</span> = uniform(<span style="color: #ff5555; font-weight: bold;">0</span>, <span style="color: #ff5555; font-weight: bold;">2</span> * np.pi)
+    <span style="color: #f8f8f2;">new_lat</span> = SOURCE_LAT + radius * np.sin(angle)
+    <span style="color: #f8f8f2;">new_long</span> = SOURCE_LONG + radius * np.cos(angle)
+    <span style="color: #ff79c6;">return</span> (new_lat, new_long)
 
-<span style="color: #6a1868;">locations_aberrant</span> = [
+<span style="color: #f8f8f2;">locations_aberrant</span> = [
     make_spread(delta)
-    <span style="color: #e45649;">for</span> delta <span style="color: #e45649;">in</span> day_deltas[:NUM_ABERRANT]
+    <span style="color: #ff79c6;">for</span> delta <span style="color: #ff79c6;">in</span> day_deltas[:NUM_ABERRANT]
 ]
 
-<span style="color: #6a1868;">locations_other</span> = [
-    (SOURCE_LAT + uniform(-BOUND_LAT, BOUND_LAT) - <span style="color: #da8548; font-weight: bold;">0.1</span>,
-     SOURCE_LONG + uniform(-BOUND_LONG, BOUND_LONG) - <span style="color: #da8548; font-weight: bold;">0.3</span>)
-    <span style="color: #e45649;">for</span> _ <span style="color: #e45649;">in</span> day_deltas[NUM_ABERRANT:]
+<span style="color: #f8f8f2;">locations_other</span> = [
+    (SOURCE_LAT + uniform(-BOUND_LAT, BOUND_LAT) - <span style="color: #ff5555; font-weight: bold;">0.1</span>,
+     SOURCE_LONG + uniform(-BOUND_LONG, BOUND_LONG) - <span style="color: #ff5555; font-weight: bold;">0.3</span>)
+    <span style="color: #ff79c6;">for</span> _ <span style="color: #ff79c6;">in</span> day_deltas[NUM_ABERRANT:]
 ]
-<span style="color: #6a1868;">locations</span> = locations_aberrant + locations_other
+<span style="color: #f8f8f2;">locations</span> = locations_aberrant + locations_other
 
-<span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Make result types</span>
-<span style="color: #6a1868;">result_types_aberrant</span> = [ResultType.BACTERIAL] * NUM_ABERRANT
-<span style="color: #6a1868;">result_types_other</span> = choices(<span style="color: #a626a4;">list</span>(ResultType), [<span style="color: #da8548; font-weight: bold;">1</span>, <span style="color: #da8548; font-weight: bold;">3</span>, <span style="color: #da8548; font-weight: bold;">1</span>, <span style="color: #da8548; font-weight: bold;">0.5</span>], k=NUM_SAMPLES-NUM_ABERRANT)
-<span style="color: #6a1868;">result_types</span> = result_types_aberrant + result_types_other
+<span style="color: #6272a4;"># </span><span style="color: #6272a4;">Make result types</span>
+<span style="color: #f8f8f2;">result_types_aberrant</span> = [ResultType.BACTERIAL] * NUM_ABERRANT
+<span style="color: #f8f8f2;">result_types_other</span> = choices(<span style="color: #ffb86c;">list</span>(ResultType), [<span style="color: #ff5555; font-weight: bold;">1</span>, <span style="color: #ff5555; font-weight: bold;">3</span>, <span style="color: #ff5555; font-weight: bold;">1</span>, <span style="color: #ff5555; font-weight: bold;">0.5</span>], k=NUM_SAMPLES-NUM_ABERRANT)
+<span style="color: #f8f8f2;">result_types</span> = result_types_aberrant + result_types_other
 
-<span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Generate random 6-digit patients IDs</span>
-<span style="color: #6a1868;">patient_ids</span> = sample(<span style="color: #a626a4;">range</span>(<span style="color: #da8548; font-weight: bold;">999999</span>), k=NUM_SAMPLES)
+<span style="color: #6272a4;"># </span><span style="color: #6272a4;">Generate random 6-digit patients IDs</span>
+<span style="color: #f8f8f2;">patient_ids</span> = sample(<span style="color: #ffb86c;">range</span>(<span style="color: #ff5555; font-weight: bold;">999999</span>), k=NUM_SAMPLES)
 
-<span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Generate all results</span>
-<span style="color: #6a1868;">results</span> = [
+<span style="color: #6272a4;"># </span><span style="color: #6272a4;">Generate all results</span>
+<span style="color: #f8f8f2;">results</span> = [
     generate_result(
         result_type=result_type,
         patient_id=patient_id,
         location=location,
         sample_datetime=date,
     )
-    <span style="color: #e45649;">for</span> result_type, patient_id, location, date
-    <span style="color: #e45649;">in</span> <span style="color: #a626a4;">zip</span>(result_types, patient_ids, locations, dates)
+    <span style="color: #ff79c6;">for</span> result_type, patient_id, location, date
+    <span style="color: #ff79c6;">in</span> <span style="color: #ffb86c;">zip</span>(result_types, patient_ids, locations, dates)
 ]
 </pre>
 </div>
@@ -789,20 +827,20 @@ string and then save it to a file.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #e45649;">from</span> random <span style="color: #e45649;">import</span> shuffle
+<pre class="src src-python"><span style="color: #ff79c6;">from</span> random <span style="color: #ff79c6;">import</span> shuffle
 
-<span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Shuffle results in-place</span>
+<span style="color: #6272a4;"># </span><span style="color: #6272a4;">Shuffle results in-place</span>
 shuffle(results)
 
-<span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Define the separator</span>
-<span style="color: #6a1868;">separator</span> = <span style="color: #50a14f;">"\n"</span> + <span style="color: #50a14f;">"-"</span> * <span style="color: #da8548; font-weight: bold;">80</span> + <span style="color: #50a14f;">"\n"</span>
+<span style="color: #6272a4;"># </span><span style="color: #6272a4;">Define the separator</span>
+<span style="color: #f8f8f2;">separator</span> = <span style="color: #f1fa8c;">"\n"</span> + <span style="color: #f1fa8c;">"-"</span> * <span style="color: #ff5555; font-weight: bold;">80</span> + <span style="color: #f1fa8c;">"\n"</span>
 
-<span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Join result strings with separator</span>
-<span style="color: #6a1868;">output</span> = separator.join(result.to_string() <span style="color: #e45649;">for</span> result <span style="color: #e45649;">in</span> results)
+<span style="color: #6272a4;"># </span><span style="color: #6272a4;">Join result strings with separator</span>
+<span style="color: #f8f8f2;">output</span> = separator.join(result.to_string() <span style="color: #ff79c6;">for</span> result <span style="color: #ff79c6;">in</span> results)
 
-<span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Save the output to a file</span>
-<span style="color: #6a1868;">FILENAME</span> = <span style="color: #50a14f;">"input-mapping-meningitis.txt"</span>
-<span style="color: #e45649;">with</span> <span style="color: #a626a4;">open</span>(FILENAME, <span style="color: #50a14f;">'w+'</span>) <span style="color: #e45649;">as</span> outfile:
+<span style="color: #6272a4;"># </span><span style="color: #6272a4;">Save the output to a file</span>
+<span style="color: #f8f8f2;">FILENAME</span> = <span style="color: #f1fa8c;">"input-mapping-meningitis.txt"</span>
+<span style="color: #ff79c6;">with</span> <span style="color: #ffb86c;">open</span>(FILENAME, <span style="color: #f1fa8c;">'w+'</span>) <span style="color: #ff79c6;">as</span> outfile:
     outfile.write(output)
 </pre>
 </div>
