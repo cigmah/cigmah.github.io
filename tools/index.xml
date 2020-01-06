@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tools on The Coding Interest Group in Medicine and Healthcare</title>
-    <link>https://cigmah.github.io/tools/</link>
+    <link>https://cigmah.org/tools/</link>
     <description>Recent content in Tools on The Coding Interest Group in Medicine and Healthcare</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://cigmah.github.io/tools/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://cigmah.org/tools/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>AORTA</title>
-      <link>https://cigmah.github.io/tools/aorta/</link>
+      <link>https://cigmah.org/tools/aorta/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://cigmah.github.io/tools/aorta/</guid>
+      <guid>https://cigmah.org/tools/aorta/</guid>
       <description>What is AORTA? AORTA, or An Open Revision Tool for Assessments, is a free and open-source web application which hosts medical learning objectives and multiple-choice questions to test those learning objectives.
 Why was AORTA developed? Medical students commonly practise and test their knowledge by answering questions about things they know. Many students find answering questions to be helpful in revealing gaps in their knowledge because questions need to be answered by actively recalling information.</description>
     </item>

@@ -2,70 +2,70 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>The Coding Interest Group in Medicine and Healthcare</title>
-    <link>https://cigmah.github.io/</link>
+    <link>https://cigmah.org/</link>
     <description>Recent content on The Coding Interest Group in Medicine and Healthcare</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 24 Dec 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://cigmah.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://cigmah.org/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Contributors</title>
-      <link>https://cigmah.github.io/about/contributors/</link>
+      <link>https://cigmah.org/about/contributors/</link>
       <pubDate>Tue, 24 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://cigmah.github.io/about/contributors/</guid>
+      <guid>https://cigmah.org/about/contributors/</guid>
       <description>Who currently contributes to CIGMAH? CIGMAH&#39;s current team is made up of:
  Andrew Tay Jamin Wu Jessica Yu Marcel Chee Yingtong Li  </description>
     </item>
     
     <item>
       <title>Feature: A/Prof Chris Wright</title>
-      <link>https://cigmah.github.io/blog/feature-chris-wright/</link>
+      <link>https://cigmah.org/blog/feature-chris-wright/</link>
       <pubDate>Mon, 29 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://cigmah.github.io/blog/feature-chris-wright/</guid>
+      <guid>https://cigmah.org/blog/feature-chris-wright/</guid>
       <description>Associate Professor Chris Wright is the Academic Director of Clinical Programs for Monash University’s medical course. A/Prof Wright has a wealth of experience as an intensive care physician, programmer, and educator. We were very fortunate to have the chance to ask A/Prof Wright about his experiences in both medicine and programming.
  How did you first begin programming? The first time I learnt to code was at school in 1971.</description>
     </item>
     
     <item>
       <title>Feature: Kevin Shi</title>
-      <link>https://cigmah.github.io/blog/feature-kevin-shi/</link>
+      <link>https://cigmah.org/blog/feature-kevin-shi/</link>
       <pubDate>Thu, 18 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://cigmah.github.io/blog/feature-kevin-shi/</guid>
+      <guid>https://cigmah.org/blog/feature-kevin-shi/</guid>
       <description>Kevin is a medical student currently undertaking a BMedSc(Hons) at Monash, and the President of MUMUS, Monash University’s medical student society. Kevin was the Puzzle Prize recipient for Puzzle No. 10C Bite Cell Scouting. We were fortunate to have the opportunity to ask Kevin some questions about his experience and views on how programming can relate to medicine.
  How did you start to learn programming and why? I was first introduced to programming / computer science in high school – we were lucky enough to have a popular Programming Club that trained students for the Australian Informatics Olympiad and other competitions.</description>
     </item>
     
     <item>
       <title>Feature: Prof Chris Bain</title>
-      <link>https://cigmah.github.io/blog/feature-chris-bain/</link>
+      <link>https://cigmah.org/blog/feature-chris-bain/</link>
       <pubDate>Mon, 15 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://cigmah.github.io/blog/feature-chris-bain/</guid>
+      <guid>https://cigmah.org/blog/feature-chris-bain/</guid>
       <description>Prof Chris Bain is the inaugural Professor of Practice in Digital Health at Monash University’s Faculty of Information Technology. Prof Bain has a diverse set of qualifications (including an MBBS, a Master of Information Technology, and a PhD in Information Systems) and has extensive experience in both clinical medicine and digital technology. He is also championing a fundraising campaign (the PWS 15for15 Challenge) for Prader Willi Syndrome, a genetic disorder with symptoms such as muscle weakness, insatiable appetite, and developmental delay.</description>
     </item>
     
     <item>
       <title>Feature: Yingtong Li</title>
-      <link>https://cigmah.github.io/blog/feature-yingtong-li/</link>
+      <link>https://cigmah.org/blog/feature-yingtong-li/</link>
       <pubDate>Fri, 12 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://cigmah.github.io/blog/feature-yingtong-li/</guid>
+      <guid>https://cigmah.org/blog/feature-yingtong-li/</guid>
       <description>Yingtong is currently a third-year medical student at Monash and the secretary of MUMUS, Monash University’s medical student society. Yingtong was the Puzzle Prize recipient for Puzzle No. 7C, Infectious Network, and we were fortunate to have a chat with Yingtong about his programming experience and his views on how it interfaces with medicine.
  How did you start to learn programming? I think it’s a little bit difficult for me to say.</description>
     </item>
     
     <item>
       <title>AORTA</title>
-      <link>https://cigmah.github.io/tools/aorta/</link>
+      <link>https://cigmah.org/tools/aorta/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://cigmah.github.io/tools/aorta/</guid>
+      <guid>https://cigmah.org/tools/aorta/</guid>
       <description>What is AORTA? AORTA, or An Open Revision Tool for Assessments, is a free and open-source web application which hosts medical learning objectives and multiple-choice questions to test those learning objectives.
 Why was AORTA developed? Medical students commonly practise and test their knowledge by answering questions about things they know. Many students find answering questions to be helpful in revealing gaps in their knowledge because questions need to be answered by actively recalling information.</description>
     </item>

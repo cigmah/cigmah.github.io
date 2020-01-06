@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About on The Coding Interest Group in Medicine and Healthcare</title>
-    <link>https://cigmah.github.io/about/</link>
+    <link>https://cigmah.org/about/</link>
     <description>Recent content in About on The Coding Interest Group in Medicine and Healthcare</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 24 Dec 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://cigmah.github.io/about/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://cigmah.org/about/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Contributors</title>
-      <link>https://cigmah.github.io/about/contributors/</link>
+      <link>https://cigmah.org/about/contributors/</link>
       <pubDate>Tue, 24 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://cigmah.github.io/about/contributors/</guid>
+      <guid>https://cigmah.org/about/contributors/</guid>
       <description>Who currently contributes to CIGMAH? CIGMAH&#39;s current team is made up of:
  Andrew Tay Jamin Wu Jessica Yu Marcel Chee Yingtong Li  </description>
     </item>
