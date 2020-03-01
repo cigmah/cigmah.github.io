@@ -17,8 +17,85 @@
       <pubDate>Tue, 24 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>https://cigmah.org/about/contributors/</guid>
-      <description>Who currently contributes to CIGMAH? CIGMAH&#39;s current team is made up of:
+      <description>Who currently contributes to CIGMAH? CIGMAH&amp;rsquo;s current team is made up of:
  Andrew Tay Jamin Wu Jessica Yu Marcel Chee Yingtong Li  </description>
+    </item>
+    
+    <item>
+      <title>Run! (Clinical)</title>
+      <link>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle24/puzzle24/</link>
+      <pubDate>Sun, 22 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle24/puzzle24/</guid>
+      <description>This puzzle was released on 2019-09-21, and was the Beginner puzzle for the theme Run!.
+ It&amp;rsquo;s 7:20am. Facing North, you walk through the corridor on the 5th wall.
+That was a weird room. You hope you&amp;rsquo;re still keeping it together.
+You sit down at the computer. But just as you reach for the mouse&amp;hellip;
+There&amp;rsquo;s a loud grumble.
+Oh no, not again. You&amp;hellip;look up at the ceiling. Nope, nothing.</description>
+    </item>
+    
+    <item>
+      <title>Run! (Preclinical)</title>
+      <link>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle23/puzzle23/</link>
+      <pubDate>Sat, 21 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle23/puzzle23/</guid>
+      <description>This puzzle was released on 2019-09-21, and was the Abstract puzzle for the theme Run!.
+ It&amp;rsquo;s 7:00am. Facing North, you walk through the corridor on the 6th wall.
+You have accepted your fate at this point. There is a strange clarity in your head as you enter the room. You&amp;rsquo;re not sad. You&amp;rsquo;re not scared. You&amp;rsquo;re not even tired.
+You sit down at the computer. But just as you reach for the mouse&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Night 2: Loops &amp; Neural Networks</title>
+      <link>https://cigmah.org/events/2019_neural_networks/</link>
+      <pubDate>Sun, 01 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cigmah.org/events/2019_neural_networks/</guid>
+      <description>When was this tutorial night held? This tutorial night was held at 6pm on 18th September 2019 at Clayton campus.
+What material was covered? This tutorial night covered:
+ Control flow and printing output in Python. Introduction to neural networks with keras.  Where are the resources for this tutorial night? There are two Google Colab notebooks available from the night:
+ Control flow (presented by Jess) available here. Neural networks (presented by Jamin) available here.</description>
+    </item>
+    
+    <item>
+      <title>Neural Decoding</title>
+      <link>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle22/puzzle22/</link>
+      <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle22/puzzle22/</guid>
+      <description>This puzzle was released on 2019-08-10, and was the Challenge puzzle for the theme &amp;ldquo;Code&amp;rdquo;.
+ It&amp;rsquo;s 6:40am. Facing North, you walk through the corridor on the 6th wall.
+You tell yourself you can only do your best, and to stop berating yourself for getting lost in this library in the first place.
+You turn on the computer in the middle of the room.
+ Neurons around the body are able communicate with each other to coordinate the sensory and motor functionality of the human body.</description>
+    </item>
+    
+    <item>
+      <title>Genetic Thrift</title>
+      <link>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle21/puzzle21/</link>
+      <pubDate>Sun, 11 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle21/puzzle21/</guid>
+      <description>This puzzle was released on 2019-08-10, and was the Beginner puzzle for the theme &amp;ldquo;Code&amp;rdquo;.
+ You&amp;rsquo;re a bit creeped out by the last room and shiver.
+It&amp;rsquo;s 6:20am. Facing North, you walk through the corridor on the 5th wall.
+This room has a computer in the centre, thankfully. You turn it on.
+ The four nucleobases found in DNA are:
+ Adenine (A), which pairs with thymine (T), and Cytosine (C), which pairs with guanine (G).</description>
+    </item>
+    
+    <item>
+      <title>Code Broadcast</title>
+      <link>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle20/puzzle20/</link>
+      <pubDate>Sat, 10 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle20/puzzle20/</guid>
+      <description>This puzzle was released on 2019-08-10, and was the Abstract puzzle for the theme &amp;ldquo;Code&amp;rdquo;.
+ You&amp;rsquo;re starting to accept that you may not make it out.
+It&amp;rsquo;s 6:00am. Facing North, you walk through the corridor on the 5th wall.
+This room doesn&amp;rsquo;t have a computer. There&amp;rsquo;s only a radio. You hear voices conversing over the radio, as if you&amp;rsquo;re unintentionally eavesdropping. You can&amp;rsquo;t make much sense over what they&amp;rsquo;re saying though.</description>
     </item>
     
     <item>
@@ -29,6 +106,115 @@
       <guid>https://cigmah.org/blog/feature-chris-wright/</guid>
       <description>Associate Professor Chris Wright is the Academic Director of Clinical Programs for Monash University’s medical course. A/Prof Wright has a wealth of experience as an intensive care physician, programmer, and educator. We were very fortunate to have the chance to ask A/Prof Wright about his experiences in both medicine and programming.
  How did you first begin programming? The first time I learnt to code was at school in 1971.</description>
+    </item>
+    
+    <item>
+      <title>HPV Profiling</title>
+      <link>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle19/puzzle19/</link>
+      <pubDate>Mon, 15 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle19/puzzle19/</guid>
+      <description>This puzzle was released on 2019-07-13, and was the Challenge puzzle for the theme Small Code.
+ If only you could get some sleep. But still, you press on.
+It&amp;rsquo;s 5:40am. Facing North, you walk through the corridor on the 3rd wall.
+You turn on the computer in the middle of the room. A message comes up.
+ Good morning keen student doctor,
+I have a great summer vacation project for you!</description>
+    </item>
+    
+    <item>
+      <title>Peak Flow Diary</title>
+      <link>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle18/puzzle18/</link>
+      <pubDate>Sun, 14 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle18/puzzle18/</guid>
+      <description>This puzzle was released on 2019-07-13, and was the Beginner puzzle for the theme Small Code.
+ Your eyelids are drooping. You push through.
+It&amp;rsquo;s 5:20am. Facing North, you walk through the corridor on the 3rd wall.
+You turn on the computer in the middle of the room. A clinical scenario pops up.
+ Annie, a 19 year old woman with asthma, has been experiencing asthma flareups since moving to Melbourne.</description>
+    </item>
+    
+    <item>
+      <title>What Dipstick?</title>
+      <link>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle17/puzzle17/</link>
+      <pubDate>Sat, 13 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle17/puzzle17/</guid>
+      <description>This puzzle was released on 2019-07-13, and was the Abstract puzzle for the theme Small Code.
+ You&amp;rsquo;re feeling very drowsy. You can&amp;rsquo;t tell if it&amp;rsquo;s your tiredness, your desperation, or your silent anger at the architects who designed this library, but you&amp;rsquo;re starting to get a bit emotional. Inside, you&amp;rsquo;re berating yourself at becoming emotional over such a silly thing - how will you cope with the inevitable difficulties of real medical care if you can&amp;rsquo;t even handle being Lost in a Library?</description>
+    </item>
+    
+    <item>
+      <title>STI Bugs&#39;n&#39;Drugs</title>
+      <link>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle16/puzzle16/</link>
+      <pubDate>Mon, 17 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle16/puzzle16/</guid>
+      <description>This puzzle was released on 2019-06-15, and was the Challenge puzzle for the theme Game Night.
+ You can do this. You&amp;rsquo;ll make it out of here. You&amp;rsquo;ll finish your internship. You&amp;rsquo;ll learn how to help your patients the best you can. You&amp;rsquo;ve made it this far. You remember that you need to have faith in yourself, even when the world is so quiet and empty here.
+It&amp;rsquo;s 4:40am. Facing North, you walk through the corridor on the 5th wall.</description>
+    </item>
+    
+    <item>
+      <title>Worst Offender</title>
+      <link>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle15/puzzle15/</link>
+      <pubDate>Sun, 16 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle15/puzzle15/</guid>
+      <description>This puzzle was released on 2019-06-15, and was the Beginner puzzle for the theme Game Night.
+ You wonder what books are contained in this medical library. Or why it is so empty. Or maybe this place is so large that the population within it simply becomes diluted. SCP-3008 comes to mind and you shudder involuntarily.
+It&amp;rsquo;s 4:20am. Facing North, you walk through the corridor on the 6th wall.</description>
+    </item>
+    
+    <item>
+      <title>Base in Balance</title>
+      <link>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle14/puzzle14/</link>
+      <pubDate>Sat, 15 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle14/puzzle14/</guid>
+      <description>This puzzle was released on 2019-06-15, and was the Abstract puzzle for the theme Game Night.
+ Maybe being lost in a library isn&amp;rsquo;t so bad. There are much worse places to be lost in, like a dark forest, or the belly of a whale.
+It&amp;rsquo;s 4:00am. Facing North, you walk through the corridor on the 6th wall.
+You take a look at the computer in the middle of the room.</description>
+    </item>
+    
+    <item>
+      <title>Allele Inference</title>
+      <link>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle13/puzzle13/</link>
+      <pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle13/puzzle13/</guid>
+      <description>This puzzle was released on 2019-05-11, and was the Challenge puzzle for the theme A Little Logic.
+ Who ever thought a giant library of identical rooms was a good idea?
+It&amp;rsquo;s 3:40am. Facing North, you walk through the corridor on the 5th wall.
+The puzzle of this room is Allele Inference.
+  A genetic disease runs through the Babel Imperial Family.
+  This genetic disease is inherited through a single gene on an autosomal chromosome.</description>
+    </item>
+    
+    <item>
+      <title>Reschedule All</title>
+      <link>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle12/</link>
+      <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle12/</guid>
+      <description>This puzzle was released on 2019-05-11, and was the Beginner puzzle for the theme A Little Logic.
+ It&amp;rsquo;s 3:20am. Facing North, you walk through the corridor on the 4th wall.
+ Dr Y. L. Noehtmi is the only doctor at The Clinic on the Outskirts. He was supposed to be back from holiday tomorrow, but his flight&amp;rsquo;s been delayed. He&amp;rsquo;s determined not to let his patients down and will work 8am to 5pm the following day to catch up.</description>
+    </item>
+    
+    <item>
+      <title>NeuroLogic</title>
+      <link>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle11/puzzle11/</link>
+      <pubDate>Sat, 11 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle11/puzzle11/</guid>
+      <description>This puzzle was released on 2019-05-11, and was the Abstract puzzle for the theme A Little Logic.
+ You&amp;rsquo;re still stuck in the library. Maybe you&amp;rsquo;ll spend the rest of your life here.
+It&amp;rsquo;s 3:00am. Facing North, you walk through the corridor on the 4th wall.
+The puzzle of this room is NeuroLogic.
+ Localise the lesions on the puzzle board. You have 10 lesions to localise in a row.</description>
     </item>
     
     <item>
@@ -61,14 +247,178 @@
     </item>
     
     <item>
+      <title>Bite Cell Scouting</title>
+      <link>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle10/</link>
+      <pubDate>Mon, 08 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle10/</guid>
+      <description>This puzzle was released on 2019-04-06, and was the Challenge puzzle for the theme Pretty Pictures.
+ It&amp;rsquo;s 2:40am. Facing North, you walk through the corridor on the 5th wall.
+Time is pressing on. You don&amp;rsquo;t want to forever be known as &amp;ldquo;the late intern&amp;rdquo;&amp;hellip;.You&amp;rsquo;ve had nightmares of this before.
+You open the book on the table. It&amp;rsquo;s called Hospital of Babel Submission Proposal: A Comprehensive Look at Bite Cell Morphology.</description>
+    </item>
+    
+    <item>
+      <title>Fundal Flow</title>
+      <link>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle09/puzzle09/</link>
+      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle09/puzzle09/</guid>
+      <description>This puzzle was released on 2019-04-06, and was the Beginner puzzle for the theme Pretty Pictures.
+ It&amp;rsquo;s 2:20am. Facing North, you walk through the corridor on the 6th wall.
+You wonder how this library came to be. Or what the Hospital of Babel does with all these medically-related books.
+The book on the table is entitled A Fundal Atlas: Central Retinal Artery Occlusion (CRAO).
+Like clockwork, the phrase &amp;ldquo;cherry red macula&amp;rdquo; pops into your head.</description>
+    </item>
+    
+    <item>
+      <title>Tarsal Tumble</title>
+      <link>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle08/puzzle08/</link>
+      <pubDate>Sat, 06 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle08/puzzle08/</guid>
+      <description>This puzzle was released on 2019-04-06, and was the Abstract puzzle for the theme Pretty Pictures.
+ It&amp;rsquo;s 2:00am. Facing North, you walk through the corridor on the 6th wall.
+You wonder why the Hospital of Babel has such a strange library. And what anyone could want with so many identical rooms&amp;hellip;
+You open the book on the table. It&amp;rsquo;s called Tarsal Tumble.
+It only has one line:
+ Play the game and enter the digit code.</description>
+    </item>
+    
+    <item>
+      <title>Infectious Network</title>
+      <link>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle07/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle07/</guid>
+      <description>This puzzle was released on 2019-03-09, and was the Challenge puzzle for the theme Automatic, Automata.
+ It&amp;rsquo;s 1:40am. Facing North, you walk through the corridor on the 5th wall.
+You open the book on the table. Its cover says Expedition Logs - Star Runner II.
+You start reading.
+ 10th March 2050   Yuen&amp;lsquo;s got The Cold today. This darn, mysterious Cold which seems to be making its rounds through the crew.</description>
+    </item>
+    
+    <item>
+      <title>While You&#39;re Waiting</title>
+      <link>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle06/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle06/</guid>
+      <description>This puzzle was released on 2019-03-09, and was the Beginner puzzle for the theme Automatic, Automata.
+ It&amp;rsquo;s 1:20am. Facing North, you walk through the corridor on the 4th wall.
+You open the book on the table. It&amp;rsquo;s called Rhinal RPG, a combination of words you&amp;rsquo;d never thought you&amp;rsquo;d hear in your lifetime&amp;hellip;and never really wanted to hear.
+You start reading.
+┌────────────────────────────────────────────┐│ Hi, I&amp;#39;m Dr Lionel. I&amp;#39;m the head Rhino at ││ Rhinal Clinics!</description>
+    </item>
+    
+    <item>
+      <title>Out of Sync</title>
+      <link>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle05/</link>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle05/</guid>
+      <description>This puzzle was released on 2019-03-09, and was the Abstract puzzle for the theme Automatic, Automata.
+ It&amp;rsquo;s 1:00am. Facing North, you walk through the corridor on the 4th wall.
+You pick up the book on the table. It says Crab Canon - Out of Sync. What&amp;rsquo;s a crab canon?
+You start reading it.
+ Crab Canon - Out of Sync   ACHILLES: Ah! Well! Of course! I found it!</description>
+    </item>
+    
+    <item>
+      <title>Troubled Test</title>
+      <link>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle04/</link>
+      <pubDate>Mon, 25 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle04/</guid>
+      <description>This puzzle was released on 2019-02-23, and was the Challenge puzzle for the theme Text Books (Sample).
+ It&amp;rsquo;s 12:40am. Facing North, you head through the corridor on the 5th wall.
+You pick up the book on the table. The cover says Lupus Diagnoses Skyrocket: Pathology Labs in Question. You open it up and read the first page.
+ LUPUS DIAGNOSES SKYROCKET: PATHOLOGY LABS IN QUESTION
+  A new diagnosis is sweeping through Autoville: Lupus.</description>
+    </item>
+    
+    <item>
+      <title>Combo Catcher</title>
+      <link>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle03/</link>
+      <pubDate>Sun, 24 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle03/</guid>
+      <description>This puzzle was released on 2019-02-23, and was the Beginner puzzle for the theme Text Books (Sample).
+ It&amp;rsquo;s 12:20am. Facing North, you walk through the corridor on the 6th wall.
+Again, you step up to the center of the room and look at the book on the table. The cover says Unusual Effects of the Anti-Mycobacterial. You open it up and read the first page.
+ We have discovered surprising and potentially useful effects of the aforementioned anti-mycobacterial.</description>
+    </item>
+    
+    <item>
+      <title>Metabolic Mayhem</title>
+      <link>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle02/</link>
+      <pubDate>Sat, 23 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle02/</guid>
+      <description>This puzzle was released on 2019-02-23, and was the Abstract puzzle for the theme Text Books (Sample).
+ It&amp;rsquo;s 12:00am. You&amp;rsquo;re currently in the room containing the Map of the Medical Library of Babel. Facing North, you enter the door on the 6th wall.
+You walk up to the book on the table and read the title - Metabolic Mayhem. You open it.
+It contains only a single sentence.</description>
+    </item>
+    
+    <item>
+      <title>Lost in a Library</title>
+      <link>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle01/</link>
+      <pubDate>Wed, 23 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle01/</guid>
+      <description>This puzzle was released on 2019-02-23, and was the Meta puzzle for the theme Meta
+ The universe (which others call the Library) is composed of an indefinite and perhaps infinite number of hexagonal galleries, with vast air shafts between, surrounded by very low railings.
+  &amp;ndash; Jorge Luis Borges, &amp;ldquo;The Library of Babel&amp;rdquo; (Translated by James E Irby)
+   You&amp;rsquo;re the new medical intern. Congrats.
+  But you&amp;rsquo;re lost in your hospital&amp;rsquo;s library.</description>
+    </item>
+    
+    <item>
+      <title>Contraindicated</title>
+      <link>https://cigmah.org/events/2019_text_processing/tute-01-contraindicated/contraindicated/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cigmah.org/events/2019_text_processing/tute-01-contraindicated/contraindicated/</guid>
+      <description>Problem   &amp;#34;Cardiovascular disease is the leading cause of death and disease burden in Australia&amp;#34;. One of the risk factors for cardiovascular disease is high blood pressure (hypertension), which can be managed through non-pharmacological or pharmacological approaches.  The Heart Foundation publishes a set of clinical guidelines relating to the management of various cardiovascular conditions, including a management guideline for hypertension in adults. This guideline outlines the important clinical information for health professionals managing patients with high blood pressure.</description>
+    </item>
+    
+    <item>
       <title>How to Contribute to AORTA</title>
       <link>https://cigmah.org/tools/aorta/how-to-contribute/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://cigmah.org/tools/aorta/how-to-contribute/</guid>
       <description>How do I contribute to AORTA? You can contribute in two ways to AORTA:
- By managing and writing notes for a medical learning objective. By adding extended-matching questions (EMQs) under a learning objective.  Both ways of contributing require you to register an account on AORTA. Registration is free and doesn&#39;t require any information from you except a username you choose and an optional email.
+ By managing and writing notes for a medical learning objective. By adding extended-matching questions (EMQs) under a learning objective.  Both ways of contributing require you to register an account on AORTA. Registration is free and doesn&amp;rsquo;t require any information from you except a username you choose and an optional email.
 Below are instructions for:</description>
+    </item>
+    
+    <item>
+      <title>Mapping Meningitis</title>
+      <link>https://cigmah.org/events/2019_text_processing/tute-01-mapping-meningitis/mapping-meningitis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cigmah.org/events/2019_text_processing/tute-01-mapping-meningitis/mapping-meningitis/</guid>
+      <description>Problem   Meningitis is spreading through Melbourne at a previously unprecedented rate. To investigate, your clinical supervisor has acquired a text file of abridged and deidentified CSF results from patients with suspected meningitis in Melbourne over a 24-week period starting from March 1st 2020.  Here is the first result. You have a collection of 1000 results in this format. PATIENT ID: 882490 LOCATION: (-36.852366,145.388525) SAMPLE TIMESTAMP: 2020-05-17 RESULTS: Turbid.</description>
+    </item>
+    
+    <item>
+      <title>Mood Diary</title>
+      <link>https://cigmah.org/events/2019_text_processing/tute-01-mood-diary/mood-diary/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cigmah.org/events/2019_text_processing/tute-01-mood-diary/mood-diary/</guid>
+      <description>Problem   Kennedy, a 26 year old male, has been struggling with depression. On your advice, he has started tracking and reflecting on his mood every day for the past two years from 1st January 2020 to 31st December 2021 inclusive.  To track his mood, he used a (fictional) mobile app - Mood Diary. Every day, Mood Diary would send him a push notification asking him to select one of five moods.</description>
+    </item>
+    
+    <item>
+      <title>Transfusion Tracing</title>
+      <link>https://cigmah.org/events/2019_text_processing/tute-01-transfusion-tracing/transfusion-tracing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cigmah.org/events/2019_text_processing/tute-01-transfusion-tracing/transfusion-tracing/</guid>
+      <description>Problem   Your hospital&amp;#39;s infectious diseases department has queried two recent diagnoses of Hepatitis C in patients who have both received blood traced to the same blood donor. While the transmission of blood-borne infections through blood transfusions is exceedingly rare in the modern age, your hospital has raised an inquiry for due caution.  You have been provided with trimmed, deidentified transfusion logs over 6 months (from 1st January 2020 to 30th June 2020) in the following format (first five lines): 2020-01-01 D012311 095703 2020-01-01 D041530 028619 2020-01-01 D007809 026117 2020-01-01 D037810 021170 2020-01-01 D099727 042349   You have 50000 lines in your input.</description>
     </item>
     
   </channel>

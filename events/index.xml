@@ -6,9 +6,22 @@
     <description>Recent content in Events on The Coding Interest Group in Medicine and Healthcare</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Wed, 02 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cigmah.org/events/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Night 2: Loops &amp; Neural Networks</title>
+      <link>https://cigmah.org/events/2019_neural_networks/</link>
+      <pubDate>Sun, 01 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cigmah.org/events/2019_neural_networks/</guid>
+      <description>When was this tutorial night held? This tutorial night was held at 6pm on 18th September 2019 at Clayton campus.
+What material was covered? This tutorial night covered:
+ Control flow and printing output in Python. Introduction to neural networks with keras.  Where are the resources for this tutorial night? There are two Google Colab notebooks available from the night:
+ Control flow (presented by Jess) available here. Neural networks (presented by Jamin) available here.</description>
+    </item>
     
   </channel>
 </rss>

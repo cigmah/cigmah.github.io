@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html><head>
+    
+    
+    <title> CIGMAH - Troubled Test </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="2019 Puzzle Hunt - Puzzle 04C">
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" href="https://cigmah.org/favicon.ico">
+    <script src="https://cigmah.org/js/toggles.js"></script>
+    <link type="text/css" rel="stylesheet" href=https://cigmah.org/sass/main.css>
+    <link rel="canonical" href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle04/">
+</head>
+<body>
+        <header>
+
+            <nav id="nav-menu-toggle" onClick="toggleNav()">
+                <div id="menu-text">☰</div>
+                <div id="cigmah-brand">
+                    <div id="cigmah-icon">
+                        <img src="https://cigmah.org/img/cigmah-icon.png">
+                    </div>
+                    <div id="cigmah-text">
+                        CIGMAH
+                    </div>
+                </div>
+            </nav>
+
+            <nav id="nav-bar">
+
+<ul id="nav-link-list" onClick="()">
+
+    <li
+        class="nav-link-list-item "
+    >
+        <a
+            class="nav-link-list-link "
+            id="nav-cigmah-link"
+            href=https://cigmah.org/
+        >
+            <img id="nav-cigmah-link-icon" src="/img/cigmah-icon-small.png">
+            <div>CIGMAH</div>
+        </a>
+    </li>
+
+  
+    <li
+        class="nav-link-list-item "
+        >
+        <a
+            class="nav-link-list-link "
+            href=https://cigmah.org/about/
+        >
+            About
+        </a>
+    </li>
+    
+    <li
+        class="nav-link-list-item "
+        >
+        <a
+            class="nav-link-list-link "
+            href=https://cigmah.org/events/
+        >
+            Events
+        </a>
+    </li>
+    
+    <li
+        class="nav-link-list-item "
+        >
+        <a
+            class="nav-link-list-link "
+            href=https://cigmah.org/tools/
+        >
+            Tools
+        </a>
+    </li>
+    
+    <li
+        class="nav-link-list-item "
+        >
+        <a
+            class="nav-link-list-link "
+            href=https://cigmah.org/resources/
+        >
+            Resources
+        </a>
+    </li>
+    
+    <li
+        class="nav-link-list-item "
+        >
+        <a
+            class="nav-link-list-link "
+            href=https://cigmah.org/blog/
+        >
+            Blog
+        </a>
+    </li>
+    
+    <li
+        class="nav-link-list-item "
+        >
+        <a
+            class="nav-link-list-link "
+            href=https://cigmah.org/contact/
+        >
+            Contact
+        </a>
+    </li>
+    
+
+    <li
+        class="nav-link-list-item"
+        id="nav-right-item"
+        >
+        <a
+            href="https://aorta.cigmah.org"
+            id="nav-aorta-link"
+            class="nav-link-list-link"
+        >
+            <img id="nav-aorta-link-icon" src="/img/aorta-icon.png">
+            <div id="nav-aorta-link">AORTA</div>
+        </a>
+    </li>
+</ul>
+</nav>
+
+        </header>
+
+        <main>
+
+
+
+<section class="normal-page">
+    <article id="side-navigation">
+        <article id="toggle-side-navigation-container">
+
+            
+            <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle03/" id="back"> &lt;&lt; </a>
+            
+
+            <button id="toggle-side-navigation" onClick="toggleSideNav()">Show Articles</button>
+
+            
+            <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle05/" id="next"> &gt;&gt; </a>
+            
+
+        </article>
+
+        <ul id="side-navigation-list">
+
+            
+            <li class="side-navigation-parent">
+                <a href="https://cigmah.org/events/">Events</a>
+            </li>
+            
+
+
+            <li class="side-navigation-section">
+                <a href="https://cigmah.org/events/2019_puzzlehunt/">
+                    2019 Puzzle Hunt
+                </a>
+            </li>
+
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle01/">Lost in a Library</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle02/">Metabolic Mayhem</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle03/">Combo Catcher</a>
+            </li>
+            
+            <li
+                class="side-navigation-item  active "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle04/">Troubled Test</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle05/">Out of Sync</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle06/">While You&#39;re Waiting</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle07/">Infectious Network</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle08/puzzle08/">Tarsal Tumble</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle09/puzzle09/">Fundal Flow</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle10/">Bite Cell Scouting</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle11/puzzle11/">NeuroLogic</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle12/">Reschedule All</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle13/puzzle13/">Allele Inference</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle14/puzzle14/">Base in Balance</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle15/puzzle15/">Worst Offender</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle16/puzzle16/">STI Bugs&#39;n&#39;Drugs</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle17/puzzle17/">What Dipstick?</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle18/puzzle18/">Peak Flow Diary</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle19/puzzle19/">HPV Profiling</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle20/puzzle20/">Code Broadcast</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle21/puzzle21/">Genetic Thrift</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle22/puzzle22/">Neural Decoding</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle23/puzzle23/">Run! (Preclinical)</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle24/puzzle24/">Run! (Clinical)</a>
+            </li>
+            
+
+        </ul>
+
+    </article>
+
+    <section id="container">
+
+        <article id="content">
+            <header id="content-header">
+            <h1 id="content-title"> Troubled Test </h1>
+
+            
+                <div id="subtitle">
+                    <div> 2019 Puzzle Hunt - Puzzle 04C </div>
+                </div>
+            
+
+            </div>
+
+            </header>
+
+            <section id="content-body">
+                <blockquote>
+<p>This puzzle was released on 2019-02-23, and was the Challenge puzzle for the theme <em>Text Books (Sample)</em>.</p>
+</blockquote>
+<!-- raw HTML omitted -->
+<p>It&rsquo;s 12:40am. Facing North, you head through the corridor on the 5th wall.</p>
+<p><img src="https://i.imgur.com/zgobFvR.gif" alt="Image"></p>
+<p>You pick up the book on the table. The cover says <em>Lupus Diagnoses Skyrocket: Pathology Labs in Question</em>. You open it up and read the first page.</p>
+<blockquote>
+<p><strong>LUPUS DIAGNOSES SKYROCKET: PATHOLOGY LABS IN QUESTION</strong></p>
+</blockquote>
+<blockquote>
+<p>A new diagnosis is sweeping through Autoville: Lupus. Lupus is an autoimmune
+disease - a disease where some of the body&rsquo;s own immune cells attack other
+cells. Some of the symptoms of lupus include a facial rash, joint pain and
+fatigue.</p>
+</blockquote>
+<blockquote>
+<p>While the prevalence of lupus in Autoville was only 20 in 100,000 three years
+ago, a recent study by the Autoville Autoimmune Disease Association has shown
+a staggering increase in the number of lupus diagnoses to 100 in 100,000 this
+year - an increase of five times.</p>
+</blockquote>
+<blockquote>
+<p>The Autoville Autoimmune Disease Association has stated that they have begun
+an investigation into the matter.</p>
+</blockquote>
+<blockquote>
+<p>&ldquo;We don&rsquo;t believe this reflects an actual increase in the number of people
+with lupus. What we believe has occurred, according to preliminary evidence,
+is an error at one of the pathology labs when detecting one of the markers
+for lupus in the blood, and unfortunately this has continued without being
+discovered sooner.&rdquo;</p>
+</blockquote>
+<blockquote>
+<p>&ldquo;No one diagnoses lupus based on the results of one, or even multiple, blood
+tests. But it <em>is</em> possible the patients who make up this sudden increase had a
+similar disease process which, when combined with the results of the blood
+test, led clinicians to make a diagnosis when it would not have ordinarily
+been made.&rdquo;</p>
+</blockquote>
+<blockquote>
+<p>&ldquo;Whether or not these constitute misdiagnoses is not clear at this point. If
+that is indeed the case, then we can assure patients and their families that
+we will be providing support and information services for all those affected.&rdquo;</p>
+</blockquote>
+<blockquote>
+<p>A spokesperson from H&amp;E Pathology, one of Autoville&rsquo;s many pathology
+providers, says that H&amp;E Pathology will assist with the investigation.</p>
+</blockquote>
+<blockquote>
+<p>&ldquo;We take the accuracy of our tests very seriously. Pathology underlies so much
+of the healthcare system that we can&rsquo;t afford to make these sorts of mistakes.
+H&amp;E Pathology will be cooperating with the Autoville Autoimmune Disease
+Association to get to the bottom of this issue, and we hope other pathology
+providers will follow suit.&rdquo;</p>
+</blockquote>
+<blockquote>
+<p>The investigation is expected to be completed within the next month.</p>
+</blockquote>
+<p>It sounds like a news transcript. Misdiagnoses&hellip;that doesn&rsquo;t sound good.</p>
+<p>You read the next page.</p>
+<blockquote>
+<p>Dear Mr Arthur,</p>
+</blockquote>
+<blockquote>
+<p>We have identified the pathology branch with the malfunctioning test. We can
+confirm the malfunction only affects one of the auto-antibody tests the lab
+provides. We are currently doing a final check and will contact you as soon as
+we are prepared to do so. I am afraid</p>
+</blockquote>
+<p>That&rsquo;s it. It looks like it was cut off. The next pages all look like pathology
+reports for various auto-antibody tests.</p>
+<p>You have a think - it seems like a malfunction in an auto-antibody test at one
+specific pathology branch was responsible for an increase in lupus diagnoses
+(though you recall this was only a small part of the SLE diagnostic
+criteria&hellip;perhaps Autoville used different criteria.). Most likely, the
+malfunction caused an increase in false positives. You have lots of pathology
+reports for different auto-antibody tests for different branches. If you apply a
+bit of statistics, maybe you can find whether there is a pathology branch which
+had a <em>significantly</em> different proportion of positive results for that
+auto-antibody (though you still don&rsquo;t know which one.)</p>
+<p>It&rsquo;s time to look at those pathology reports&hellip;</p>
+<h2 id="input">Input</h2>
+<p><a href="https://drive.google.com/open?id=1Zm-TMyNlFe-g6MZ4wiWiQWqUK4Hxb7C9">cgmnt_input04.txt</a> (15MB)</p>
+<p>Compressed versions:</p>
+<ul>
+<li><a href="https://drive.google.com/uc?id=1hqqn7b_2HMQu2KO_5VZ76p36Ab00FFZR">cgmnt_input04.txt.gzip</a> (414KB)</li>
+<li><a href="https://drive.google.com/uc?id=1fvcQlUmbgYeG7kAf5YOOAnrIzuzSBL_a">cgmnt_input04.txt.zip</a> (477KB)</li>
+</ul>
+<h2 id="statement">Statement</h2>
+<p>State the ID of the pathology branch with the malfunctioning test.</p>
+<h2 id="references">References</h2>
+<p>Written by the CIGMAH Puzzle Hunt team.</p>
+<!-- raw HTML omitted -->
+<p>To generate the input data, we used some information from the <a href="https://en.wikipedia.org/wiki/Autoantibody">Wikipedia Autoantibody page</a> licensed under Creative Commons.</p>
+<h2 id="answer">Answer</h2>
+<p>The correct solution was <code>53562</code>.</p>
+<h2 id="explanation">Explanation</h2>
+<h3 id="map-hint">Map Hint</h3>
+<p>You reflect on the events this news transcript reveals. You wonder what happened in the aftermath - what were patients told? Were they truly misdiagnosed? And how could Autoville let the error of a single pathology branch create such an impact on patients&rsquo; lives?</p>
+<p>You open <code>map_hint.txt</code>. It has only a single line:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">The map itself is an SVG image.
+</code></pre></div><p>Hmm. That&rsquo;s not very helpful unfortunately. But it&rsquo;s only the third room - you still have plenty of time to explore the other hints. Maybe they&rsquo;ll get more helpful as you explore more rooms&hellip;</p>
+<h3 id="writers-notes">Writer&rsquo;s Notes</h3>
+<h4 id="objectives">Objectives</h4>
+<p>Our objectives for this puzzle were to incorporate:</p>
+<ol>
+<li>Text processing, including regular expressions</li>
+<li>Basic statistical analysis</li>
+</ol>
+<p>When planning the puzzle, we intended the solving steps to be:</p>
+<ol>
+<li>Parse the pathology reports into a branch ID and antibody results</li>
+<li>Use some statistical test (e.g. chi-squared test) to determine the significance level of of branch ID&rsquo;s effect on the antibody result</li>
+<li>Determine the pathology branch ID of the &ldquo;significantly different&rdquo; branch</li>
+</ol>
+<h4 id="context">Context</h4>
+<p>Some basic data analysis skills are always a great idea for clinicians and researchers. Understanding epidemiology is crucial for medical professionals, even if they don&rsquo;t touch the analyses underlying it. <em>Evidence-based medicine</em> is practically an end-product of data analysis, and we believe that, although medical professionals may not necessarily <em>need</em> to conduct analyses themselves, it is an absolutely useful skill to learn (or, at the very least, understand thoroughly!). By not understanding the tools that we use, we make ourselves susceptible to possessing only a superficial understanding of how things came to be and losing the ability to critically think.</p>
+<p>Calculating statistics manually, however, is laborious and error-prone. Coding is enormously helpful here. There are many ecosystems built around data analysis, perhaps the most eminent being that of <a href="https://www.r-project.org/">R</a> , <a href="https://www.mathworks.com/products/matlab.html">Matlab</a> (<em>proprietary</em>) and <a href="https://www.ibm.com/au-en/analytics/spss-statistics-software">SPSS</a> (<em>propietary</em>). Thankfully, Python also has a great (and open!) data science ecosystem built around libraries such as <a href="http://www.numpy.org/">Numpy</a>, <a href="https://pandas.pydata.org/">Pandas</a> and <a href="https://scikit-learn.org/stable/">scikit-learn</a>.</p>
+<p>This puzzle is only a very simple example, but hopefully one which demonstrates how data mirroring real-life reports could be analysed in a very simple way to provide some useful information. Finding how a pathology branch ID is correlated with antibody positivity is essentially the same problem as determining how any multi-class categorical variable correlates with a binary outcome (e.g. how a place of residence might correlate with the number of cholera cases.)</p>
+<h4 id="example-solution">Example Solution</h4>
+<blockquote>
+<p>Our example solutions are just one way of solving the puzzle. They&rsquo;re not necessarily the best way, or even a good way!</p>
+</blockquote>
+<p>Loading data:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">requests</span>
+
+input_url <span style="color:#666">=</span> <span style="color:#ba2121">&#34;https://drive.google.com/uc?id=1Zm-TMyNlFe-g6MZ4wiWiQWqUK4Hxb7C9&#34;</span>
+text <span style="color:#666">=</span> requests<span style="color:#666">.</span>get(input_url)<span style="color:#666">.</span>text
+</code></pre></div><p>Processing data:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">re</span>
+<span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">pandas</span> <span style="color:#008000;font-weight:bold">as</span> <span style="color:#00f;font-weight:bold">pd</span>
+<span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">scipy.stats</span> <span style="color:#008000;font-weight:bold">as</span> <span style="color:#00f;font-weight:bold">stats</span>
+
+<span style="color:#408080;font-style:italic">### Regexes</span>
+antibody_regex <span style="color:#666">=</span> re<span style="color:#666">.</span>compile(<span style="color:#ba2121">r</span><span style="color:#ba2121">&#39;-{80}\n*(.*?)\t+((?:POSITIVE)|(?:NEGATIVE))&#39;</span>, re<span style="color:#666">.</span>DOTALL)
+branch_regex <span style="color:#666">=</span> re<span style="color:#666">.</span>compile(<span style="color:#ba2121">r</span><span style="color:#ba2121">&#39;PATHOLOGY BRANCH: (\d+)&#39;</span>)
+
+<span style="color:#408080;font-style:italic">### Process text to list of (branch_id, test, result) tuples</span>
+data <span style="color:#666">=</span> [(branch_regex<span style="color:#666">.</span>search(report)<span style="color:#666">.</span>group(<span style="color:#666">1</span>), <span style="color:#666">*</span>result)
+         <span style="color:#008000;font-weight:bold">for</span> report <span style="color:#a2f;font-weight:bold">in</span> text<span style="color:#666">.</span>split(<span style="color:#ba2121">&#34;=&#34;</span><span style="color:#666">*</span><span style="color:#666">80</span>)
+         <span style="color:#008000;font-weight:bold">for</span> result <span style="color:#a2f;font-weight:bold">in</span> antibody_regex<span style="color:#666">.</span>findall(report)]
+
+<span style="color:#408080;font-style:italic">### Convert data to Pandas DataFrame</span>
+columns <span style="color:#666">=</span> [<span style="color:#ba2121">&#34;branch_id&#34;</span>, <span style="color:#ba2121">&#34;assay_name&#34;</span>, <span style="color:#ba2121">&#34;assay_result&#34;</span>]
+df <span style="color:#666">=</span> pd<span style="color:#666">.</span>DataFrame(data, columns<span style="color:#666">=</span>columns)
+
+<span style="color:#408080;font-style:italic">### Create contingency tables on branch_id x [test, result]</span>
+cross <span style="color:#666">=</span> pd<span style="color:#666">.</span>crosstab(df<span style="color:#666">.</span>branch_id, [df<span style="color:#666">.</span>assay_name, df<span style="color:#666">.</span>assay_result])
+
+<span style="color:#408080;font-style:italic">### Generate statistics for each test&#39;s contingency table</span>
+tests <span style="color:#666">=</span> <span style="color:#008000">list</span>(<span style="color:#008000">set</span>([c[<span style="color:#666">0</span>] <span style="color:#008000;font-weight:bold">for</span> c <span style="color:#a2f;font-weight:bold">in</span> cross<span style="color:#666">.</span>columns]))
+analyses <span style="color:#666">=</span> [(test, stats<span style="color:#666">.</span>chi2_contingency(cross[test])) <span style="color:#008000;font-weight:bold">for</span> test <span style="color:#a2f;font-weight:bold">in</span> tests]
+
+<span style="color:#408080;font-style:italic">### Find the minimum p-value and assert &lt; 0.05</span>
+min_p <span style="color:#666">=</span> <span style="color:#008000">min</span>([a[<span style="color:#666">1</span>] <span style="color:#008000;font-weight:bold">for</span> test, a <span style="color:#a2f;font-weight:bold">in</span> analyses])
+<span style="color:#008000;font-weight:bold">assert</span> min_p <span style="color:#666">&lt;</span> <span style="color:#666">0.05</span>
+
+<span style="color:#408080;font-style:italic">### Find the analysis with the lowest p-value</span>
+selected <span style="color:#666">=</span> [(test, analysis) <span style="color:#008000;font-weight:bold">for</span> test, analysis <span style="color:#a2f;font-weight:bold">in</span> analyses <span style="color:#008000;font-weight:bold">if</span> analysis[<span style="color:#666">1</span>] <span style="color:#666">==</span> min_p][<span style="color:#666">0</span>]
+
+<span style="color:#408080;font-style:italic">### Find the antibody test for which this analysis occurred</span>
+selected_test <span style="color:#666">=</span> selected[<span style="color:#666">0</span>]
+
+<span style="color:#408080;font-style:italic">### Find the difference between the observed and expected frequencies for this analysis</span>
+data_test <span style="color:#666">=</span> cross[selected_test]
+diffs <span style="color:#666">=</span> data_test <span style="color:#666">-</span> selected[<span style="color:#666">1</span>][<span style="color:#666">3</span>]
+
+<span style="color:#408080;font-style:italic">### Find the branch with the max positive difference for this analysis</span>
+selected_branch <span style="color:#666">=</span> diffs[diffs[<span style="color:#ba2121">&#34;POSITIVE&#34;</span>] <span style="color:#666">==</span> <span style="color:#008000">max</span>(diffs[<span style="color:#ba2121">&#34;POSITIVE&#34;</span>])]<span style="color:#666">.</span>index<span style="color:#666">.</span>item()
+
+<span style="color:#008000;font-weight:bold">print</span>(selected_test)
+<span style="color:#008000;font-weight:bold">print</span>(selected_branch)
+</code></pre></div><pre><code>Anti-Smith (ENA), Qualitative
+53562
+</code></pre>
+<p>The solution works by:</p>
+<ol>
+<li>Splitting the data into per-patient reports, and extracting the branch ID and antibodies with their results from each pathology report</li>
+<li>Converting the extracted data into a Pandas dataframe (for easy analysis, given the amount of utilities Pandas provides)</li>
+<li>Creating contingency tables for each branch ID and antibody test on the test result</li>
+<li>Using Pandas to calculate statistics for each contingency table, including the chi-squared statistic, p-value and expected value matrix</li>
+<li>Finding the minimum p-value and asserting that it must be below 0.05 (somewhat arbitrary, but a convention). If it is not, raise an error.</li>
+<li>Determining the data for which the minimum p-value occurred (indicating a the branch ID made a &ldquo;significant&rdquo; difference to the antibody outcome)</li>
+<li>Finding, from this data, the branch which contributed the most positive deviation of positive results from the expected frequencies.</li>
+</ol>
+<p>This solution makes a number of assumptions about the data (e.g. that a p-value below 0.05 exists, or that this p-value was contributed by the branch which had the greatest positive deviation). We prototyped this solution initially using a REPL which helped us analyse the data step by step, but we have put it into a single Python script above for convenience.</p>
+<h4 id="extra-notes">Extra Notes</h4>
+<p>We&rsquo;ll have a quick look at a few of these steps.</p>
+<p>After processing our data using some standard string processing and regular expressions, our data looks something like this (we&rsquo;ll print the first five rows):</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df[:<span style="color:#666">5</span>]
+</code></pre></div><!-- raw HTML omitted -->
+<p>We can actually stop here and briefly graph the data as a bar chart of the relative frequency of positive results for each branch ID, for each antibody test.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">freqs <span style="color:#666">=</span> df<span style="color:#666">.</span>replace([<span style="color:#ba2121">&#34;NEGATIVE&#34;</span>, <span style="color:#ba2121">&#34;POSITIVE&#34;</span>], [<span style="color:#666">0</span>, <span style="color:#666">1</span>])<span style="color:#666">.</span>groupby([<span style="color:#ba2121">&#34;branch_id&#34;</span>, <span style="color:#ba2121">&#34;assay_name&#34;</span>])<span style="color:#666">.</span>mean()
+
+<span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">matplotlib.pyplot</span> <span style="color:#008000;font-weight:bold">as</span> <span style="color:#00f;font-weight:bold">plt</span>
+plt<span style="color:#666">.</span>style<span style="color:#666">.</span>use(<span style="color:#ba2121">&#34;default&#34;</span>)
+
+ax <span style="color:#666">=</span> freqs<span style="color:#666">.</span>unstack()<span style="color:#666">.</span>plot(kind<span style="color:#666">=</span><span style="color:#ba2121">&#39;bar&#39;</span>, figsize<span style="color:#666">=</span>(<span style="color:#666">12</span>,<span style="color:#666">10</span>))<span style="color:#666">.</span>legend(bbox_to_anchor<span style="color:#666">=</span>(<span style="color:#666">1</span>, <span style="color:#666">1</span>))
+</code></pre></div><p><img src="https://lh3.googleusercontent.com/nL-Eh2zOYZ0e6F2AJmocq0LIFkyN4aQqi5uA135V0gIlM8kjoieaVzreA4MSeYKAVipbtHbRGvVxbGuxAEY5v7fLBAM9rOLAN1V2j2wHpIUKBgywTok6fbTPU90res9SJjVPdzm3=w1200" alt="Graph"></p>
+<p>It just so happens that the largest peak is also our answer. We should have probably made it a bit less obvious when generating our data. The other large peaks are test results which didn&rsquo;t occur very often, so have large errors.</p>
+<p>If we plot a very crude SEMs on top of this, we can see the standard errors of the means are quite large (it&rsquo;s not a pretty graphic, but we didn&rsquo;t feel the need to make it pretty&hellip;)</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sems <span style="color:#666">=</span> df<span style="color:#666">.</span>replace([<span style="color:#ba2121">&#34;NEGATIVE&#34;</span>, <span style="color:#ba2121">&#34;POSITIVE&#34;</span>], [<span style="color:#666">0</span>, <span style="color:#666">1</span>])<span style="color:#666">.</span>groupby([<span style="color:#ba2121">&#34;branch_id&#34;</span>, <span style="color:#ba2121">&#34;assay_name&#34;</span>])<span style="color:#666">.</span>sem()
+ax <span style="color:#666">=</span> freqs<span style="color:#666">.</span>unstack()<span style="color:#666">.</span>plot(kind<span style="color:#666">=</span><span style="color:#ba2121">&#39;bar&#39;</span>, yerr<span style="color:#666">=</span>sems<span style="color:#666">.</span>unstack(), figsize<span style="color:#666">=</span>(<span style="color:#666">12</span>,<span style="color:#666">10</span>))<span style="color:#666">.</span>legend(bbox_to_anchor<span style="color:#666">=</span>(<span style="color:#666">1</span>, <span style="color:#666">1</span>))
+</code></pre></div><p><img src="https://lh3.googleusercontent.com/hr1RmU52RDviegU05cgKcSkctDFbds5hv3btAWwCwTk3QC2iwtZhCZ65qb6n1mHx67UnbbDxY9KwhGsqPXOf0oxPc08Q7E00exRnaBsyZxLkkqfNZ3mJNnhK7ROXwPZnR3rx_-Vu=w1200" alt="Errors"></p>
+<p>An astute observer might remark that the answer bar (53562, Anti-Smith antibodies) actually has a comparitively smaller SEM than many of the other large bars - though we think it would be hard to make any inference &ldquo;for sure&rdquo; about this data purely from inspection of this diagram.</p>
+<p>Our contingency table of the data (e.g. for Anti-Smith antibodies) looks a bit like this:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">cross[<span style="color:#ba2121">&#34;Anti-Smith (ENA), Qualitative &#34;</span>]
+</code></pre></div><!-- raw HTML omitted -->
+<p>When we run the chi-squared test on this table to see whether the branch ID is independent of the antibody results, we get results that look something like this:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">stats<span style="color:#666">.</span>chi2_contingency(cross[<span style="color:#ba2121">&#34;Anti-Smith (ENA), Qualitative &#34;</span>])
+</code></pre></div><pre><code>(171.40385769496152,
+ 3.5633515152280256e-29,
+ 14,
+ array([[157.32182254,   8.67817746],
+        [123.20383693,   6.79616307],
+        [126.99472422,   7.00527578],
+        [123.20383693,   6.79616307],
+        [117.517506  ,   6.482494  ],
+        [117.517506  ,   6.482494  ],
+        [119.41294964,   6.58705036],
+        [146.89688249,   8.10311751],
+        [145.94916067,   8.05083933],
+        [125.09928058,   6.90071942],
+        [125.09928058,   6.90071942],
+        [123.20383693,   6.79616307],
+        [151.63549161,   8.36450839],
+        [154.47865707,   8.52134293],
+        [118.46522782,   6.53477218]]))
+</code></pre>
+<p>In this output, the tuple values correspond to the following:</p>
+<ol>
+<li>The first value is the chi-squared statistic (the sum of normalised squared differences between the observed and expected frequencies).</li>
+<li>The second value is the p-value (which is <em>very</em> small for this case, suggesting that no, the branch ID is <em>not</em> independent of the antibody results).</li>
+<li>The third value corresponds to the degrees of freedom.</li>
+<li>The fourth value is an array of the expected outcomes (calculated from the marginals).</li>
+</ol>
+<p>We like reading documentation - it&rsquo;s super helpful. The information on what value corresponds to what is available from the <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.chi2_contingency.html">scipy documentation for <code>chi2_contingency</code></a>.</p>
+<p>Out of curiosity, we can check how many results had a p-value below 0.05:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">[a[<span style="color:#666">1</span>] <span style="color:#008000;font-weight:bold">for</span> test, a <span style="color:#a2f;font-weight:bold">in</span> analyses <span style="color:#008000;font-weight:bold">if</span> a[<span style="color:#666">1</span>] <span style="color:#666">&lt;</span> <span style="color:#666">0.05</span>]
+</code></pre></div><pre><code>[0.03852813286638996, 3.5633515152280256e-29]
+</code></pre>
+<p>So we can see there are actually two p-values below 0.05 (which is not terribly unexpected given that p-values correspond to probabilities, and we have a lot of null hypotheses to test in this data!) - though one is indeed much smaller than the other. We think that a statistics professor somewhere would be angry at us if we said that one of these is more significant than the other purely by virtue of being lower, so we&rsquo;ll just have a look at what the other significant value was:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">[(test, analysis) <span style="color:#008000;font-weight:bold">for</span> test, analysis <span style="color:#a2f;font-weight:bold">in</span> analyses <span style="color:#008000;font-weight:bold">if</span> analysis[<span style="color:#666">1</span>] <span style="color:#666">&lt;</span> <span style="color:#666">0.05</span>]
+</code></pre></div><pre><code>[('Anti-Ma, Qualitative ',
+  (24.618288488409586,
+   0.03852813286638996,
+   14,
+   array([[11.74025974,  0.25974026],
+          [12.71861472,  0.28138528],
+          [12.71861472,  0.28138528],
+          [19.56709957,  0.43290043],
+          [23.48051948,  0.51948052],
+          [13.6969697 ,  0.3030303 ],
+          [13.6969697 ,  0.3030303 ],
+          [12.71861472,  0.28138528],
+          [10.76190476,  0.23809524],
+          [13.6969697 ,  0.3030303 ],
+          [17.61038961,  0.38961039],
+          [ 8.80519481,  0.19480519],
+          [17.61038961,  0.38961039],
+          [18.58874459,  0.41125541],
+          [18.58874459,  0.41125541]]))),
+ ('Anti-Smith (ENA), Qualitative ',
+  (171.40385769496152,
+   3.5633515152280256e-29,
+   14,
+   array([[157.32182254,   8.67817746],
+          [123.20383693,   6.79616307],
+          [126.99472422,   7.00527578],
+          [123.20383693,   6.79616307],
+          [117.517506  ,   6.482494  ],
+          [117.517506  ,   6.482494  ],
+          [119.41294964,   6.58705036],
+          [146.89688249,   8.10311751],
+          [145.94916067,   8.05083933],
+          [125.09928058,   6.90071942],
+          [125.09928058,   6.90071942],
+          [123.20383693,   6.79616307],
+          [151.63549161,   8.36450839],
+          [154.47865707,   8.52134293],
+          [118.46522782,   6.53477218]])))]
+</code></pre>
+<p>So it&rsquo;s an Anti-Ma antibody test, which is not typically associated with SLE. We can also see that the number of occurrences of this antibody test at all is much lower. All suggestive, nothing definitive, but good enough for us.</p>
+<h4 id="data-generation">Data Generation</h4>
+<p>Our scenario is, like many of our puzzle scenarios, &ldquo;unrealistic&rdquo; in terms of narrative, but the data format and analysis principles should be similar.</p>
+<p>We scraped a list of auto-antibodies from the <a href="https://en.wikipedia.org/wiki/Autoantibody">Wikipedia Autoantibody page</a> (CC BY-SA license).</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">requests</span>
+
+text_html <span style="color:#666">=</span> requests<span style="color:#666">.</span>get(<span style="color:#ba2121">&#34;https://en.wikipedia.org/wiki/Autoantibody&#34;</span>)<span style="color:#666">.</span>text
+</code></pre></div><div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">re</span>
+
+<span style="color:#408080;font-style:italic">### We only need the data container in the table with class &#34;wikitable&#34;</span>
+ab_html_match <span style="color:#666">=</span> re<span style="color:#666">.</span>search(<span style="color:#ba2121">r</span><span style="color:#ba2121">&#39;&lt;table class=&#34;wikitable&#34;&gt;[\s\S]*&lt;/table&gt;&#39;</span>, text_html)
+
+<span style="color:#008000;font-weight:bold">if</span> ab_html_match:
+    ab_html <span style="color:#666">=</span> ab_html_match<span style="color:#666">.</span>group(<span style="color:#666">0</span>)
+</code></pre></div><blockquote>
+<p>Note - we initially captured the data using a regular expression, but learned an important lesson: don&rsquo;t use regular expressions to parse HTML (unless it&rsquo;s <em>really</em> simple). It&rsquo;s too easy to miss edge cases or your regex becomes&hellip;&ldquo;messy&rdquo;. We eventually did use an HTML parser for our actual data generation.</p>
+</blockquote>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#408080;font-style:italic">### Don&#39;t do this. We are ashamed of it.</span>
+<span style="color:#408080;font-style:italic">### Let this be a reminder of how every day we stray further...</span>
+
+antibody_regex <span style="color:#666">=</span> <span style="color:#ba2121">r</span><span style="color:#ba2121">&#39;(?:&lt;a.*&gt;)?((?:[aA]nti[^&lt;]+)|(?:[^a&gt;]+antibod(?:y|ies)))(?:&lt;/a&gt;)?(?:&lt;sup.*&gt;&lt;a.*&gt;.*&lt;/a&gt;&lt;/sup&gt;)?(?:\n)?&#39;</span>
+auto_abs_capture <span style="color:#666">=</span> re<span style="color:#666">.</span>findall(<span style="color:#ba2121">r</span><span style="color:#ba2121">&#39;&lt;tr&gt;\n&lt;td.*?&gt;{}&lt;/td&gt;(?:\n&lt;td.*?&gt;{})?[\s\S]*?title=&#34;.*?&#34;&gt;([^&lt;]*).*?&lt;/a&gt;(?:&lt;/sup&gt;)?\n&lt;/td&gt;&lt;/tr&gt;&#39;</span><span style="color:#666">.</span>format(antibody_regex, antibody_regex),
+                      ab_html)
+</code></pre></div><div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#408080;font-style:italic">### See a few examples of what we captured</span>
+<span style="color:#408080;font-style:italic">### The table formatting was irregular, so regex wasn&#39;t a particularly good idea in this case...</span>
+<span style="color:#408080;font-style:italic">### The antibodies were contained in two columns; a &#34;category&#34; column and, sometimes, a specific column</span>
+<span style="color:#408080;font-style:italic">### We wanted to capture the more specific version where present, which is why some of the capture values in the tuple are blank</span>
+<span style="color:#408080;font-style:italic">### We also wanted to clean out links and reference markup, which is why our antibody_regex is so messy</span>
+auto_abs_capture[:<span style="color:#666">5</span>]
+</code></pre></div><pre><code>[('Antinuclear antibodies',
+  'Anti-SSA/Ro autoantibodies',
+  'systemic lupus erythematosus'),
+ ('Anti-centromere antibodies', '', 'CREST syndrome'),
+ ('Anti-dsDNA', '', 'SLE'),
+ ('Anti-Jo1', '', 'inflammatory myopathy'),
+ ('Anti-RNP', '', 'Mixed Connective Tissue Disease')]
+</code></pre>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#408080;font-style:italic">### Clean up</span>
+auto_abs <span style="color:#666">=</span> [ab
+            <span style="color:#008000;font-weight:bold">for</span> capture <span style="color:#a2f;font-weight:bold">in</span> auto_abs_capture
+            <span style="color:#008000;font-weight:bold">for</span> i, ab <span style="color:#a2f;font-weight:bold">in</span> <span style="color:#008000">enumerate</span>(capture)
+            <span style="color:#008000;font-weight:bold">if</span> ab <span style="color:#a2f;font-weight:bold">and</span> ((i <span style="color:#666">==</span> <span style="color:#666">0</span> <span style="color:#a2f;font-weight:bold">and</span> <span style="color:#a2f;font-weight:bold">not</span> capture[i<span style="color:#666">+</span><span style="color:#666">1</span>]) <span style="color:#a2f;font-weight:bold">or</span> (i <span style="color:#666">==</span> <span style="color:#666">1</span>)) ]
+
+descriptions <span style="color:#666">=</span> [capture[<span style="color:#666">2</span>] <span style="color:#008000;font-weight:bold">for</span> capture <span style="color:#a2f;font-weight:bold">in</span> auto_abs_capture]
+
+abs_full <span style="color:#666">=</span> <span style="color:#008000">list</span>(<span style="color:#008000">zip</span>(auto_abs, descriptions))
+
+<span style="color:#408080;font-style:italic">### Add these back because our regex didn&#39;t capture certain antibody names (e.g. due to interfering markup, or not being labelled as an antibody)</span>
+abs_full <span style="color:#666">+=</span> [(<span style="color:#ba2121">&#34;Rheumatoid factor&#34;</span>, <span style="color:#ba2121">&#34;rheumatoid arthritis&#34;</span>),
+             (<span style="color:#ba2121">&#34;c-ANCA&#34;</span>, <span style="color:#ba2121">&#34;granulomatosis with polyangiitis&#34;</span>),
+             (<span style="color:#ba2121">&#34;p-ANCA&#34;</span>, <span style="color:#ba2121">&#34;microscopic polyangiitis, eosinophilic granulomatosis with polyangiitis, systemic vasculitides (non-specific)&#34;</span>),
+             (<span style="color:#ba2121">&#34;Anti-SSB/La autoantibodies&#34;</span>, <span style="color:#ba2121">&#34;Primary Sjogren&#39;s syndrome&#34;</span>)]
+
+<span style="color:#408080;font-style:italic">### Remove this as we replaced it with a more specific version</span>
+abs_full<span style="color:#666">.</span>remove((<span style="color:#ba2121">&#39;Anti-neutrophil cytoplasmic antibody&#39;</span>, <span style="color:#ba2121">&#39;granulomatosis with polyangiitis&#39;</span>))
+</code></pre></div><p>We decided that the ENA panel antibodies would always co-occur and labelled them.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">enas <span style="color:#666">=</span> [
+    <span style="color:#ba2121">&#39;Anti-SSA/Ro autoantibodies&#39;</span>,
+    <span style="color:#ba2121">&#39;Anti-SSB/La autoantibodies&#39;</span>,
+    <span style="color:#ba2121">&#39;Anti-RNP&#39;</span>,
+    <span style="color:#ba2121">&#39;Anti-Smith&#39;</span>,
+    <span style="color:#ba2121">&#39;Anti-Jo1&#39;</span>,
+    <span style="color:#ba2121">&#39;Anti-topoisomerase antibodies&#39;</span>
+]
+
+ena_full <span style="color:#666">=</span> []
+
+ena_full <span style="color:#666">=</span> [(data[<span style="color:#666">0</span>] <span style="color:#666">+</span> <span style="color:#ba2121">&#34; (ENA)&#34;</span>, data[<span style="color:#666">1</span>]) <span style="color:#008000;font-weight:bold">for</span> data <span style="color:#a2f;font-weight:bold">in</span> abs_full <span style="color:#008000;font-weight:bold">if</span> data[<span style="color:#666">0</span>] <span style="color:#a2f;font-weight:bold">in</span> enas]
+abs_full <span style="color:#666">=</span> [data <span style="color:#008000;font-weight:bold">for</span> data <span style="color:#a2f;font-weight:bold">in</span> abs_full <span style="color:#008000;font-weight:bold">if</span> data[<span style="color:#666">0</span>] <span style="color:#a2f;font-weight:bold">not</span> <span style="color:#a2f;font-weight:bold">in</span> enas]
+</code></pre></div><p>Now that we had a list of antibodies and some descriptions, we defined a template for our pathology reports. The description text for our simulated data is almost useless, but is not particularly important for this puzzle; we have included it to increase the similarity of these reports to proper pathology reports.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">template <span style="color:#666">=</span> <span style="color:#ba2121">&#34;&#34;&#34;
+</span><span style="color:#ba2121">PATIENT ID: {patient_id}
+</span><span style="color:#ba2121">DATE OF BIRTH: REDACTED
+</span><span style="color:#ba2121">SEX: REDACTED
+</span><span style="color:#ba2121">
+</span><span style="color:#ba2121">COLLECTION DATETIME: {collection_datetime}
+</span><span style="color:#ba2121">SPECIMEN ID: {specimen_id}
+</span><span style="color:#ba2121">SPECIMEN: SERUM
+</span><span style="color:#ba2121">
+</span><span style="color:#ba2121">RECEIVED DATETIME: {received_datetime}
+</span><span style="color:#ba2121">REPORTED DATETIME: {reported_datetime}
+</span><span style="color:#ba2121">
+</span><span style="color:#ba2121">PATHOLOGY PROVIDER: {provider}
+</span><span style="color:#ba2121">PATHOLOGY BRANCH: {branch_id}
+</span><span style="color:#ba2121">
+</span><span style="color:#ba2121">RESULTS:
+</span><span style="color:#ba2121">{results}
+</span><span style="color:#ba2121">
+</span><span style="color:#ba2121">Signed off by REDACTED, {provider}.
+</span><span style="color:#ba2121">&#34;&#34;&#34;</span>
+
+results_template <span style="color:#666">=</span> <span style="color:#ba2121">&#34;&#34;&#34;
+</span><span style="color:#ba2121">
+</span><span style="color:#ba2121">{ab}, Qualitative </span><span style="color:#b62;font-weight:bold">\t\t</span><span style="color:#ba2121">{result}
+</span><span style="color:#ba2121">
+</span><span style="color:#ba2121">INTERPRETATION:
+</span><span style="color:#ba2121">
+</span><span style="color:#ba2121">A positive {ab} result is most often associated with {description}.
+</span><span style="color:#ba2121">There is, however, limited information on the positive or negative predicted value of this test and we recommend that clinicians correlate this finding clinically.
+</span><span style="color:#ba2121">A positive {ab} result may also be seen in connection with other autoimmune pathologies, and should be interpreted in the context of other findings in consultation with clinical and biochemical criteria.
+</span><span style="color:#ba2121">
+</span><span style="color:#ba2121">&#34;&#34;&#34;</span>
+
+separator_thin <span style="color:#666">=</span> <span style="color:#ba2121">&#34;</span><span style="color:#b62;font-weight:bold">\n</span><span style="color:#ba2121">&#34;</span> <span style="color:#666">+</span> <span style="color:#ba2121">&#34;-&#34;</span> <span style="color:#666">*</span> <span style="color:#666">80</span> <span style="color:#666">+</span> <span style="color:#ba2121">&#34;</span><span style="color:#b62;font-weight:bold">\n</span><span style="color:#ba2121">&#34;</span>
+separator_thick <span style="color:#666">=</span> <span style="color:#ba2121">&#34;</span><span style="color:#b62;font-weight:bold">\n\n</span><span style="color:#ba2121">&#34;</span> <span style="color:#666">+</span> <span style="color:#ba2121">&#34;=&#34;</span> <span style="color:#666">*</span> <span style="color:#666">80</span> <span style="color:#666">+</span> <span style="color:#ba2121">&#34;</span><span style="color:#b62;font-weight:bold">\n\n</span><span style="color:#ba2121">&#34;</span>
+</code></pre></div><p>We selected one of the auto-antibodies - Anti-Smith - which is often thought of as &ldquo;lupus-specific&rdquo;. We didn&rsquo;t want participants to be able to guess which antibody was the false positive, even though specifying lupus limited the possible antibodies that could act in this role.</p>
+<p>We decided on an arbitrary number of pathology branches - 15 - and an arbitrary number of reports - 3000 (200 records each). We hoped this would be enough to make any difference between hospitals obvious.</p>
+<p>We then made random generator functions for each of the variables.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">malfunction_ab <span style="color:#666">=</span> <span style="color:#ba2121">&#34;Anti-Smith (ENA)&#34;</span>
+</code></pre></div><div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">from</span> <span style="color:#00f;font-weight:bold">datetime</span> <span style="color:#008000;font-weight:bold">import</span> datetime
+<span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">random</span>
+
+num_reports <span style="color:#666">=</span> <span style="color:#666">3000</span>
+num_branches <span style="color:#666">=</span> <span style="color:#666">15</span>
+
+<span style="color:#008000;font-weight:bold">def</span> <span style="color:#00f">get_datetimes</span>():
+    start <span style="color:#666">=</span> <span style="color:#666">1893456000</span> <span style="color:#408080;font-style:italic"># 2030/01/01</span>
+    end <span style="color:#666">=</span> <span style="color:#666">1924992000</span> <span style="color:#408080;font-style:italic"># 2031/01/01</span>
+    collection <span style="color:#666">=</span> random<span style="color:#666">.</span>randint(start, end)
+    received <span style="color:#666">=</span> collection <span style="color:#666">+</span> random<span style="color:#666">.</span>randint(<span style="color:#666">120</span>, <span style="color:#666">6000</span>) <span style="color:#408080;font-style:italic"># 2 to 100 mins</span>
+    reported <span style="color:#666">=</span> received <span style="color:#666">+</span> random<span style="color:#666">.</span>randint(<span style="color:#666">120</span>, <span style="color:#666">6000</span>) <span style="color:#408080;font-style:italic"># 2 to 100 mins</span>
+    times <span style="color:#666">=</span> [collection, received, reported]
+    <span style="color:#008000;font-weight:bold">return</span> [datetime<span style="color:#666">.</span>fromtimestamp(t)<span style="color:#666">.</span>strftime(<span style="color:#ba2121">&#39;%Y-%m-</span><span style="color:#b68;font-weight:bold">%d</span><span style="color:#ba2121"> %H:%M&#39;</span>) <span style="color:#008000;font-weight:bold">for</span> t <span style="color:#a2f;font-weight:bold">in</span> times]
+
+
+providers <span style="color:#666">=</span> [
+    <span style="color:#ba2121">&#34;H&amp;E Pathology&#34;</span>,
+    <span style="color:#ba2121">&#34;Giemsa&#34;</span>,
+    <span style="color:#ba2121">&#34;PAS Pathological Adjunct Service&#34;</span>,
+    <span style="color:#ba2121">&#34;Silver Diagnostics&#34;</span>,
+    <span style="color:#ba2121">&#34;Mallory Labs&#34;</span>
+]
+
+
+<span style="color:#008000;font-weight:bold">def</span> <span style="color:#00f">pad</span>(num):
+    <span style="color:#008000;font-weight:bold">return</span> <span style="color:#ba2121">&#34;{0:05d}&#34;</span><span style="color:#666">.</span>format(num)
+
+<span style="color:#408080;font-style:italic">### Must be unique, but also must look random</span>
+patient_ids <span style="color:#666">=</span> <span style="color:#008000">list</span>(<span style="color:#008000">map</span>(pad, random<span style="color:#666">.</span>sample(<span style="color:#008000">range</span>(<span style="color:#666">100000</span>), k<span style="color:#666">=</span>num_reports)))
+specimen_ids <span style="color:#666">=</span> <span style="color:#008000">list</span>(<span style="color:#008000">map</span>(pad, random<span style="color:#666">.</span>sample(<span style="color:#008000">range</span>(<span style="color:#666">100000</span>), k<span style="color:#666">=</span>num_reports)))
+branch_ids_choices <span style="color:#666">=</span> <span style="color:#008000">list</span>(<span style="color:#008000">map</span>(pad, random<span style="color:#666">.</span>sample(<span style="color:#008000">range</span>(<span style="color:#666">100000</span>), k<span style="color:#666">=</span>num_branches)))
+
+branch_id_provider_choices <span style="color:#666">=</span> <span style="color:#008000">list</span>(<span style="color:#008000">zip</span>(random<span style="color:#666">.</span>choices(providers, k<span style="color:#666">=</span>num_branches), branch_ids_choices))
+</code></pre></div><p>We defined the base probabilities of an antibody being positive as a random number between 0.01 and 0.05. We couldn&rsquo;t make these too low, since we were afraid there wouldn&rsquo;t be enough data. To explain the seemingly high prevalence of positive antibody results, we reasoned that most clinicians in Autoville would only be asking for the test if they had reasonable suspicion it would be positive.</p>
+<p>We decided on a probability between 0.2 and 0.3 as the probability of the malfunctioning test to be positive at the culprit branch.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">ena_data <span style="color:#666">=</span> [(ena[<span style="color:#666">0</span>], ena[<span style="color:#666">1</span>], random<span style="color:#666">.</span>uniform(<span style="color:#666">0.01</span>, <span style="color:#666">0.05</span>)) <span style="color:#008000;font-weight:bold">for</span> ena <span style="color:#a2f;font-weight:bold">in</span> ena_full]
+abs_data <span style="color:#666">=</span> [(ab[<span style="color:#666">0</span>], ab[<span style="color:#666">1</span>], random<span style="color:#666">.</span>uniform(<span style="color:#666">0.01</span>, <span style="color:#666">0.05</span>)) <span style="color:#008000;font-weight:bold">for</span> ab <span style="color:#a2f;font-weight:bold">in</span> abs_full]
+</code></pre></div><div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">malfunction_prob <span style="color:#666">=</span> random<span style="color:#666">.</span>uniform(<span style="color:#666">0.2</span>, <span style="color:#666">0.3</span>)
+</code></pre></div><p>Then we selected the branch ID with the malfunctioning machine.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">malfunction_branch <span style="color:#666">=</span> random<span style="color:#666">.</span>choice(branch_ids_choices)
+</code></pre></div><p>We defined a function to generate antibodies and their results using their respective probabilities.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">def</span> <span style="color:#00f">get_results</span>(branch_id):
+    <span style="color:#408080;font-style:italic"># Choose between 2 and 4 antibodies other than ENA</span>
+    chosen <span style="color:#666">=</span> random<span style="color:#666">.</span>sample(abs_data, random<span style="color:#666">.</span>randint(<span style="color:#666">2</span>, <span style="color:#666">4</span>))
+    <span style="color:#408080;font-style:italic"># ENA arbitrarily included in approx 70% of reports</span>
+    use_ena <span style="color:#666">=</span> random<span style="color:#666">.</span>random()
+    <span style="color:#008000;font-weight:bold">if</span> use_ena <span style="color:#666">&lt;=</span> <span style="color:#666">0.7</span>:
+        chosen <span style="color:#666">+=</span> ena_data
+    result_choices <span style="color:#666">=</span> [<span style="color:#ba2121">&#34;POSITIVE&#34;</span>, <span style="color:#ba2121">&#34;NEGATIVE&#34;</span>]
+
+    results <span style="color:#666">=</span> []
+
+    <span style="color:#008000;font-weight:bold">for</span> test <span style="color:#a2f;font-weight:bold">in</span> chosen:
+        <span style="color:#008000;font-weight:bold">if</span> test[<span style="color:#666">0</span>] <span style="color:#666">==</span> malfunction_ab <span style="color:#a2f;font-weight:bold">and</span> branch_id <span style="color:#666">==</span> malfunction_branch:
+          weights <span style="color:#666">=</span> [malfunction_prob, <span style="color:#666">1</span> <span style="color:#666">-</span> malfunction_prob]
+        <span style="color:#008000;font-weight:bold">else</span>:
+          weights <span style="color:#666">=</span> [test[<span style="color:#666">2</span>], <span style="color:#666">1</span> <span style="color:#666">-</span> test[<span style="color:#666">2</span>]]
+        results<span style="color:#666">.</span>append(random<span style="color:#666">.</span>choices(result_choices, weights<span style="color:#666">=</span>weights, k<span style="color:#666">=</span><span style="color:#666">1</span>))
+
+    <span style="color:#008000;font-weight:bold">return</span> <span style="color:#008000">zip</span>(chosen, results)
+</code></pre></div><p>We defined a function to generate a pathology report with the required variables.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">def</span> <span style="color:#00f">get_report</span>(patient_id, specimen_id, branch_id_provider):
+    collection, received, reported <span style="color:#666">=</span> get_datetimes()
+    branch_id <span style="color:#666">=</span> branch_id_provider[<span style="color:#666">1</span>]
+    provider <span style="color:#666">=</span> branch_id_provider[<span style="color:#666">0</span>]
+    res_data <span style="color:#666">=</span> get_results(branch_id)
+
+    result_strings <span style="color:#666">=</span> [results_template<span style="color:#666">.</span>format(ab<span style="color:#666">=</span>d[<span style="color:#666">0</span>][<span style="color:#666">0</span>],
+                                            result<span style="color:#666">=</span>d[<span style="color:#666">1</span>][<span style="color:#666">0</span>],
+                                            description<span style="color:#666">=</span>d[<span style="color:#666">0</span>][<span style="color:#666">1</span>])
+                      <span style="color:#008000;font-weight:bold">for</span> d <span style="color:#a2f;font-weight:bold">in</span> res_data]
+    result_block <span style="color:#666">=</span> separator_thin <span style="color:#666">+</span> separator_thin<span style="color:#666">.</span>join(result_strings) <span style="color:#666">+</span> separator_thin
+
+    report <span style="color:#666">=</span> template<span style="color:#666">.</span>format(patient_id<span style="color:#666">=</span>patient_id,
+                           collection_datetime<span style="color:#666">=</span>collection,
+                           specimen_id<span style="color:#666">=</span>specimen_id,
+                           received_datetime<span style="color:#666">=</span>received,
+                           reported_datetime<span style="color:#666">=</span>reported,
+                           provider<span style="color:#666">=</span>provider,
+                           branch_id<span style="color:#666">=</span>branch_id,
+                           results<span style="color:#666">=</span>result_block
+                          )
+    <span style="color:#008000;font-weight:bold">return</span> report
+</code></pre></div><p>We now generate the reports for our sets of <code>patient_ids</code>, <code>specimen_ids</code> and <code>branch_ids</code>.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">branch_id_providers <span style="color:#666">=</span> random<span style="color:#666">.</span>choices(branch_id_provider_choices, k<span style="color:#666">=</span>num_reports)
+</code></pre></div><div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">reports <span style="color:#666">=</span> [get_report(<span style="color:#666">*</span>ids) <span style="color:#008000;font-weight:bold">for</span> ids <span style="color:#a2f;font-weight:bold">in</span> <span style="color:#008000">zip</span>(patient_ids, specimen_ids, branch_id_providers)]
+</code></pre></div><p>We can finally get the final text as a string.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">text <span style="color:#666">=</span> separator_thick<span style="color:#666">.</span>join(reports)<span style="color:#666">.</span>encode(<span style="color:#ba2121">&#34;ascii&#34;</span>)
+</code></pre></div><p>And we can save it!</p>
+<p>Since the file is quite large, we&rsquo;ll save a gzipped and a txt version and offer both.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">filename <span style="color:#666">=</span> <span style="color:#ba2121">&#39;cgmnt_input04.txt&#39;</span>
+
+<span style="color:#008000;font-weight:bold">with</span> <span style="color:#008000">open</span>(filename, <span style="color:#ba2121">&#39;wb&#39;</span>) <span style="color:#008000;font-weight:bold">as</span> f:
+    f<span style="color:#666">.</span>write(text)
+</code></pre></div><div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">gzip</span>
+
+<span style="color:#008000;font-weight:bold">with</span> gzip<span style="color:#666">.</span>open(filename <span style="color:#666">+</span> <span style="color:#ba2121">&#34;.gzip&#34;</span>, <span style="color:#ba2121">&#39;wb&#39;</span>) <span style="color:#008000;font-weight:bold">as</span> f:
+    f<span style="color:#666">.</span>write(text)
+</code></pre></div><p>It&rsquo;s quite a large file, unfortunately, but it&rsquo;ll have to do.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">print</span>(malfunction_branch)
+</code></pre></div><pre><code>53562
+</code></pre>
+            </section>
+
+        </article>
+    </section>
+
+</section>
+
+
+        </main>
+
+        <footer><footer>
+</footer>
+</footer>
+
+    </body>
+</html>

@@ -25,6 +25,9 @@ header {
   margin: auto;
   z-index: 50; }
 
+footer {
+  padding: 2rem; }
+
 a {
   color: black; }
   a:hover {
@@ -58,7 +61,9 @@ ol {
     justify-content: center; }
 
 pre, code {
-  font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif; }
+  font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
+  font-size: 0.9em;
+  line-height: 1; }
 
 #nav-menu-toggle {
   display: none; }
@@ -90,7 +95,6 @@ pre, code {
       #nav-menu-toggle #cigmah-text {
         font-weight: bold;
         letter-spacing: -1px; } }
-
 #nav-bar {
   height: 3rem;
   margin: 2rem; }
@@ -104,7 +108,6 @@ pre, code {
       width: 100%;
       margin: 0;
       z-index: 60; } }
-
 #nav-link-list {
   display: flex;
   align-items: center;
@@ -121,7 +124,6 @@ pre, code {
       z-index: 60;
       padding: 1rem;
       border-bottom: 1px solid black; } }
-
 .nav-link-list-item {
   list-style-type: none;
   padding: 0;
@@ -160,7 +162,6 @@ pre, code {
         padding-left: 0.5rem; }
       .nav-link-list-link:before {
         display: none; } }
-
 #nav-right-item {
   margin-left: auto;
   display: flex;
@@ -197,13 +198,11 @@ pre, code {
   @media only screen and (max-width: 760px) {
     #hero-background {
       display: none; } }
-
 #hero-background-image {
   height: 80vh; }
   @media only screen and (max-width: 760px) {
     #hero-background-image {
       display: none; } }
-
 #hero-mobile-image {
   display: none; }
   @media only screen and (max-width: 760px) {
@@ -211,7 +210,6 @@ pre, code {
       display: block;
       margin: 2rem 0 2rem 0;
       width: 100%; } }
-
 .hero {
   height: 100vh;
   width: 100vw;
@@ -233,7 +231,6 @@ pre, code {
       max-width: none;
       display: block;
       margin: 0; } }
-
 .hero-container {
   height: 80vh;
   padding: 0 4rem 0 2rem;
@@ -251,14 +248,12 @@ pre, code {
       display: flex;
       flex-direction: column;
       align-items: space-between; } }
-
 #landing-text {
   background: white; }
   @media only screen and (max-width: 760px) {
     #landing-text {
       padding: 1.5rem;
       width: 100%; } }
-
 #landing-title {
   margin: 0;
   font-size: 6rem;
@@ -272,7 +267,6 @@ pre, code {
   @media only screen and (min-width: 1440px) {
     #landing-title {
       font-size: 7rem; } }
-
 #landing-subtitle {
   font-size: 3rem;
   font-weight: normal;
@@ -287,7 +281,6 @@ pre, code {
   @media only screen and (min-width: 1440px) {
     #landing-subtitle {
       font-size: 4rem; } }
-
 #landing-paragraph {
   font-size: 1.5rem;
   letter-spacing: -1px;
@@ -300,7 +293,6 @@ pre, code {
   @media only screen and (min-width: 1440px) {
     #landing-paragraph {
       font-size: 2.5rem; } }
-
 #landing-button {
   width: 100%;
   padding: 1rem;
@@ -309,7 +301,8 @@ pre, code {
   border: 2px solid black;
   cursor: pointer;
   display: block;
-  text-align: center; }
+  text-align: center;
+  text-decoration: none; }
   @media only screen and (max-width: 760px) {
     #landing-button {
       font-size: 1.4rem;
@@ -322,14 +315,12 @@ pre, code {
 .normal-page {
   max-width: 1280px;
   margin: auto;
-  display: flex;
   padding: 1rem 2rem 2rem 2rem; }
   @media only screen and (max-width: 760px) {
     .normal-page {
       margin-top: 2.5rem;
       display: block;
       padding: 1rem; } }
-
 #toggle-side-navigation-container {
   display: none; }
   @media only screen and (max-width: 760px) {
@@ -350,16 +341,16 @@ pre, code {
         flex-grow: 1;
         padding: 0.25rem 0.5rem;
         cursor: pointer; } }
-
 #side-navigation {
-  width: 400px;
-  margin-right: 1rem; }
+  width: 280px;
+  margin-right: 1rem;
+  float: left; }
   @media only screen and (max-width: 760px) {
     #side-navigation {
+      float: none;
       width: 100%;
       margin: 0;
       margin-bottom: 1rem; } }
-
 #side-navigation-list {
   list-style-type: none;
   padding: 0; }
@@ -370,15 +361,21 @@ pre, code {
       margin: 0;
       border-top: none;
       padding: 1rem; } }
+.side-navigation-parent {
+  color: #696969; }
+  .side-navigation-parent:before {
+    content: "◁";
+    margin-right: 0.25rem; }
 
-.side-navigation-section:before {
-  content: "§";
-  margin-right: 0.25rem; }
-
-.side-navigation-section.active {
-  font-weight: bold; }
-  .side-navigation-section.active a {
-    text-decoration: none; }
+.side-navigation-section {
+  margin: 0.75rem 0; }
+  .side-navigation-section:before {
+    content: "§";
+    margin-right: 0.25rem; }
+  .side-navigation-section.active {
+    font-weight: bold; }
+    .side-navigation-section.active a {
+      text-decoration: none; }
 
 .side-navigation-item {
   margin: 0.75rem 0; }
@@ -388,9 +385,10 @@ pre, code {
       text-decoration: none; }
 
 #container {
-  width: 100%;
-  flex-grow: 1; }
-
+  margin-left: 300px; }
+  @media only screen and (max-width: 760px) {
+    #container {
+      margin-left: 0; } }
 #content-header {
   margin-bottom: 2rem; }
 
@@ -404,7 +402,6 @@ pre, code {
     #content-title {
       font-size: 2.5rem;
       letter-spacing: -2.5px; } }
-
 #subtitle {
   font-size: 2rem;
   font-weight: normal;
@@ -413,7 +410,6 @@ pre, code {
     #subtitle {
       font-size: 1.5rem;
       letter-spacing: -1.5px; } }
-
 #tagline {
   display: flex;
   font-weight: bold;
@@ -451,10 +447,36 @@ pre, code {
   #content-body img, #content-body figure, #content-body video {
     display: block;
     margin: auto;
-    max-width: 100%; }
-  @media only screen and (max-width: 760px) {
-    #content-body blockquote {
-      margin: 0 1rem; } }
+    max-width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+  #content-body hr {
+    border: none;
+    border-top: 1px solid #696969;
+    margin: 2rem 0; }
+  #content-body details {
+    border: 1px dotted #696969;
+    margin: 1rem 0;
+    padding: 1rem; }
+  #content-body summary {
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    font-weight: bold; }
+  #content-body table {
+    width: 100%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin: 2rem 0; }
+  #content-body th {
+    text-align: left;
+    border-bottom: 1px solid black; }
+  #content-body blockquote {
+    margin: 0 1rem;
+    border-left: 2px solid #696969;
+    padding: 0 1rem; }
+    @media only screen and (max-width: 760px) {
+      #content-body blockquote {
+        margin: 0; } }
   #content-body pre {
     background: #EDF2F7;
     padding: 1rem;

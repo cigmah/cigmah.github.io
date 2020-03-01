@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Night 1: Text Processing on The Coding Interest Group in Medicine and Healthcare</title>
+    <link>https://cigmah.org/events/2019_text_processing/</link>
+    <description>Recent content in Night 1: Text Processing on The Coding Interest Group in Medicine and Healthcare</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 06 Aug 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://cigmah.org/events/2019_text_processing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Contraindicated</title>
+      <link>https://cigmah.org/events/2019_text_processing/tute-01-contraindicated/contraindicated/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cigmah.org/events/2019_text_processing/tute-01-contraindicated/contraindicated/</guid>
+      <description>Problem   &amp;#34;Cardiovascular disease is the leading cause of death and disease burden in Australia&amp;#34;. One of the risk factors for cardiovascular disease is high blood pressure (hypertension), which can be managed through non-pharmacological or pharmacological approaches.  The Heart Foundation publishes a set of clinical guidelines relating to the management of various cardiovascular conditions, including a management guideline for hypertension in adults. This guideline outlines the important clinical information for health professionals managing patients with high blood pressure.</description>
+    </item>
+    
+    <item>
+      <title>Mapping Meningitis</title>
+      <link>https://cigmah.org/events/2019_text_processing/tute-01-mapping-meningitis/mapping-meningitis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cigmah.org/events/2019_text_processing/tute-01-mapping-meningitis/mapping-meningitis/</guid>
+      <description>Problem   Meningitis is spreading through Melbourne at a previously unprecedented rate. To investigate, your clinical supervisor has acquired a text file of abridged and deidentified CSF results from patients with suspected meningitis in Melbourne over a 24-week period starting from March 1st 2020.  Here is the first result. You have a collection of 1000 results in this format. PATIENT ID: 882490 LOCATION: (-36.852366,145.388525) SAMPLE TIMESTAMP: 2020-05-17 RESULTS: Turbid.</description>
+    </item>
+    
+    <item>
+      <title>Mood Diary</title>
+      <link>https://cigmah.org/events/2019_text_processing/tute-01-mood-diary/mood-diary/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cigmah.org/events/2019_text_processing/tute-01-mood-diary/mood-diary/</guid>
+      <description>Problem   Kennedy, a 26 year old male, has been struggling with depression. On your advice, he has started tracking and reflecting on his mood every day for the past two years from 1st January 2020 to 31st December 2021 inclusive.  To track his mood, he used a (fictional) mobile app - Mood Diary. Every day, Mood Diary would send him a push notification asking him to select one of five moods.</description>
+    </item>
+    
+    <item>
+      <title>Transfusion Tracing</title>
+      <link>https://cigmah.org/events/2019_text_processing/tute-01-transfusion-tracing/transfusion-tracing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cigmah.org/events/2019_text_processing/tute-01-transfusion-tracing/transfusion-tracing/</guid>
+      <description>Problem   Your hospital&amp;#39;s infectious diseases department has queried two recent diagnoses of Hepatitis C in patients who have both received blood traced to the same blood donor. While the transmission of blood-borne infections through blood transfusions is exceedingly rare in the modern age, your hospital has raised an inquiry for due caution.  You have been provided with trimmed, deidentified transfusion logs over 6 months (from 1st January 2020 to 30th June 2020) in the following format (first five lines): 2020-01-01 D012311 095703 2020-01-01 D041530 028619 2020-01-01 D007809 026117 2020-01-01 D037810 021170 2020-01-01 D099727 042349   You have 50000 lines in your input.</description>
+    </item>
+    
+  </channel>
+</rss>
