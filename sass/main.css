@@ -10,11 +10,14 @@ button {
   border: 1px solid black; }
 
 html {
-  font-family: "Helvetica", "Arial", sans-serif;
+  font-family: "Inter", "Helvetica", "Arial", sans-serif;
   margin: 0;
   padding: 0;
-  background: white; }
-
+  background: white;
+  font-size: 16px; }
+  @media only screen and (min-width: 1440px) {
+    html {
+      font-size: 18px; } }
 body {
   margin: 0;
   padding: 0; }
@@ -26,8 +29,19 @@ header {
   z-index: 50; }
 
 footer {
-  padding: 2rem; }
-
+  padding: 1rem;
+  padding-bottom: 2rem;
+  max-width: 1260px;
+  margin: auto;
+  z-index: 50;
+  text-align: right;
+  border-top: 1px dotted #696969; }
+  @media print {
+    footer {
+      display: none; } }
+  @media only screen and (max-width: 760px) {
+    footer {
+      padding: 1rem; } }
 a {
   color: black; }
   a:hover {
@@ -62,7 +76,7 @@ ol {
 
 pre, code {
   font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
-  font-size: 0.9em;
+  font-size: 0.9rem;
   line-height: 1; }
 
 #nav-menu-toggle {
@@ -97,7 +111,11 @@ pre, code {
         letter-spacing: -1px; } }
 #nav-bar {
   height: 3rem;
-  margin: 2rem; }
+  margin: 2rem;
+  margin-bottom: 1rem; }
+  @media print {
+    #nav-bar {
+      display: none; } }
   @media only screen and (max-width: 760px) {
     #nav-bar {
       display: block;
@@ -112,6 +130,9 @@ pre, code {
   display: flex;
   align-items: center;
   padding: 0; }
+  @media print {
+    #nav-link-list {
+      display: none; } }
   @media only screen and (max-width: 760px) {
     #nav-link-list {
       background: white;
@@ -203,13 +224,18 @@ pre, code {
   @media only screen and (max-width: 760px) {
     #hero-background-image {
       display: none; } }
-#hero-mobile-image {
+#hero-mobile-image-container {
   display: none; }
   @media only screen and (max-width: 760px) {
-    #hero-mobile-image {
-      display: block;
-      margin: 2rem 0 2rem 0;
-      width: 100%; } }
+    #hero-mobile-image-container {
+      margin: 0.5rem 0 0.5rem 0;
+      width: 100%;
+      flex-grow: 1;
+      display: flex;
+      align-items: center; } }
+  #hero-mobile-image-container #hero-mobile-image {
+    width: 100%; }
+
 .hero {
   height: 100vh;
   width: 100vw;
@@ -247,7 +273,7 @@ pre, code {
       height: 100%;
       display: flex;
       flex-direction: column;
-      align-items: space-between; } }
+      justify-content: space-between; } }
 #landing-text {
   background: white; }
   @media only screen and (max-width: 760px) {
@@ -264,9 +290,6 @@ pre, code {
     #landing-title {
       font-size: 4rem;
       letter-spacing: -5px; } }
-  @media only screen and (min-width: 1440px) {
-    #landing-title {
-      font-size: 7rem; } }
 #landing-subtitle {
   font-size: 3rem;
   font-weight: normal;
@@ -278,11 +301,8 @@ pre, code {
       font-size: 1.6rem;
       letter-spacing: -1px;
       margin: 0.5rem 0; } }
-  @media only screen and (min-width: 1440px) {
-    #landing-subtitle {
-      font-size: 4rem; } }
 #landing-paragraph {
-  font-size: 1.5rem;
+  font-size: 2rem;
   letter-spacing: -1px;
   margin-bottom: 3rem; }
   @media only screen and (max-width: 760px) {
@@ -290,9 +310,6 @@ pre, code {
       font-size: 1.2rem;
       letter-spacing: -0.5px;
       margin: 1rem 0; } }
-  @media only screen and (min-width: 1440px) {
-    #landing-paragraph {
-      font-size: 2.5rem; } }
 #landing-button {
   width: 100%;
   padding: 1rem;
@@ -307,7 +324,7 @@ pre, code {
     #landing-button {
       font-size: 1.4rem;
       letter-spacing: -0.5px;
-      margin: 2rem 0; } }
+      margin: 2rem 0 0.5rem 0; } }
   #landing-button:hover {
     background: black;
     color: white; }
@@ -342,15 +359,22 @@ pre, code {
         padding: 0.25rem 0.5rem;
         cursor: pointer; } }
 #side-navigation {
-  width: 280px;
+  width: 240px;
   margin-right: 1rem;
-  float: left; }
+  float: left;
+  text-align: right;
+  padding-bottom: 2rem;
+  font-size: 0.9rem; }
+  @media print {
+    #side-navigation {
+      display: none; } }
   @media only screen and (max-width: 760px) {
     #side-navigation {
+      text-align: left;
       float: none;
       width: 100%;
       margin: 0;
-      margin-bottom: 1rem; } }
+      font-size: 1rem; } }
 #side-navigation-list {
   list-style-type: none;
   padding: 0; }
@@ -385,31 +409,37 @@ pre, code {
       text-decoration: none; }
 
 #container {
-  margin-left: 300px; }
+  margin-left: 260px;
+  padding-left: 3rem;
+  min-height: 72vh; }
+  @media print {
+    #container {
+      margin-left: 0;
+      padding-left: 0; } }
   @media only screen and (max-width: 760px) {
     #container {
-      margin-left: 0; } }
+      margin-left: 0;
+      padding-left: 0;
+      padding: 0.1rem; } }
 #content-header {
   margin-bottom: 2rem; }
 
 #content-title {
   font-size: 3rem;
   font-weight: bold;
-  letter-spacing: -3px;
+  letter-spacing: -2px;
   margin: 0;
-  margin-bottom: 0.25rem; }
+  margin-bottom: 0.5rem; }
   @media only screen and (max-width: 760px) {
     #content-title {
-      font-size: 2.5rem;
-      letter-spacing: -2.5px; } }
+      font-size: 2.5rem; } }
 #subtitle {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: normal;
-  letter-spacing: -1px; }
+  letter-spacing: -0.5px; }
   @media only screen and (max-width: 760px) {
     #subtitle {
-      font-size: 1.5rem;
-      letter-spacing: -1.5px; } }
+      font-size: 1.5rem; } }
 #tagline {
   display: flex;
   font-weight: bold;
@@ -427,23 +457,28 @@ pre, code {
 
 #content-body {
   line-height: 1.5;
-  padding-bottom: 2rem; }
+  padding-bottom: 1rem; }
   #content-body h1 {
-    margin: 2rem 0 0.25rem 0;
+    margin: 2.5rem 0 0.5rem 0;
     font-size: 1.5rem;
-    letter-spacing: -1.5px; }
-  #content-body h2 {
-    margin: 1.5rem 0 0.25rem 0;
-    font-size: 1.5rem;
-    font-weight: normal;
-    letter-spacing: -1px; }
-  #content-body h3 {
-    margin: 1.25rem 0 0.25rem 0;
-    font-size: 1.25rem;
-    font-weight: normal;
     letter-spacing: -0.5px; }
+  #content-body h2 {
+    margin: 2rem 0 0.25rem 0;
+    font-size: 1.25rem;
+    letter-spacing: -0.25px; }
+  #content-body h3 {
+    margin: 1.5rem 0 0.25rem 0;
+    font-size: 1.1rem; }
+  #content-body h4 {
+    margin: 1.25rem 0 0.25rem 0;
+    font-size: 1.0rem;
+    font-weight: bold; }
+  #content-body h5 {
+    margin: 1rem 0 0.25rem 0;
+    font-size: 1.1rem;
+    font-weight: normal; }
   #content-body p {
-    margin: 0 0 1rem 0; }
+    margin: 0 0 1.25rem 0; }
   #content-body img, #content-body figure, #content-body video {
     display: block;
     margin: auto;
@@ -453,7 +488,7 @@ pre, code {
   #content-body hr {
     border: none;
     border-top: 1px solid #696969;
-    margin: 2rem 0; }
+    margin: 3rem 0; }
   #content-body details {
     border: 1px dotted #696969;
     margin: 1rem 0;
