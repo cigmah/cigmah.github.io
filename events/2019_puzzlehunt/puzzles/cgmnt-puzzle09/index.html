@@ -1,0 +1,966 @@
+
+<!DOCTYPE html>
+<html><head>
+    
+    
+    <title> CIGMAH - Fundal Flow </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="2019 Puzzle Hunt - Puzzle 09B">
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" href="https://cigmah.org/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cigmah.org/js/toggles.js"></script>
+    <link type="text/css" rel="stylesheet" href=https://cigmah.org/sass/main.css>
+    <link rel="canonical" href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle09/">
+</head>
+<body>
+        <header>
+
+            <nav id="nav-menu-toggle" onClick="toggleNav()">
+                <div id="menu-text">☰</div>
+                <div id="cigmah-brand">
+                    <div id="cigmah-icon">
+                        <img src="https://cigmah.org/img/cigmah-icon.png">
+                    </div>
+                    <div id="cigmah-text">
+                        CIGMAH
+                    </div>
+                </div>
+            </nav>
+
+            <nav id="nav-bar">
+
+<ul id="nav-link-list" onClick="()">
+
+    <li
+        class="nav-link-list-item "
+    >
+        <a
+            class="nav-link-list-link "
+            id="nav-cigmah-link"
+            href=https://cigmah.org/
+        >
+            <img id="nav-cigmah-link-icon" src="/img/cigmah-icon-small.png">
+            <div>CIGMAH</div>
+        </a>
+    </li>
+
+  
+    <li
+        class="nav-link-list-item "
+        >
+        <a
+            class="nav-link-list-link "
+            href=https://cigmah.org/about/
+        >
+            About
+        </a>
+    </li>
+    
+    <li
+        class="nav-link-list-item "
+        >
+        <a
+            class="nav-link-list-link "
+            href=https://cigmah.org/events/
+        >
+            Events
+        </a>
+    </li>
+    
+    <li
+        class="nav-link-list-item "
+        >
+        <a
+            class="nav-link-list-link "
+            href=https://cigmah.org/tools/
+        >
+            Tools
+        </a>
+    </li>
+    
+    <li
+        class="nav-link-list-item "
+        >
+        <a
+            class="nav-link-list-link "
+            href=https://cigmah.org/resources/
+        >
+            Resources
+        </a>
+    </li>
+    
+    <li
+        class="nav-link-list-item "
+        >
+        <a
+            class="nav-link-list-link "
+            href=https://cigmah.org/blog/
+        >
+            Blog
+        </a>
+    </li>
+    
+    <li
+        class="nav-link-list-item "
+        >
+        <a
+            class="nav-link-list-link "
+            href=https://cigmah.org/contact/
+        >
+            Contact
+        </a>
+    </li>
+    
+
+    <li
+        class="nav-link-list-item"
+        id="nav-right-item"
+        >
+        <a
+            href="https://aorta.cigmah.org"
+            id="nav-aorta-link"
+            class="nav-link-list-link"
+        >
+            <img id="nav-aorta-link-icon" src="/img/aorta-icon.png">
+            <div id="nav-aorta-link">AORTA</div>
+        </a>
+    </li>
+</ul>
+</nav>
+
+        </header>
+
+        <main>
+
+
+
+<section class="normal-page">
+    <article id="side-navigation">
+        <article id="toggle-side-navigation-container">
+
+            
+            <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle08/" id="back"> &lt;&lt; </a>
+            
+
+            <button id="toggle-side-navigation" onClick="toggleSideNav()">Show Articles</button>
+
+            
+            <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle10/" id="next"> &gt;&gt; </a>
+            
+
+        </article>
+
+        <ul id="side-navigation-list">
+
+            
+            <li class="side-navigation-parent">
+                <a href="https://cigmah.org/events/">Events</a>
+            </li>
+            
+
+
+            <li class="side-navigation-section">
+                <a href="https://cigmah.org/events/2019_puzzlehunt/">
+                    2019 Puzzle Hunt
+                </a>
+            </li>
+
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle01/">Lost in a Library</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle02/">Metabolic Mayhem</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle03/">Combo Catcher</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle04/">Troubled Test</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle05/">Out of Sync</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle06/">While You&#39;re Waiting</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle07/">Infectious Network</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle08/">Tarsal Tumble</a>
+            </li>
+            
+            <li
+                class="side-navigation-item  active "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle09/">Fundal Flow</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle10/">Bite Cell Scouting</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle11/">NeuroLogic</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle12/">Reschedule All</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle13/">Allele Inference</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle14/">Base in Balance</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle15/">Worst Offender</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle16/">STI Bugs&#39;n&#39;Drugs</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle17/">What Dipstick?</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle18/">Peak Flow Diary</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle19/">HPV Profiling</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle20/">Code Broadcast</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle21/">Genetic Thrift</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle22/">Neural Decoding</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle23/">Run! (Preclinical)</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle24/">Run! (Clinical)</a>
+            </li>
+            
+
+        </ul>
+
+    </article>
+
+    <section id="container">
+
+        <article id="content">
+            <header id="content-header">
+            <h1 id="content-title"> Fundal Flow </h1>
+
+            
+                <div id="subtitle">
+                    <div> 2019 Puzzle Hunt - Puzzle 09B </div>
+                </div>
+            
+
+            </div>
+
+            </header>
+
+            <section id="content-body">
+                <blockquote>
+<p>This puzzle was released on 2019-04-06, and was the Beginner puzzle for the theme <em>Pretty Pictures</em>.</p>
+</blockquote>
+<p>It&rsquo;s 2:20am. Facing North, you walk through the corridor on the 6th wall.</p>
+<p><img src="https://i.imgur.com/dd0Fxxd.gif" alt="Imgur"></p>
+<p>You wonder how this library came to be. Or what the <em>Hospital of Babel</em> does with all these medically-related books.</p>
+<p>The book on the table is entitled <em>A Fundal Atlas: Central Retinal Artery Occlusion (CRAO)</em>.</p>
+<p>Like clockwork, the phrase &ldquo;cherry red macula&rdquo; pops into your head. Though you remember that buzzword, you remember precious little else to do with CRAO.</p>
+<p>You flip through the book. There&rsquo;s an introductory paragraph, followed by a gazillion images of fundi.</p>
+<blockquote>
+<p>This book contains 2000 images. The first 1000 consist of 500 labelled images of normal fundi contrasted with 500 labelled images of fundi from patients with a severe central retinal artery occlusion (CRAO). We leave the remaining 1000 images as an exercise to the budding ophthalmologist to practise their fundal interpretation skills. One can never have too much fun with fundi interpretation.</p>
+</blockquote>
+<p>You can almost hear the author chuckling. Or maybe they were entirely serious. You&rsquo;ve never understood ophthalmologists&hellip;</p>
+<p>You open the book on the computer.</p>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>Your task in this puzzle is to write a program that will classify images of fundi as either &ldquo;normal&rdquo; or &ldquo;CRAO&rdquo; with reasonable accuracy.</p>
+<p>Your puzzle input consists of two folders containing 1000 images each. All images are <code>.png</code> files with dimensions <code>75x75</code> pixels.</p>
+<p>The first folder, <code>input09_training/</code> contains 1000 ground-truth images: 500 normal fundi and 500 fundi suggesting CRAO. Each image file is of the form <code>XXXX_normal.png</code> or <code>XXXX_crao.png</code> for some ID <code>XXXX</code> (e.g. <code>0001_normal.png</code>).</p>
+<p>This is a normal fundus:</p>
+<p><img src="https://lh3.googleusercontent.com/daVg5cRKjxz7pnm525yiaoD_pL4By0hIGi6hU1M91lmHUA-0brGyCgGKVIv-INjFFr5Jn6yHy6OLwGaLxKLP2KR7-ciGzvNsWSYtlESDh270sXxAVcQLm3M_kmUrKhSpYL9-HGcBXA=s198-p-k" alt="Normal"></p>
+<p>This fundus is suggestive of a CRAO:</p>
+<p><img src="https://lh3.googleusercontent.com/YysI3HZycEtwEQU5Zkq-l9iQhhxTGmuuE-3OIurVo6aerW8o4uofXiMPQilx4wTGMQFawr2E2YpS9vhgPR1gUJpkHhg64A6r4_r2X-QTx_XoKpRCqK84tIs12hC8kc8C8Sy-0BqO3g=s198-p-k" alt="CRAO"></p>
+<p>Each ID is unique. You may use this training data to train a classifier to distinguish between normal and CRAO fundi.</p>
+<p>The second folder, <code>input10_test/</code> contains 1000 images for classification. Each image is of the form <code>XXXX_Y.png</code> for some ID <code>XXXX</code> and for some alphabet character <code>Y</code> (e.g. <code>0001_Z.png</code>).</p>
+<p>Identify all the images in the second folder <code>input10_test</code> which suggest CRAO. Once you have identified all these images and put them in order of their ID, the resulting characters will spell out a short riddle for you to solve.</p>
+</blockquote>
+<!-- raw HTML omitted -->
+<h1 id="input">Input</h1>
+<p><a href="https://drive.google.com/drive/folders/1w2fptmKRlkYdQf5D5yCbCWuEU56qOGLM?usp=sharing">cgmnt_input09/</a>, containing:</p>
+<ol>
+<li><code>input09_training/</code> (1000 class-labelled 75x75 pixel PNG images, 9.1MB total)</li>
+<li><code>input09_test/</code> (1000 letter-labelled 75x75 pixel PNG images, 8.8MB total)</li>
+</ol>
+<p>Templates on <a href="https://mybinder.org/v2/gh/cigmah/cgmnt-beginners/master">Binder</a>, <a href="https://notebooks.azure.com/cigmah-cgmnt/projects/cgmnt">Azure Notebooks</a> and <a href="https://github.com/cigmah/cgmnt-beginners/">GitHub</a>.</p>
+<h1 id="statement">Statement</h1>
+<p>State the answer to the riddle formed by the CRAO images in <code>input10_test/</code>.</p>
+<h1 id="references">References</h1>
+<p>Written by the CIGMAH Puzzle Hunt team. We also generated the images; no external images were used in the process. Details of the image generation are revealed in the Writer&rsquo;s Notes after the puzzle is solved.</p>
+<hr>
+<h1 id="answer">Answer</h1>
+<p>The correct solution was <code>RB</code>.</p>
+<h1 id="explanation">Explanation</h1>
+<h2 id="map-hint">Map Hint</h2>
+<p>You pat yourself on the back for having outwitted this fundal atlas. If only it were so easy in real life&hellip;</p>
+<p>You open the file <code>map_hint.txt</code>. It contains the following:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Key from &#34;La Biblioteca de Babel&#34;:
+
+    En algun anaquel de algun...
+</code></pre></div><p>You wonder what this could mean.</p>
+<h2 id="writers-notes">Writer&rsquo;s Notes</h2>
+<h3 id="objectives">Objectives</h3>
+<ol>
+<li>Introduce applications of computer vision (image classification) and machine learning in medical image interpretation.</li>
+<li>Provide sample, sanitised training and test data for image classification, of reasonable similarity to medical images.</li>
+</ol>
+<h3 id="context">Context</h3>
+<p>We were very keen to write a basic image classification puzzle as it was one of the most prominent applications of machine learning/artifical intelligence in clinical medicine. Images are particularly central to specialties such as radiology, pathology, ophthalmology and dermatology - so much so, that there have been growing claims and fears that machines could dramatically alter (or even replace) the work of doctors in these specialties. The future of image classification tasks in medicine is unclear at this point, but the use of computer interpretation is certainly becoming more and more widespread (though clearly on a much more complex scale than we have indicated in this puzzle).</p>
+<p>We chose to generate fundi as an example, and chose to make the problem one of classifying between &ldquo;normal&rdquo; fundi and fundi showing typical signs of a severe central retinal artery occlusion (CRAO). We greatly exaggerated the appearance of the pathological fundi slightly to make this task suitable for beginners, but took into account two often-repeated phrases when discussing fundi in CRAO - &ldquo;cherry red macula&rdquo; and &ldquo;pale retina.&rdquo;</p>
+<p>We spent a <em>lot</em> of time trying to get our generated fundi to look semi-realistic (mostly on vessel paths and branching). We have a principle of minimising our use of external data in CIGMAH, and this was no exception; we wanted to generate all of our images automatically and <em>without</em> using any &ldquo;base&rdquo; clinical images - i.e. all our images were to be generated <em>de novo</em>. Fundi were something we felt were feasible to simulate with array operations, geometry and filters, and indeed we were able to come up with a simple fundi generator using <code>matplotlib</code> and <code>PIL</code> - no clinical images needed. Although this means models won&rsquo;t generalise to real clinical datasets (which are much messier), it does mean we can have participants undergo the whole image-to-model training and classification process and achieve very good results, even with a completely naive network. The model may be different, but the principles are similar.</p>
+<h3 id="example-solution">Example Solution</h3>
+<blockquote>
+<p>Note: Our example solutions are just one way of approaching our puzzles. They&rsquo;re not necessarily the best way, or even a good way!</p>
+</blockquote>
+<p>Here&rsquo;s an example of a solution using Tensorflow. Using convolutional neural networks (CNNs) for this problem is definitely overkill, but Tensorflow makes this so <em>criminally</em> easy for simple cases like this one, and reasonably performant for even personal laptops on a CPU, that our example solution uses a CNN anyway.</p>
+<p>Our example solution is about 22 lines of Python (excluding imports, but including all preprocessing and intepretation steps) and trains a very simple CNN to classify the images. We have written it in a fairly dense format, which some may disagree with, but in the spirit of APL/J/K&hellip;&hellip;</p>
+<blockquote>
+<p>As an aside: if not a CNN, then what? The images of this puzzle are sanitised enough that performing some simpler machine learning methods (e.g. K-nearest neighbours, support vector machines, or even a logistic regression) on some very simple image statistics (for this particular puzzle, perhaps on a combination of some aggregate of HSV values) may work. We haven&rsquo;t tried these, and they&rsquo;re certainly not as generalisable, but if you would like to explore or compare machine learning methods, we leave these as an exercise to the reader :)</p>
+</blockquote>
+<p>First we import modules (note you will need to have these installed, either through <code>pip</code> or <code>conda</code>):</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">re</span>
+<span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">numpy</span> <span style="color:#008000;font-weight:bold">as</span> <span style="color:#00f;font-weight:bold">np</span>
+<span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">keras</span>
+<span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">tensorflow</span> <span style="color:#008000;font-weight:bold">as</span> <span style="color:#00f;font-weight:bold">tf</span>
+<span style="color:#008000;font-weight:bold">from</span> <span style="color:#00f;font-weight:bold">glob</span> <span style="color:#008000;font-weight:bold">import</span> glob
+<span style="color:#008000;font-weight:bold">from</span> <span style="color:#00f;font-weight:bold">pandas</span> <span style="color:#008000;font-weight:bold">import</span> DataFrame <span style="color:#008000;font-weight:bold">as</span> DF
+<span style="color:#008000;font-weight:bold">from</span> <span style="color:#00f;font-weight:bold">imageio</span> <span style="color:#008000;font-weight:bold">import</span> imread
+</code></pre></div><pre><code>Using TensorFlow backend.
+</code></pre>
+<p>And our solution:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#408080;font-style:italic">## PREPROCESSING</span>
+trainglob <span style="color:#666">=</span> <span style="color:#ba2121">&#34;./input09_training/*.png&#34;</span>
+trainfs <span style="color:#666">=</span> <span style="color:#008000">sorted</span>(glob(trainglob))
+renm <span style="color:#666">=</span> re<span style="color:#666">.</span>compile(<span style="color:#ba2121">r</span><span style="color:#ba2121">&#34;.*?(\d+)_(\w+).png&#34;</span>)
+trainlabs <span style="color:#666">=</span> DF<span style="color:#666">.</span>from_records([{k: renm<span style="color:#666">.</span>match(f)[i] <span style="color:#008000;font-weight:bold">for</span> k,i <span style="color:#a2f;font-weight:bold">in</span> <span style="color:#008000">zip</span>([<span style="color:#ba2121">&#34;id&#34;</span>, <span style="color:#ba2121">&#34;class&#34;</span>], [<span style="color:#666">1</span>,<span style="color:#666">2</span>])} <span style="color:#008000;font-weight:bold">for</span> f <span style="color:#a2f;font-weight:bold">in</span> trainfs])
+trainlabs[<span style="color:#ba2121">&#34;class&#34;</span>] <span style="color:#666">=</span> trainlabs[<span style="color:#ba2121">&#34;class&#34;</span>]<span style="color:#666">.</span>apply(<span style="color:#008000;font-weight:bold">lambda</span> c: <span style="color:#666">0</span> <span style="color:#008000;font-weight:bold">if</span> c<span style="color:#666">==</span><span style="color:#ba2121">&#34;normal&#34;</span> <span style="color:#008000;font-weight:bold">else</span> <span style="color:#666">1</span>)
+trainims <span style="color:#666">=</span> np<span style="color:#666">.</span>stack([imread(f) <span style="color:#666">/</span> <span style="color:#666">255</span> <span style="color:#008000;font-weight:bold">for</span> f <span style="color:#a2f;font-weight:bold">in</span> trainfs], axis<span style="color:#666">=</span><span style="color:#666">0</span>)
+
+<span style="color:#408080;font-style:italic">## MODEL</span>
+model <span style="color:#666">=</span> keras<span style="color:#666">.</span>Sequential([
+    keras<span style="color:#666">.</span>layers<span style="color:#666">.</span>Flatten(input_shape<span style="color:#666">=</span>(<span style="color:#666">75</span>, <span style="color:#666">75</span>, <span style="color:#666">3</span>)),
+    keras<span style="color:#666">.</span>layers<span style="color:#666">.</span>Dense(<span style="color:#666">64</span>, activation<span style="color:#666">=</span>tf<span style="color:#666">.</span>nn<span style="color:#666">.</span>relu),
+    keras<span style="color:#666">.</span>layers<span style="color:#666">.</span>Dense(<span style="color:#666">64</span>, activation<span style="color:#666">=</span>tf<span style="color:#666">.</span>nn<span style="color:#666">.</span>relu),
+    keras<span style="color:#666">.</span>layers<span style="color:#666">.</span>Dense(<span style="color:#666">2</span>, activation<span style="color:#666">=</span>tf<span style="color:#666">.</span>nn<span style="color:#666">.</span>softmax)
+])
+model<span style="color:#666">.</span>compile(optimizer<span style="color:#666">=</span><span style="color:#ba2121">&#39;adam&#39;</span>, loss<span style="color:#666">=</span><span style="color:#ba2121">&#39;sparse_categorical_crossentropy&#39;</span>, metrics<span style="color:#666">=</span>[<span style="color:#ba2121">&#39;accuracy&#39;</span>])
+model<span style="color:#666">.</span>fit(trainims, np<span style="color:#666">.</span>array(trainlabs[<span style="color:#ba2121">&#34;class&#34;</span>]), epochs<span style="color:#666">=</span><span style="color:#666">5</span>)
+
+<span style="color:#408080;font-style:italic">## MODEL PREDICTIONS</span>
+testglob <span style="color:#666">=</span> <span style="color:#ba2121">&#34;./input09_test/*.png&#34;</span>
+testfs <span style="color:#666">=</span> <span style="color:#008000">sorted</span>(glob(testglob))
+testims <span style="color:#666">=</span> np<span style="color:#666">.</span>stack([imread(<span style="color:#008000">file</span>) <span style="color:#666">/</span> <span style="color:#666">255</span> <span style="color:#008000;font-weight:bold">for</span> <span style="color:#008000">file</span> <span style="color:#a2f;font-weight:bold">in</span> testfs], axis<span style="color:#666">=</span><span style="color:#666">0</span>)
+testlabs <span style="color:#666">=</span> DF<span style="color:#666">.</span>from_records([{k: renm<span style="color:#666">.</span>match(f)[i] <span style="color:#008000;font-weight:bold">for</span> k,i <span style="color:#a2f;font-weight:bold">in</span> <span style="color:#008000">zip</span>([<span style="color:#ba2121">&#34;id&#34;</span>, <span style="color:#ba2121">&#34;class&#34;</span>], [<span style="color:#666">1</span>,<span style="color:#666">2</span>])} <span style="color:#008000;font-weight:bold">for</span> f <span style="color:#a2f;font-weight:bold">in</span> testfs])
+preds <span style="color:#666">=</span> [np<span style="color:#666">.</span>argmax(p) <span style="color:#008000;font-weight:bold">for</span> p <span style="color:#a2f;font-weight:bold">in</span> model<span style="color:#666">.</span>predict(testims)]
+
+<span style="color:#408080;font-style:italic">## RIDDLE</span>
+icrao <span style="color:#666">=</span> np<span style="color:#666">.</span>array([i <span style="color:#008000;font-weight:bold">for</span> i, p <span style="color:#a2f;font-weight:bold">in</span> <span style="color:#008000">enumerate</span>(preds) <span style="color:#008000;font-weight:bold">if</span> p <span style="color:#666">==</span> <span style="color:#666">1</span>])
+letters <span style="color:#666">=</span> <span style="color:#ba2121">&#34;&#34;</span><span style="color:#666">.</span>join(testlabs<span style="color:#666">.</span>loc[icrao,<span style="color:#ba2121">&#34;class&#34;</span>])
+<span style="color:#008000;font-weight:bold">print</span>(letters)
+</code></pre></div><pre><code>Epoch 1/5
+1000/1000 [==============================] - 2s 2ms/step - loss: 0.4892 - acc: 0.7530
+Epoch 2/5
+1000/1000 [==============================] - 1s 838us/step - loss: 0.0941 - acc: 0.9890
+Epoch 3/5
+1000/1000 [==============================] - 1s 1ms/step - loss: 0.0520 - acc: 0.9930
+Epoch 4/5
+1000/1000 [==============================] - 1s 1ms/step - loss: 0.0307 - acc: 0.9960
+Epoch 5/5
+1000/1000 [==============================] - 1s 1ms/step - loss: 0.0348 - acc: 0.9950
+</code></pre>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">TWOLTERSRETINOBLASTOMAROTEN
+</code></pre></div><p>You can see the classification accuracy is not 100%, but the riddle is still legible &ldquo;Two letters retinoblastoma protein&rdquo;.</p>
+<p>This riddle refers to the two letters <code>RB</code>, which is the standard symbol for the retinoblastoma protein (the gene of which should be very familiar to medical students as it is often the prototypical gene for explaining the <a href="https://en.wikipedia.org/wiki/Knudson_hypothesis">&ldquo;two-hit hypothesis&rdquo;</a>).</p>
+<h3 id="image-generation">Image Generation</h3>
+<p>We were very time-pressured this month with a variety of other tasks, so our image generation code is neither clean, nor optimised, nor short. In the future, we hope to have time to redo this code (now that we know better) and possibly rewrite it for a client-side generator that could be called from the browser. Much of our dissatisfaction with the current code is the number of loops through Numpy arrays; we have high hopes in either APL or J that we could fit this code on a business card, as it really is mostly array manipulation&hellip;all we need is to find the time!</p>
+<p>We have not had the time this month to walkthrough this image generation code step-by-step as we have done previously, but we have clarified a few points briefly where appropriate.</p>
+<h4 id="setup">Setup</h4>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">matplotlib</span>
+<span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">numpy</span> <span style="color:#008000;font-weight:bold">as</span> <span style="color:#00f;font-weight:bold">np</span>
+<span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">matplotlib.cm</span> <span style="color:#008000;font-weight:bold">as</span> <span style="color:#00f;font-weight:bold">cm</span>
+<span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">itertools</span>
+<span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">random</span>
+<span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">PIL</span>
+<span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">PIL.Image</span> <span style="color:#008000;font-weight:bold">as</span> <span style="color:#00f;font-weight:bold">Image</span>
+<span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">PIL.ImageFilter</span> <span style="color:#008000;font-weight:bold">as</span> <span style="color:#00f;font-weight:bold">ImageFilter</span>
+<span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">PIL.ImageChops</span> <span style="color:#008000;font-weight:bold">as</span> <span style="color:#00f;font-weight:bold">ImageChops</span>
+<span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">PIL.ImageDraw</span> <span style="color:#008000;font-weight:bold">as</span> <span style="color:#00f;font-weight:bold">ImageDraw</span>
+<span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">PIL.ImageEnhance</span> <span style="color:#008000;font-weight:bold">as</span> <span style="color:#00f;font-weight:bold">ImageEnhance</span>
+<span style="color:#008000;font-weight:bold">from</span> <span style="color:#00f;font-weight:bold">matplotlib</span> <span style="color:#008000;font-weight:bold">import</span> pyplot <span style="color:#008000;font-weight:bold">as</span> plt
+<span style="color:#008000;font-weight:bold">from</span> <span style="color:#00f;font-weight:bold">matplotlib</span> <span style="color:#008000;font-weight:bold">import</span> patches
+</code></pre></div><div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#666">%</span>matplotlib inline
+</code></pre></div><h4 id="constants">Constants</h4>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">radius <span style="color:#666">=</span> <span style="color:#666">64</span>
+imextent <span style="color:#666">=</span> [<span style="color:#666">-</span>radius, radius, <span style="color:#666">-</span>radius, radius]
+</code></pre></div><h4 id="general-functions">General Functions</h4>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">def</span> <span style="color:#00f">make_base</span>():
+    fig, ax <span style="color:#666">=</span> plt<span style="color:#666">.</span>subplots(figsize<span style="color:#666">=</span>(<span style="color:#666">4</span>,<span style="color:#666">4</span>))
+    ax<span style="color:#666">.</span>axis(<span style="color:#ba2121">&#34;off&#34;</span>)
+    ax<span style="color:#666">.</span>patch<span style="color:#666">.</span>set_alpha(<span style="color:#666">0</span>)
+    ax<span style="color:#666">.</span>set_ylim([<span style="color:#666">-</span>radius, radius])
+    ax<span style="color:#666">.</span>set_xlim([<span style="color:#666">-</span>radius, radius])
+    <span style="color:#008000;font-weight:bold">return</span> fig, ax
+</code></pre></div><div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">def</span> <span style="color:#00f">fig2img</span>(fig):
+    <span style="color:#ba2121">&#34;&#34;&#34;Based on http://www.icare.univ-lille1.fr/tutorials/convert_a_matplotlib_figure&#34;&#34;&#34;</span>
+    fig<span style="color:#666">.</span>canvas<span style="color:#666">.</span>draw()
+    width, height <span style="color:#666">=</span> fig<span style="color:#666">.</span>canvas<span style="color:#666">.</span>get_width_height()
+    <span style="color:#008000">buffer</span> <span style="color:#666">=</span> np<span style="color:#666">.</span>frombuffer(fig<span style="color:#666">.</span>canvas<span style="color:#666">.</span>tostring_argb(), dtype<span style="color:#666">=</span>np<span style="color:#666">.</span>uint8)
+    <span style="color:#008000">buffer</span><span style="color:#666">.</span>shape <span style="color:#666">=</span> (width, height, <span style="color:#666">4</span>)
+    <span style="color:#008000">buffer</span> <span style="color:#666">=</span> np<span style="color:#666">.</span>roll(<span style="color:#008000">buffer</span>, <span style="color:#666">3</span>, axis<span style="color:#666">=</span><span style="color:#666">2</span>)
+    image <span style="color:#666">=</span> Image<span style="color:#666">.</span>frombytes(<span style="color:#ba2121">&#34;RGBA&#34;</span>, (width, height), <span style="color:#008000">buffer</span><span style="color:#666">.</span>tostring())
+    <span style="color:#008000;font-weight:bold">return</span> image
+</code></pre></div><div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">def</span> <span style="color:#00f">rand_around</span>(mean, std, clip_low<span style="color:#666">=</span><span style="color:#666">0</span>, clip_high<span style="color:#666">=</span><span style="color:#666">1</span>):
+    result <span style="color:#666">=</span> np<span style="color:#666">.</span>random<span style="color:#666">.</span>normal(mean, std)
+    <span style="color:#008000;font-weight:bold">if</span> result <span style="color:#666">&lt;</span> clip_low:
+        <span style="color:#008000;font-weight:bold">return</span> clip_low
+    <span style="color:#008000;font-weight:bold">if</span> result <span style="color:#666">&gt;</span> clip_high:
+        <span style="color:#008000;font-weight:bold">return</span> clip_high
+    <span style="color:#008000;font-weight:bold">return</span> result
+</code></pre></div><div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">def</span> <span style="color:#00f">make_imnoise</span>(ax, radius, scalefactor, redmodifier<span style="color:#666">=</span><span style="color:#666">1</span>, green<span style="color:#666">=</span><span style="color:#666">0.35</span>, blue<span style="color:#666">=</span><span style="color:#666">0.25</span>):
+    imsize <span style="color:#666">=</span> radius
+    imcontainer <span style="color:#666">=</span> np<span style="color:#666">.</span>zeros([imsize, imsize, <span style="color:#666">4</span>])
+    bgnoise <span style="color:#666">=</span> ((np<span style="color:#666">.</span>random<span style="color:#666">.</span>random((imsize, imsize)) <span style="color:#666">-</span> <span style="color:#666">0.5</span>) <span style="color:#666">/</span> scalefactor) <span style="color:#666">+</span> <span style="color:#666">0.8</span>
+    imcontainer[:, :, <span style="color:#666">0</span>] <span style="color:#666">=</span> bgnoise <span style="color:#666">*</span> redmodifier
+    imcontainer[:, :, <span style="color:#666">1</span>] <span style="color:#666">=</span> green
+    imcontainer[:, :, <span style="color:#666">2</span>] <span style="color:#666">=</span> blue
+    imcontainer[:, :, <span style="color:#666">3</span>] <span style="color:#666">=</span> <span style="color:#666">1</span>
+    im <span style="color:#666">=</span> ax<span style="color:#666">.</span>imshow(imcontainer,
+            origin<span style="color:#666">=</span><span style="color:#ba2121">&#39;lower&#39;</span>,
+            interpolation<span style="color:#666">=</span><span style="color:#ba2121">&#39;bilinear&#39;</span>,
+            extent<span style="color:#666">=</span>imextent)
+</code></pre></div><h4 id="background">Background</h4>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">def</span> <span style="color:#00f">make_bg</span>(odxcentre, odycentre, odradius, fvxcentre, fvycentre, fvradius, crao<span style="color:#666">=</span>False):
+
+    fig, ax <span style="color:#666">=</span> make_base()
+    plt<span style="color:#666">.</span>close()
+
+    make_imnoise(ax, radius, <span style="color:#666">8</span>)
+
+    <span style="color:#008000;font-weight:bold">if</span> crao:
+        fvcol <span style="color:#666">=</span> (rand_around(<span style="color:#666">0.55</span>, <span style="color:#666">0.05</span>, <span style="color:#666">0</span>, <span style="color:#666">1</span>),
+                 rand_around(<span style="color:#666">0</span>, <span style="color:#666">0.05</span>, <span style="color:#666">0</span>, <span style="color:#666">1</span>),
+                 rand_around(<span style="color:#666">0</span>, <span style="color:#666">0.05</span>, <span style="color:#666">0</span>, <span style="color:#666">1</span>)
+                )
+    <span style="color:#008000;font-weight:bold">else</span>:
+        fvcol <span style="color:#666">=</span> (rand_around(<span style="color:#666">0.2</span>, <span style="color:#666">0.05</span>, <span style="color:#666">0</span>, <span style="color:#666">1</span>),
+                 rand_around(<span style="color:#666">0</span>, <span style="color:#666">0.05</span>, <span style="color:#666">0</span>, <span style="color:#666">1</span>),
+                 rand_around(<span style="color:#666">0</span>, <span style="color:#666">0.05</span>, <span style="color:#666">0</span>, <span style="color:#666">1</span>)
+                )
+
+    fovea <span style="color:#666">=</span> patches<span style="color:#666">.</span>Circle((fvxcentre, fvycentre), fvradius, facecolor<span style="color:#666">=</span>fvcol, alpha <span style="color:#666">=</span> <span style="color:#666">0.5</span>)
+    fovea_extend <span style="color:#666">=</span> patches<span style="color:#666">.</span>Circle((fvxcentre, fvycentre), fvradius <span style="color:#666">*</span> <span style="color:#666">2</span>, facecolor <span style="color:#666">=</span> fvcol, alpha <span style="color:#666">=</span> <span style="color:#666">0.1</span>)
+    fovea_extend_extend <span style="color:#666">=</span> patches<span style="color:#666">.</span>Circle((fvxcentre, fvycentre), fvradius <span style="color:#666">*</span> <span style="color:#666">3</span>, facecolor <span style="color:#666">=</span> fvcol, alpha <span style="color:#666">=</span> <span style="color:#666">0.1</span>)
+
+    <span style="color:#408080;font-style:italic"># Optic disc &#34;Halo&#34;</span>
+    odcol <span style="color:#666">=</span> (rand_around(<span style="color:#666">1</span>, <span style="color:#666">0.05</span>, <span style="color:#666">0</span>, <span style="color:#666">1</span>),
+             rand_around(<span style="color:#666">0.8</span>, <span style="color:#666">0.05</span>, <span style="color:#666">0</span>, <span style="color:#666">1</span>),
+             rand_around(<span style="color:#666">0.8</span>, <span style="color:#666">0.05</span>, <span style="color:#666">0</span>, <span style="color:#666">1</span>)
+            )
+    od_halo <span style="color:#666">=</span> patches<span style="color:#666">.</span>Circle((odxcentre, odycentre), odradius <span style="color:#666">*</span> <span style="color:#666">2</span>, facecolor<span style="color:#666">=</span>odcol, alpha <span style="color:#666">=</span> <span style="color:#666">0.1</span>)
+    od_halo_extend <span style="color:#666">=</span> patches<span style="color:#666">.</span>Circle((odxcentre, odycentre), odradius <span style="color:#666">*</span> <span style="color:#666">4</span>, facecolor<span style="color:#666">=</span>odcol, alpha <span style="color:#666">=</span> <span style="color:#666">0.1</span>)
+    od_halo_extend_extend <span style="color:#666">=</span> patches<span style="color:#666">.</span>Circle((odxcentre, odycentre), odradius <span style="color:#666">*</span> <span style="color:#666">6</span>, facecolor<span style="color:#666">=</span>odcol, alpha <span style="color:#666">=</span> <span style="color:#666">0.1</span>)
+
+    <span style="color:#408080;font-style:italic"># Retinal opacity if CRAO</span>
+    <span style="color:#008000;font-weight:bold">if</span> crao:
+        retcol <span style="color:#666">=</span> (rand_around(<span style="color:#666">0.9</span>, <span style="color:#666">0.05</span>, <span style="color:#666">0.8</span>, <span style="color:#666">1</span>),
+                  rand_around(<span style="color:#666">0.8</span>, <span style="color:#666">0.05</span>, <span style="color:#666">0.6</span>, <span style="color:#666">1</span>),
+                  rand_around(<span style="color:#666">0.7</span>, <span style="color:#666">0.05</span>, <span style="color:#666">0.4</span>, <span style="color:#666">1</span>)
+                 )
+        <span style="color:#008000;font-weight:bold">for</span> rmod, alpha <span style="color:#a2f;font-weight:bold">in</span> <span style="color:#008000">zip</span>([rand_around(<span style="color:#666">1</span>, <span style="color:#666">2</span>, <span style="color:#666">0.1</span>, <span style="color:#666">2</span>), rand_around(<span style="color:#666">0.8</span>, <span style="color:#666">0.5</span>, <span style="color:#666">0.1</span>, <span style="color:#666">2</span>), <span style="color:#666">0.5</span>], (<span style="color:#666">0.6</span>, <span style="color:#666">0.4</span>, <span style="color:#666">0.3</span>)):
+            ax<span style="color:#666">.</span>add_patch(patches<span style="color:#666">.</span>Circle((fvxcentre, fvycentre), radius<span style="color:#666">/</span>rmod, facecolor<span style="color:#666">=</span>retcol, alpha<span style="color:#666">=</span>alpha))
+
+    <span style="color:#408080;font-style:italic"># Adding patches</span>
+    ax<span style="color:#666">.</span>add_patch(od_halo)
+    ax<span style="color:#666">.</span>add_patch(od_halo_extend)
+    ax<span style="color:#666">.</span>add_patch(od_halo_extend_extend)
+    ax<span style="color:#666">.</span>add_patch(fovea)
+    ax<span style="color:#666">.</span>add_patch(fovea_extend)
+    ax<span style="color:#666">.</span>add_patch(fovea_extend_extend)
+
+    im <span style="color:#666">=</span> fig2img(fig)<span style="color:#666">.</span>filter(ImageFilter<span style="color:#666">.</span>GaussianBlur(<span style="color:#666">5</span>))
+
+    <span style="color:#408080;font-style:italic"># Shadows</span>
+    figsh, axsh <span style="color:#666">=</span> make_base()
+    plt<span style="color:#666">.</span>close()
+    shadows <span style="color:#666">=</span> np<span style="color:#666">.</span>random<span style="color:#666">.</span>random((<span style="color:#666">4</span>,<span style="color:#666">4</span>)) <span style="color:#666">/</span> <span style="color:#666">2</span>
+    axsh<span style="color:#666">.</span>imshow(shadows, vmin <span style="color:#666">=</span> <span style="color:#666">0</span>, vmax <span style="color:#666">=</span> <span style="color:#666">1</span>, interpolation <span style="color:#666">=</span> <span style="color:#ba2121">&#34;bicubic&#34;</span>, cmap<span style="color:#666">=</span>cm<span style="color:#666">.</span>Greys, extent<span style="color:#666">=</span>imextent)
+    imsh <span style="color:#666">=</span> fig2img(figsh)<span style="color:#666">.</span>filter(ImageFilter<span style="color:#666">.</span>GaussianBlur())
+
+    combined <span style="color:#666">=</span> ImageChops<span style="color:#666">.</span>multiply(imsh, im)
+
+    <span style="color:#008000;font-weight:bold">return</span> combined
+</code></pre></div><p>Example:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">make_bg(<span style="color:#666">-</span><span style="color:#666">20</span>, <span style="color:#666">0</span>, <span style="color:#666">10</span>, <span style="color:#666">10</span>, <span style="color:#666">0</span>, <span style="color:#666">8</span>)
+</code></pre></div><p><img src="https://lh3.googleusercontent.com/51af6xeMGNqHgUMO5pQmoTDuEaFsCPr_3tw5qA5fLBmFKHb3jSin3I9ngzAbJJEBs29Zsy0AgKRAuo1M-HTFTPrBd2Zf164bAhkgrHRMBtLxPRPW-RHyCGAtsFdi_I_zkYNiarnBbg=s288-p-k" alt="png"></p>
+<p>Example &ldquo;with&rdquo; CRAO:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">make_bg(<span style="color:#666">-</span><span style="color:#666">20</span>, <span style="color:#666">0</span>, <span style="color:#666">10</span>, <span style="color:#666">10</span>, <span style="color:#666">0</span>, <span style="color:#666">8</span>, crao<span style="color:#666">=</span>True)
+</code></pre></div><p><img src="https://lh3.googleusercontent.com/U2DvRpO7gy04tvQhI4PvJGL9AzATvNZqLgulWCOX6bcT-_S6NUoYkJrII1JF5OXpXa3S-nLNLbFgO1OSfb2MMAMYEO5Eyr6JGKAztCMUP84m4iUkPwUpTJueEVvbPeYR7bqxJiYOcg=s288-p-k" alt="png"></p>
+<h4 id="vessels">Vessels</h4>
+<p>We spent most of our effort on creating semi-realistic depictions of vessels on the retina. Currently, we have implemented a recursive branching algorithm that widens the vessel on each branch (such that vessels with more branches appear thicker) and with gradual deviation towards the fovea. There are a large number of random variables incorporated in this to ensure the vessel patterns are unique.</p>
+<p>We know the code below is very messy, and would like to clean it up at some point in the future.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">def</span> <span style="color:#00f">make_vessels</span>(odxcentre, odycentre, fvxcentre, fvycentre, iterations, thickness, numbranches<span style="color:#666">=</span><span style="color:#666">2</span>, base_steps<span style="color:#666">=</span><span style="color:#666">20</span>):
+    fig, ax <span style="color:#666">=</span> make_base()
+    plt<span style="color:#666">.</span>close()
+
+    lines <span style="color:#666">=</span> []
+
+    unit_step <span style="color:#666">=</span> (<span style="color:#666">4</span> <span style="color:#666">*</span> radius <span style="color:#666">/</span> base_steps)
+
+    <span style="color:#008000;font-weight:bold">def</span> <span style="color:#00f">move</span>(accumulator, facing_angle, main_direction, steps_left, diverged_left, first<span style="color:#666">=</span>False, towardsfv<span style="color:#666">=</span>True):
+        <span style="color:#008000;font-weight:bold">if</span> steps_left <span style="color:#666">==</span> <span style="color:#666">0</span>:
+            lines<span style="color:#666">.</span>append(accumulator)
+        <span style="color:#008000;font-weight:bold">else</span>:
+            <span style="color:#008000;font-weight:bold">if</span> diverged_left <span style="color:#666">&gt;</span> <span style="color:#666">0</span>:
+                <span style="color:#408080;font-style:italic"># Make decision whether to diverge here or not</span>
+                randf <span style="color:#666">=</span> random<span style="color:#666">.</span>random()
+                <span style="color:#008000;font-weight:bold">if</span> randf <span style="color:#666">&lt;</span> <span style="color:#666">0.3</span>:
+                    next_diverged_left <span style="color:#666">=</span> diverged_left <span style="color:#666">-</span> <span style="color:#666">1</span>
+                    next_main_direction <span style="color:#666">=</span> main_direction <span style="color:#666">*</span> random<span style="color:#666">.</span>uniform(<span style="color:#666">-</span><span style="color:#666">2</span>, <span style="color:#666">-</span><span style="color:#666">1</span>)
+                    shifted_accum <span style="color:#666">=</span> <span style="color:#008000">list</span>(<span style="color:#008000">map</span>(<span style="color:#008000;font-weight:bold">lambda</span> p: (p[<span style="color:#666">0</span>] <span style="color:#666">+</span> thickness <span style="color:#666">/</span> <span style="color:#666">2</span>, p[<span style="color:#666">1</span>] <span style="color:#666">+</span> thickness<span style="color:#666">/</span><span style="color:#666">2</span>), accumulator))
+
+                    <span style="color:#008000;font-weight:bold">if</span> random<span style="color:#666">.</span>random() <span style="color:#666">&lt;</span> <span style="color:#666">0.5</span>:
+                        next_towardsfv <span style="color:#666">=</span> False
+                    <span style="color:#008000;font-weight:bold">else</span>:
+                        next_towardsfv <span style="color:#666">=</span> True
+
+                    move(shifted_accum, facing_angle, next_main_direction, steps_left, next_diverged_left, False, next_towardsfv)
+                <span style="color:#008000;font-weight:bold">else</span>:
+                    next_diverged_left <span style="color:#666">=</span> diverged_left
+            <span style="color:#008000;font-weight:bold">else</span>:
+                next_diverged_left <span style="color:#666">=</span> <span style="color:#666">0</span>
+
+            <span style="color:#008000;font-weight:bold">if</span> random<span style="color:#666">.</span>random() <span style="color:#666">&lt;</span> <span style="color:#666">0.98</span>:
+                turn_angle_modifier <span style="color:#666">=</span> np<span style="color:#666">.</span>random<span style="color:#666">.</span>normal(<span style="color:#666">0</span>, <span style="color:#666">3</span>)
+                turn_angle <span style="color:#666">=</span> main_direction <span style="color:#666">*</span> turn_angle_modifier
+            <span style="color:#008000;font-weight:bold">else</span>:
+                turn_angle <span style="color:#666">=</span> main_direction <span style="color:#666">+</span> random<span style="color:#666">.</span>uniform(<span style="color:#666">-</span>np<span style="color:#666">.</span>pi<span style="color:#666">/</span><span style="color:#666">2</span>, np<span style="color:#666">.</span>pi<span style="color:#666">/</span><span style="color:#666">2</span>)
+
+
+            xlast, ylast <span style="color:#666">=</span> accumulator[<span style="color:#666">-</span><span style="color:#666">1</span>]
+
+            <span style="color:#408080;font-style:italic"># Deviate towards the fovea</span>
+            <span style="color:#008000;font-weight:bold">if</span> towardsfv:
+                fvx <span style="color:#666">=</span> rand_around(fvxcentre <span style="color:#666">-</span> xlast, <span style="color:#008000">abs</span>((fvxcentre<span style="color:#666">-</span>xlast)<span style="color:#666">/</span><span style="color:#666">5</span>), fvxcentre <span style="color:#666">-</span> <span style="color:#666">2</span><span style="color:#666">*</span>xlast, fvxcentre <span style="color:#666">+</span> <span style="color:#666">2</span><span style="color:#666">*</span>xlast)
+                fvy <span style="color:#666">=</span> rand_around(fvycentre <span style="color:#666">-</span> ylast, <span style="color:#008000">abs</span>((fvycentre<span style="color:#666">-</span>ylast)<span style="color:#666">/</span><span style="color:#666">5</span>), fvycentre <span style="color:#666">-</span> <span style="color:#666">2</span><span style="color:#666">*</span>ylast, fvycentre <span style="color:#666">+</span> <span style="color:#666">2</span><span style="color:#666">*</span>ylast)
+
+                angle_to_fv <span style="color:#666">=</span> np<span style="color:#666">.</span>arctan2(fvy, fvx)
+
+                <span style="color:#008000;font-weight:bold">if</span> angle_to_fv <span style="color:#666">&gt;</span> <span style="color:#666">0</span>:
+                    angle_to_fv <span style="color:#666">=</span> angle_to_fv <span style="color:#666">+</span> (angle_to_fv <span style="color:#666">-</span> np<span style="color:#666">.</span>pi)  <span style="color:#666">/</span> <span style="color:#666">2</span>
+                <span style="color:#008000;font-weight:bold">else</span>:
+                    angle_to_fv <span style="color:#666">=</span> (np<span style="color:#666">.</span>pi <span style="color:#666">+</span> angle_to_fv) <span style="color:#666">/</span> <span style="color:#666">2</span> <span style="color:#666">+</span> angle_to_fv
+                angle_to_fv <span style="color:#666">=</span> (angle_to_fv <span style="color:#666">-</span> facing_angle)
+                angle_to_fv <span style="color:#666">=</span> rand_around(angle_to_fv, np<span style="color:#666">.</span>pi<span style="color:#666">/</span><span style="color:#666">8</span>, angle_to_fv <span style="color:#666">/</span> <span style="color:#666">2</span>, angle_to_fv <span style="color:#666">*</span> <span style="color:#666">2</span>)
+
+                deviate_prop <span style="color:#666">=</span> rand_around(<span style="color:#666">1</span>, <span style="color:#666">2</span>, <span style="color:#666">0</span>, <span style="color:#666">6</span>)
+                turn_angle <span style="color:#666">=</span> (deviate_prop <span style="color:#666">*</span> angle_to_fv <span style="color:#666">+</span> <span style="color:#666">1</span> <span style="color:#666">*</span> turn_angle) <span style="color:#666">/</span> (<span style="color:#666">1</span> <span style="color:#666">+</span> deviate_prop)
+
+
+
+            <span style="color:#008000;font-weight:bold">if</span> first:
+                start_dist <span style="color:#666">=</span> rand_around(<span style="color:#666">12</span>, <span style="color:#666">3</span>, <span style="color:#666">4</span>, <span style="color:#666">12</span>)
+                start_angle <span style="color:#666">=</span> turn_angle <span style="color:#666">+</span> rand_around(np<span style="color:#666">.</span>pi<span style="color:#666">/</span><span style="color:#666">8</span>, np<span style="color:#666">.</span>pi<span style="color:#666">/</span><span style="color:#666">16</span>, np<span style="color:#666">.</span>pi<span style="color:#666">/</span><span style="color:#666">8</span>, <span style="color:#666">7</span><span style="color:#666">*</span>np<span style="color:#666">.</span>pi<span style="color:#666">/</span><span style="color:#666">8</span>)
+                next_point <span style="color:#666">=</span> (xlast <span style="color:#666">+</span> (start_dist <span style="color:#666">*</span> np<span style="color:#666">.</span>cos(facing_angle <span style="color:#666">+</span> start_angle)),
+                              ylast <span style="color:#666">+</span> (start_dist <span style="color:#666">*</span> np<span style="color:#666">.</span>sin(facing_angle <span style="color:#666">+</span> start_angle)))
+            <span style="color:#008000;font-weight:bold">else</span>:
+                step_distance <span style="color:#666">=</span> rand_around(steps_left <span style="color:#666">/</span> base_steps <span style="color:#666">*</span> unit_step, base_steps<span style="color:#666">/</span><span style="color:#666">5</span>, <span style="color:#666">0</span>,  base_steps <span style="color:#666">*</span> <span style="color:#666">10</span>)
+
+                next_point <span style="color:#666">=</span> (xlast <span style="color:#666">+</span> (step_distance <span style="color:#666">*</span> np<span style="color:#666">.</span>cos(facing_angle <span style="color:#666">+</span> turn_angle)),
+                              ylast <span style="color:#666">+</span> (step_distance <span style="color:#666">*</span> np<span style="color:#666">.</span>sin(facing_angle <span style="color:#666">+</span> turn_angle)))
+
+            next_facing <span style="color:#666">=</span> facing_angle <span style="color:#666">+</span> turn_angle
+
+            <span style="color:#008000;font-weight:bold">while</span> next_facing <span style="color:#666">&gt;</span> <span style="color:#666">2</span> <span style="color:#666">*</span> np<span style="color:#666">.</span>pi:
+                next_facing <span style="color:#666">-=</span> (<span style="color:#666">2</span> <span style="color:#666">*</span> np<span style="color:#666">.</span>pi)
+            <span style="color:#008000;font-weight:bold">while</span> next_facing <span style="color:#666">&lt;</span> <span style="color:#666">0</span>:
+                next_facing <span style="color:#666">+=</span> (<span style="color:#666">2</span> <span style="color:#666">*</span> np<span style="color:#666">.</span>pi)
+            <span style="color:#008000;font-weight:bold">if</span> np<span style="color:#666">.</span>pi <span style="color:#666">&lt;</span> next_facing:
+                next_facing <span style="color:#666">=</span> <span style="color:#666">-</span>(<span style="color:#666">2</span> <span style="color:#666">*</span> np<span style="color:#666">.</span>pi <span style="color:#666">-</span> next_facing)
+            move(accumulator <span style="color:#666">+</span> [next_point], next_facing, main_direction, steps_left <span style="color:#666">-</span> <span style="color:#666">1</span>, next_diverged_left)
+
+
+    unit_rotate <span style="color:#666">=</span> (<span style="color:#666">1.5</span> <span style="color:#666">*</span> np<span style="color:#666">.</span>pi <span style="color:#666">/</span> iterations)
+
+    <span style="color:#008000;font-weight:bold">for</span> i <span style="color:#a2f;font-weight:bold">in</span> <span style="color:#008000">range</span>(iterations):
+        starting_point <span style="color:#666">=</span> (rand_around(odxcentre, <span style="color:#666">2</span>, odxcentre <span style="color:#666">-</span> <span style="color:#666">10</span>, odxcentre <span style="color:#666">+</span> <span style="color:#666">10</span>),
+                          rand_around(odycentre, <span style="color:#666">2</span>, odycentre <span style="color:#666">-</span> <span style="color:#666">10</span>, odycentre <span style="color:#666">+</span> <span style="color:#666">10</span>))
+        start_accum <span style="color:#666">=</span> [starting_point]
+        num_steps <span style="color:#666">=</span> <span style="color:#008000">int</span>(random<span style="color:#666">.</span>uniform(base_steps <span style="color:#666">*</span> <span style="color:#666">0.75</span>, base_steps <span style="color:#666">*</span> <span style="color:#666">1.25</span>))
+        num_diverge <span style="color:#666">=</span> random<span style="color:#666">.</span>randint(<span style="color:#666">1</span>, numbranches)
+        facing_angle <span style="color:#666">=</span> (unit_rotate <span style="color:#666">*</span> i) <span style="color:#666">+</span> (np<span style="color:#666">.</span>pi <span style="color:#666">/</span> <span style="color:#666">8</span>)
+        angle_total <span style="color:#666">=</span> random<span style="color:#666">.</span>uniform(<span style="color:#666">-</span>np<span style="color:#666">.</span>pi , np<span style="color:#666">.</span>pi )
+        main_direction <span style="color:#666">=</span> angle_total <span style="color:#666">/</span> (num_steps <span style="color:#666">*</span> <span style="color:#666">1</span>)
+        <span style="color:#008000;font-weight:bold">if</span> random<span style="color:#666">.</span>random() <span style="color:#666">&lt;</span> <span style="color:#666">0.5</span>:
+            new_towardsfv <span style="color:#666">=</span> False
+        <span style="color:#008000;font-weight:bold">else</span>:
+            new_towardsfv <span style="color:#666">=</span> True
+        move(start_accum, facing_angle, main_direction, num_steps, num_diverge, first<span style="color:#666">=</span>True, towardsfv <span style="color:#666">=</span> new_towardsfv)
+
+    <span style="color:#008000;font-weight:bold">for</span> line <span style="color:#a2f;font-weight:bold">in</span> lines:
+        linecol <span style="color:#666">=</span> (rand_around(<span style="color:#666">0.4</span>, <span style="color:#666">0.02</span>, <span style="color:#666">0</span>, <span style="color:#666">1</span>),
+                   rand_around(<span style="color:#666">0.1</span>, <span style="color:#666">0.01</span>, <span style="color:#666">0</span>, <span style="color:#666">1</span>),
+                   rand_around(<span style="color:#666">0.1</span>, <span style="color:#666">0.01</span>, <span style="color:#666">0</span>, <span style="color:#666">1</span>)
+                  )
+        linewidth <span style="color:#666">=</span> rand_around(thickness, <span style="color:#666">0.1</span>, <span style="color:#666">0</span>, thickness <span style="color:#666">*</span> <span style="color:#666">2</span>)
+        vx <span style="color:#666">=</span> [p[<span style="color:#666">0</span>] <span style="color:#008000;font-weight:bold">for</span> p <span style="color:#a2f;font-weight:bold">in</span> line]
+        vy <span style="color:#666">=</span> [p[<span style="color:#666">1</span>] <span style="color:#008000;font-weight:bold">for</span> p <span style="color:#a2f;font-weight:bold">in</span> line]
+        ax<span style="color:#666">.</span>plot(vx, vy, color<span style="color:#666">=</span>linecol, linewidth<span style="color:#666">=</span>linewidth)
+
+    im <span style="color:#666">=</span> fig2img(fig)
+
+    <span style="color:#008000;font-weight:bold">return</span> im
+</code></pre></div><p>Example</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">make_vessels(<span style="color:#666">-</span><span style="color:#666">32</span>, <span style="color:#666">0</span>, <span style="color:#666">10</span>, <span style="color:#666">0</span>, <span style="color:#666">8</span>, <span style="color:#666">0.5</span>, numbranches<span style="color:#666">=</span><span style="color:#666">3</span>)
+</code></pre></div><p><img src="https://lh3.googleusercontent.com/3iGsnEm_ZckFOsWC736nVXtclwGrpU0-YoWbY1rXJ-JkWJUtWr6eMFPJxCk5tm5bnHtvYBM8eiy2yefdgcJFPpmpWqkf4kf_KjRQVLEkG6H2FUboWzEPPwD8WkdzCZdvH-p5spA25w=s288-p-k" alt="png"></p>
+<h4 id="intermediate-shadows">Intermediate Shadows</h4>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">def</span> <span style="color:#00f">make_inter</span>():
+    fig, ax <span style="color:#666">=</span> make_base()
+    plt<span style="color:#666">.</span>close()
+    make_imnoise(ax, random<span style="color:#666">.</span>randint(radius<span style="color:#666">//</span><span style="color:#666">2</span>, radius<span style="color:#666">*</span><span style="color:#666">3</span><span style="color:#666">/</span><span style="color:#666">4</span>), <span style="color:#666">2.5</span>)
+    im <span style="color:#666">=</span> fig2img(fig)
+
+    <span style="color:#408080;font-style:italic"># Shadows</span>
+    figsh, axsh <span style="color:#666">=</span> make_base()
+    plt<span style="color:#666">.</span>close()
+    shadows <span style="color:#666">=</span> np<span style="color:#666">.</span>random<span style="color:#666">.</span>random((<span style="color:#666">4</span>,<span style="color:#666">4</span>)) <span style="color:#666">/</span> <span style="color:#666">1</span>
+    axsh<span style="color:#666">.</span>imshow(shadows, vmin <span style="color:#666">=</span> <span style="color:#666">0</span>, vmax <span style="color:#666">=</span> <span style="color:#666">1</span>, interpolation <span style="color:#666">=</span> <span style="color:#ba2121">&#34;bicubic&#34;</span>, cmap<span style="color:#666">=</span>cm<span style="color:#666">.</span>Greys, extent<span style="color:#666">=</span>imextent)
+    imsh <span style="color:#666">=</span> fig2img(figsh)<span style="color:#666">.</span>filter(ImageFilter<span style="color:#666">.</span>GaussianBlur())
+
+    combined <span style="color:#666">=</span> ImageChops<span style="color:#666">.</span>blend(im, imsh, <span style="color:#666">0.4</span>)
+
+    <span style="color:#008000;font-weight:bold">return</span> combined
+</code></pre></div><div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">make_inter()
+</code></pre></div><p><img src="https://lh3.googleusercontent.com/jZall_Ea4PF0SuO1wyTCeRV2bXUsfhPReV3XEK15jvsiVbSYC18MhOrqe7lT8uCG6bzyhcoYx7rpb2kcTtFIF0scFucxh8VRWZlavO4xvt0kBLmefFIH5MT8q_UcL0669v8G5IPPpg=s288-p-k" alt="png"></p>
+<h4 id="optic-disc">Optic Disc</h4>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">def</span> <span style="color:#00f">make_od</span>(odxcentre, odycentre, odradius_original):
+
+    fig, ax <span style="color:#666">=</span> make_base()
+    plt<span style="color:#666">.</span>close()
+
+    imsize <span style="color:#666">=</span> <span style="color:#666">250</span>
+
+    odradius <span style="color:#666">=</span> odradius_original <span style="color:#666">*</span> (imsize<span style="color:#666">/</span>radius) <span style="color:#666">*</span> <span style="color:#666">0.8</span>
+
+    cup_to_disc <span style="color:#666">=</span> rand_around(<span style="color:#666">0.3</span>, <span style="color:#666">0.05</span>, <span style="color:#666">0</span>, <span style="color:#666">1</span>)
+    ocradius <span style="color:#666">=</span> <span style="color:#008000">int</span>(odradius <span style="color:#666">*</span> cup_to_disc)
+
+    imcontainer <span style="color:#666">=</span> np<span style="color:#666">.</span>zeros((imsize<span style="color:#666">*</span><span style="color:#666">2</span>, imsize<span style="color:#666">*</span><span style="color:#666">2</span>, <span style="color:#666">4</span>))
+
+    odxtrans <span style="color:#666">=</span> <span style="color:#008000">int</span>((odxcentre <span style="color:#666">*</span> imsize<span style="color:#666">/</span>radius) <span style="color:#666">+</span> imsize)
+    odytrans <span style="color:#666">=</span> <span style="color:#008000">int</span>((odycentre <span style="color:#666">*</span> imsize<span style="color:#666">/</span>radius) <span style="color:#666">+</span> imsize)
+
+    odcolbase <span style="color:#666">=</span> np<span style="color:#666">.</span>array([rand_around(<span style="color:#666">1</span>, <span style="color:#666">0.05</span>, <span style="color:#666">0</span>, <span style="color:#666">1</span>),
+                 rand_around(<span style="color:#666">0.7</span>, <span style="color:#666">0.05</span>, <span style="color:#666">0</span>, <span style="color:#666">1</span>),
+                 rand_around(<span style="color:#666">0.3</span>, <span style="color:#666">0.05</span>, <span style="color:#666">0</span>, <span style="color:#666">1</span>),
+                 <span style="color:#666">1</span>
+                ])
+
+    occolbase <span style="color:#666">=</span> np<span style="color:#666">.</span>array([rand_around(<span style="color:#666">1</span>, <span style="color:#666">0.05</span>, <span style="color:#666">0</span>, <span style="color:#666">1</span>),
+                 rand_around(<span style="color:#666">0.95</span>, <span style="color:#666">0.05</span>, <span style="color:#666">0</span>, <span style="color:#666">1</span>),
+                 rand_around(<span style="color:#666">0.95</span>, <span style="color:#666">0.05</span>, <span style="color:#666">0</span>, <span style="color:#666">1</span>),
+                 <span style="color:#666">1</span>
+                ])
+
+    rimhalfwidth <span style="color:#666">=</span> odradius <span style="color:#666">/</span> <span style="color:#666">10</span>
+
+    xmod <span style="color:#666">=</span> rand_around(<span style="color:#666">1</span> <span style="color:#666">+</span> <span style="color:#008000">abs</span>(odxcentre <span style="color:#666">/</span> radius)<span style="color:#666">/</span><span style="color:#666">4</span>, <span style="color:#666">0.05</span>, <span style="color:#666">1</span>, <span style="color:#666">1.5</span>)
+
+    <span style="color:#008000;font-weight:bold">for</span> y <span style="color:#a2f;font-weight:bold">in</span> <span style="color:#008000">range</span>(imsize<span style="color:#666">*</span><span style="color:#666">2</span>):
+        <span style="color:#008000;font-weight:bold">for</span> x <span style="color:#a2f;font-weight:bold">in</span> <span style="color:#008000">range</span>(imsize<span style="color:#666">*</span><span style="color:#666">2</span>):
+            r <span style="color:#666">=</span> np<span style="color:#666">.</span>sqrt(((x <span style="color:#666">-</span> odxtrans) <span style="color:#666">*</span> xmod) <span style="color:#666">**</span> <span style="color:#666">2</span> <span style="color:#666">+</span> (y <span style="color:#666">-</span> odytrans) <span style="color:#666">**</span> <span style="color:#666">2</span>)
+            <span style="color:#008000;font-weight:bold">if</span> r <span style="color:#666">&lt;</span> ocradius:
+                alpha <span style="color:#666">=</span> rand_around(<span style="color:#666">0.85</span>, <span style="color:#666">0.1</span>, <span style="color:#666">0.7</span>, <span style="color:#666">1</span>)
+                col <span style="color:#666">=</span> occolbase
+                col[<span style="color:#666">3</span>] <span style="color:#666">=</span> alpha
+                imcontainer[y, x] <span style="color:#666">=</span> col
+            <span style="color:#008000;font-weight:bold">elif</span> r <span style="color:#666">&lt;</span> odradius <span style="color:#666">+</span> rimhalfwidth:
+                alpha <span style="color:#666">=</span> rand_around(<span style="color:#666">0.7</span>, <span style="color:#666">0.1</span>, <span style="color:#666">0.5</span>, <span style="color:#666">1</span>)
+                factor <span style="color:#666">=</span> np<span style="color:#666">.</span>sqrt((r <span style="color:#666">-</span> ocradius) <span style="color:#666">/</span> (odradius <span style="color:#666">+</span> rimhalfwidth <span style="color:#666">-</span> ocradius))
+                col <span style="color:#666">=</span> np<span style="color:#666">.</span>add(factor <span style="color:#666">*</span> odcolbase, (<span style="color:#666">1</span> <span style="color:#666">-</span> factor) <span style="color:#666">*</span> occolbase)
+                col[<span style="color:#666">3</span>] <span style="color:#666">=</span> alpha
+                imcontainer[y, x] <span style="color:#666">=</span> col
+            <span style="color:#008000;font-weight:bold">if</span> (odradius <span style="color:#666">-</span> rimhalfwidth <span style="color:#666">&lt;</span> r <span style="color:#666">&lt;</span> odradius):
+                alpha <span style="color:#666">=</span> rand_around(<span style="color:#666">0.4</span>, <span style="color:#666">0.2</span>, <span style="color:#666">0.5</span>, <span style="color:#666">1</span>)
+                col <span style="color:#666">=</span> odcolbase <span style="color:#666">/</span> (rand_around(<span style="color:#666">1.2</span>, <span style="color:#666">0.05</span>, <span style="color:#666">1</span>, <span style="color:#666">1.4</span>))
+                col[<span style="color:#666">3</span>] <span style="color:#666">=</span> alpha
+                imcontainer[y, x] <span style="color:#666">=</span> col
+    ax<span style="color:#666">.</span>imshow(imcontainer, extent<span style="color:#666">=</span>imextent, origin<span style="color:#666">=</span><span style="color:#ba2121">&#34;lower&#34;</span>)
+
+    im <span style="color:#666">=</span> fig2img(fig)
+
+    <span style="color:#008000;font-weight:bold">return</span> im
+</code></pre></div><p>Example:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">make_od(<span style="color:#666">-</span><span style="color:#666">32</span>, <span style="color:#666">5</span>, <span style="color:#666">10</span>)
+</code></pre></div><p><img src="https://lh3.googleusercontent.com/PB4vYxdDRw5g-ZPNxAhZSjJDMK971ngMvMm5imVrF6kUCqJ9moigRlTmroEKxybXrO_aPzjR1mtrcNtIFlhyOx8IYe6CYIJ1j_6UqHpDC3hiYhV44qlo8onZUWFv3b4m5eVyMksKuQ=s288-p-k" alt="png"></p>
+<h4 id="optic-disc-highlight">Optic Disc Highlight</h4>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">def</span> <span style="color:#00f">make_odhighlight</span>(odxcentre, odycentre):
+
+    fig, ax <span style="color:#666">=</span> make_base()
+    plt<span style="color:#666">.</span>close()
+
+    imcontainer <span style="color:#666">=</span> np<span style="color:#666">.</span>zeros((<span style="color:#666">2</span><span style="color:#666">*</span>radius, <span style="color:#666">2</span><span style="color:#666">*</span>radius))
+
+    <span style="color:#008000;font-weight:bold">for</span> y <span style="color:#a2f;font-weight:bold">in</span> <span style="color:#008000">range</span>(<span style="color:#666">2</span><span style="color:#666">*</span>radius):
+        <span style="color:#008000;font-weight:bold">for</span> x <span style="color:#a2f;font-weight:bold">in</span> <span style="color:#008000">range</span>(<span style="color:#666">2</span><span style="color:#666">*</span>radius):
+            distance <span style="color:#666">=</span> np<span style="color:#666">.</span>sqrt((y<span style="color:#666">-</span>radius<span style="color:#666">-</span>odycentre) <span style="color:#666">**</span> <span style="color:#666">2</span> <span style="color:#666">+</span> (x<span style="color:#666">-</span>radius<span style="color:#666">-</span>odxcentre) <span style="color:#666">**</span> <span style="color:#666">2</span>)
+            imcontainer[y, x] <span style="color:#666">=</span> distance
+
+    dmax <span style="color:#666">=</span> np<span style="color:#666">.</span>amax(imcontainer)
+    <span style="color:#408080;font-style:italic">#invert = lambda v: 1 - v</span>
+    <span style="color:#408080;font-style:italic">#vinvert = np.vectorize(invert)</span>
+    <span style="color:#408080;font-style:italic">#imcontainer = vinvert(imcontainer / dmax)</span>
+
+    vmin <span style="color:#666">=</span> random<span style="color:#666">.</span>uniform(<span style="color:#666">0</span>, <span style="color:#666">0.3</span>)
+    vmax <span style="color:#666">=</span> random<span style="color:#666">.</span>uniform(<span style="color:#666">0.9</span>, <span style="color:#666">1.1</span>)
+
+    ax<span style="color:#666">.</span>imshow(imcontainer <span style="color:#666">/</span> dmax , cmap<span style="color:#666">=</span>cm<span style="color:#666">.</span>Greys, vmin<span style="color:#666">=</span>vmin, vmax<span style="color:#666">=</span>vmax, interpolation <span style="color:#666">=</span> <span style="color:#ba2121">&#34;bicubic&#34;</span>, extent<span style="color:#666">=</span>imextent)
+
+    im <span style="color:#666">=</span> fig2img(fig)
+    <span style="color:#008000;font-weight:bold">return</span> im
+</code></pre></div><p>Example:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">make_odhighlight(<span style="color:#666">-</span><span style="color:#666">32</span>, <span style="color:#666">0</span>)
+</code></pre></div><p><img src="https://lh3.googleusercontent.com/MzNrzAWtWcS6uh6PCtkml437x0C5-WvFv_6cdcE6cZyNs6YCR99o9GEnEGIZ8WzaJUvgZTfZ-125UuZ9Ee03Bl8trBDSP-Y_hdQUhWfdfG66YC3ASC-TEnYkXfCiJ8wP_xzaDI9Ajw=s288-p-k" alt="png"></p>
+<h4 id="noise">Noise</h4>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">def</span> <span style="color:#00f">make_noise</span>():
+
+    fig, ax <span style="color:#666">=</span> make_base()
+    plt<span style="color:#666">.</span>close()
+
+    imsize <span style="color:#666">=</span> <span style="color:#666">2</span><span style="color:#666">*</span>radius
+
+    imcontainer <span style="color:#666">=</span> np<span style="color:#666">.</span>random<span style="color:#666">.</span>random((imsize, imsize))
+
+    vmin <span style="color:#666">=</span> random<span style="color:#666">.</span>uniform(<span style="color:#666">-</span><span style="color:#666">0.5</span>, <span style="color:#666">0</span>)
+    vmax <span style="color:#666">=</span> random<span style="color:#666">.</span>uniform(<span style="color:#666">1</span>, <span style="color:#666">1.5</span>)
+
+    ax<span style="color:#666">.</span>imshow(imcontainer <span style="color:#666">/</span> <span style="color:#666">5</span>, cmap<span style="color:#666">=</span>cm<span style="color:#666">.</span>Greys, vmin<span style="color:#666">=</span>vmin, vmax<span style="color:#666">=</span>vmax, interpolation <span style="color:#666">=</span> <span style="color:#ba2121">&#34;bicubic&#34;</span>, extent<span style="color:#666">=</span>imextent)
+
+    im <span style="color:#666">=</span> fig2img(fig)
+    <span style="color:#008000;font-weight:bold">return</span> im
+</code></pre></div><p>Example:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">make_noise()
+</code></pre></div><p><img src="https://lh3.googleusercontent.com/j00r_0I4vWqCOADfdeaJ_Vh2X_6v4WVAV_pkDWZxviVQIqcoB87Wh52LbO_EH2ABPU23_VlR4eLPE18ZIpp2uZGdiYB6IQ-sLtR5uMsAm_bOtuJTlHH2-TbSJFlEXQXA8yLiPe887g=s288-p-k" alt="png"></p>
+<h4 id="compositing">Compositing</h4>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">def</span> <span style="color:#00f">make_fundus</span>(crao<span style="color:#666">=</span>False):
+
+    <span style="color:#408080;font-style:italic"># OD parameters</span>
+    odradius <span style="color:#666">=</span> rand_around(radius <span style="color:#666">/</span> <span style="color:#666">8</span>, radius <span style="color:#666">/</span> <span style="color:#666">24</span>, radius <span style="color:#666">/</span> <span style="color:#666">7</span>, radius <span style="color:#666">/</span> <span style="color:#666">5</span>)
+    odxcentre <span style="color:#666">=</span> rand_around(<span style="color:#666">-</span> radius <span style="color:#666">/</span> <span style="color:#666">2</span>, radius <span style="color:#666">/</span> <span style="color:#666">8</span>, <span style="color:#666">-</span>radius <span style="color:#666">+</span> odradius, <span style="color:#666">0</span>)
+    odycentre <span style="color:#666">=</span> rand_around(<span style="color:#666">0</span>, radius <span style="color:#666">/</span> <span style="color:#666">8</span>, <span style="color:#666">-</span>radius <span style="color:#666">+</span> odradius, radius <span style="color:#666">-</span> odradius)
+
+    <span style="color:#408080;font-style:italic"># Fovea parameters</span>
+    fvradius_base <span style="color:#666">=</span> odradius <span style="color:#666">/</span> <span style="color:#666">1.5</span>
+    fvxcentre_base <span style="color:#666">=</span> odxcentre <span style="color:#666">+</span> (odradius <span style="color:#666">*</span> <span style="color:#666">2</span> <span style="color:#666">*</span> <span style="color:#666">2</span>)
+    fvycentre_base <span style="color:#666">=</span> odycentre
+
+    fvxcentre <span style="color:#666">=</span> rand_around(fvxcentre_base, <span style="color:#666">1.5</span>, clip_low<span style="color:#666">=-</span>radius, clip_high<span style="color:#666">=</span>radius)
+    fvycentre <span style="color:#666">=</span> rand_around(fvycentre_base, <span style="color:#666">1.5</span>, clip_low<span style="color:#666">=-</span>radius, clip_high<span style="color:#666">=</span>radius)
+    fvradius <span style="color:#666">=</span> rand_around(fvradius_base, <span style="color:#666">1</span>, clip_low<span style="color:#666">=</span><span style="color:#666">1</span>, clip_high<span style="color:#666">=</span>odradius)
+
+    <span style="color:#408080;font-style:italic"># Making images</span>
+    bg <span style="color:#666">=</span> make_bg(odxcentre, odycentre, odradius, fvxcentre, fvycentre, fvradius, crao<span style="color:#666">=</span>crao)
+    smves <span style="color:#666">=</span> make_vessels(odxcentre, odycentre, fvxcentre, fvycentre, <span style="color:#666">10</span>, <span style="color:#666">0.2</span>, numbranches <span style="color:#666">=</span> <span style="color:#666">3</span>)
+    inter <span style="color:#666">=</span> make_inter()
+    od <span style="color:#666">=</span> make_od(odxcentre, odycentre, odradius )
+    lgves <span style="color:#666">=</span> make_vessels(odxcentre, odycentre, fvxcentre, fvycentre, <span style="color:#666">5</span>, <span style="color:#666">0.75</span>, numbranches<span style="color:#666">=</span><span style="color:#666">3</span>)
+    inter2 <span style="color:#666">=</span> make_inter()<span style="color:#666">.</span>filter(ImageFilter<span style="color:#666">.</span>SMOOTH)
+    highlighter <span style="color:#666">=</span> make_odhighlight(odxcentre, odycentre)
+    noise <span style="color:#666">=</span> make_noise()
+
+    im <span style="color:#666">=</span> bg<span style="color:#666">.</span>copy()
+
+    im<span style="color:#666">.</span>paste(smves, (<span style="color:#666">0</span>,<span style="color:#666">0</span>), smves)
+    im <span style="color:#666">=</span> ImageChops<span style="color:#666">.</span>blend(im, inter, <span style="color:#666">0.2</span>)
+    im<span style="color:#666">.</span>paste(od, (<span style="color:#666">0</span>,<span style="color:#666">0</span>), od)
+    im <span style="color:#666">=</span> im<span style="color:#666">.</span>filter(ImageFilter<span style="color:#666">.</span>GaussianBlur(<span style="color:#666">1</span>))<span style="color:#666">.</span>filter(ImageFilter<span style="color:#666">.</span>SHARPEN)
+    im<span style="color:#666">.</span>paste(lgves, (<span style="color:#666">0</span>,<span style="color:#666">0</span>), lgves)
+
+    <span style="color:#408080;font-style:italic"># Enhancements</span>
+    im <span style="color:#666">=</span> ImageChops<span style="color:#666">.</span>blend(im, inter2, rand_around(<span style="color:#666">0.3</span>, <span style="color:#666">0.1</span>, <span style="color:#666">0</span>, <span style="color:#666">0.8</span>))
+    im <span style="color:#666">=</span> ImageChops<span style="color:#666">.</span>multiply(im, highlighter)
+    im <span style="color:#666">=</span> ImageChops<span style="color:#666">.</span>multiply(im, noise)
+
+    brightener <span style="color:#666">=</span> ImageEnhance<span style="color:#666">.</span>Brightness(im)
+    im <span style="color:#666">=</span> brightener<span style="color:#666">.</span>enhance(rand_around(<span style="color:#666">1.65</span>, <span style="color:#666">0.05</span>, <span style="color:#666">1.5</span>, <span style="color:#666">1.75</span>))
+    contraster <span style="color:#666">=</span> ImageEnhance<span style="color:#666">.</span>Contrast(im)
+    im <span style="color:#666">=</span> contraster<span style="color:#666">.</span>enhance(rand_around(<span style="color:#666">1</span>, <span style="color:#666">0.05</span>, <span style="color:#666">0.95</span>, <span style="color:#666">1.05</span>))
+
+    <span style="color:#408080;font-style:italic"># Circular Mask</span>
+    bigsize <span style="color:#666">=</span> (im<span style="color:#666">.</span>size[<span style="color:#666">0</span>] <span style="color:#666">*</span> <span style="color:#666">3</span>, im<span style="color:#666">.</span>size[<span style="color:#666">1</span>] <span style="color:#666">*</span> <span style="color:#666">3</span>)
+    mask <span style="color:#666">=</span> Image<span style="color:#666">.</span>new(<span style="color:#ba2121">&#39;L&#39;</span>, bigsize, <span style="color:#666">0</span>)
+    draw <span style="color:#666">=</span> ImageDraw<span style="color:#666">.</span>Draw(mask)
+    draw<span style="color:#666">.</span>ellipse((im<span style="color:#666">.</span>size[<span style="color:#666">0</span>] <span style="color:#666">/</span> <span style="color:#666">2</span>, im<span style="color:#666">.</span>size[<span style="color:#666">1</span>] <span style="color:#666">/</span> <span style="color:#666">2</span>) <span style="color:#666">+</span> (im<span style="color:#666">.</span>size[<span style="color:#666">0</span>] <span style="color:#666">*</span> <span style="color:#666">2.5</span>, im<span style="color:#666">.</span>size[<span style="color:#666">1</span>] <span style="color:#666">*</span> <span style="color:#666">2.5</span>), fill<span style="color:#666">=</span><span style="color:#666">255</span>)
+    mask <span style="color:#666">=</span> mask<span style="color:#666">.</span>resize(im<span style="color:#666">.</span>size, Image<span style="color:#666">.</span>ANTIALIAS)
+
+    im<span style="color:#666">.</span>putalpha(mask)
+
+    <span style="color:#408080;font-style:italic"># Black Background</span>
+    im_black <span style="color:#666">=</span> Image<span style="color:#666">.</span>new(<span style="color:#ba2121">&#39;RGB&#39;</span>, im<span style="color:#666">.</span>size, <span style="color:#666">0</span>)
+    im_black<span style="color:#666">.</span>paste(im, (<span style="color:#666">0</span>,<span style="color:#666">0</span>), im)
+
+    margin <span style="color:#666">=</span> <span style="color:#666">45</span>
+    cropped <span style="color:#666">=</span> im_black<span style="color:#666">.</span>crop((margin,margin) <span style="color:#666">+</span> (im<span style="color:#666">.</span>size[<span style="color:#666">0</span>] <span style="color:#666">-</span> margin, im<span style="color:#666">.</span>size[<span style="color:#666">1</span>] <span style="color:#666">-</span> margin))
+
+    <span style="color:#008000;font-weight:bold">if</span> random<span style="color:#666">.</span>random() <span style="color:#666">&lt;</span> <span style="color:#666">0.5</span>:
+        cropped <span style="color:#666">=</span> cropped<span style="color:#666">.</span>transpose(Image<span style="color:#666">.</span>FLIP_LEFT_RIGHT)
+
+    <span style="color:#008000;font-weight:bold">return</span> cropped
+</code></pre></div><p>Example:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">make_fundus()
+</code></pre></div><p><img src="https://lh3.googleusercontent.com/YTU-n1jCwi9eXNJaPZDp9xOAOCXjJjbZk25Tiza8fNdX72yuiArrPLBY9BH6xAn_CrZHeB8wSBoJLMXf9-4YMFOQtz4jGG9VrBnQzSRZJhycfRFZUYP1GpXPDhsEquzwJaW44Mxw8g=s198-p-k" alt="png"></p>
+<p>Example of CRAO fundus:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">make_fundus(crao<span style="color:#666">=</span>True)
+</code></pre></div><p><img src="https://lh3.googleusercontent.com/R2Hzv06-MGDPk253hFmweiFYcSc8VTlUODTYUhSe7bIr2XmTsVzlDE256vzysSPjutnCbjeB2IIBbhr_ClvA4c4Eebgt9JGOkwLeXi6yF7iu-M09LCYFpiOs1AljZtlR5QVwBHkacA=s198-p-k" alt="png"></p>
+<p>We downsampled these images to 75 by 75 pixels for the actual input.</p>
+<h4 id="training-set">Training Set</h4>
+<p>500 normal and 500 &ldquo;with&rdquo; CRAO.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">save_directory <span style="color:#666">=</span> <span style="color:#ba2121">&#34;./input08_training/&#34;</span>
+
+<span style="color:#008000;font-weight:bold">for</span> i <span style="color:#a2f;font-weight:bold">in</span> <span style="color:#008000">range</span>(<span style="color:#666">871</span>, <span style="color:#666">1000</span>):
+    <span style="color:#008000;font-weight:bold">if</span> i <span style="color:#666">&lt;</span> <span style="color:#666">500</span>:
+        fileid <span style="color:#666">=</span> <span style="color:#ba2121">&#34;{0:04d}_normal.png&#34;</span><span style="color:#666">.</span>format(i <span style="color:#666">+</span> <span style="color:#666">1</span>)
+        image <span style="color:#666">=</span> make_fundus()
+    <span style="color:#008000;font-weight:bold">else</span>:
+        fileid <span style="color:#666">=</span> <span style="color:#ba2121">&#34;{0:04d}_crao.png&#34;</span><span style="color:#666">.</span>format(i <span style="color:#666">+</span> <span style="color:#666">1</span>)
+        image <span style="color:#666">=</span> make_fundus(crao<span style="color:#666">=</span>True)
+    image <span style="color:#666">=</span> image<span style="color:#666">.</span>resize((<span style="color:#666">75</span>, <span style="color:#666">75</span>))
+    image<span style="color:#666">.</span>save(save_directory <span style="color:#666">+</span> fileid)
+</code></pre></div><h4 id="riddle">Riddle</h4>
+<p>We tried to ensure that the pattern of letters wouldn&rsquo;t give away the riddle, so we generated the letters randomly and only allocated a CRAO image if incidentally this corresponded to the next letter in the riddle.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">question_full <span style="color:#666">=</span> <span style="color:#ba2121">&#34;TWO LETTERS RETINOBLASTOMA PROTEIN&#34;</span>
+question<span style="color:#666">=</span> question_full<span style="color:#666">.</span>replace(<span style="color:#ba2121">&#34; &#34;</span>, <span style="color:#ba2121">&#34;&#34;</span>)
+alphabet <span style="color:#666">=</span> <span style="color:#ba2121">&#34;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#34;</span>
+</code></pre></div><div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">position <span style="color:#666">=</span> <span style="color:#666">0</span>
+counter <span style="color:#666">=</span> <span style="color:#666">0</span>
+max_position <span style="color:#666">=</span> <span style="color:#008000">len</span>(question)
+
+save_directory <span style="color:#666">=</span> <span style="color:#ba2121">&#34;./input08_test/&#34;</span>
+
+<span style="color:#008000;font-weight:bold">while</span> position <span style="color:#666">&lt;</span> max_position:
+    next_letter <span style="color:#666">=</span> question[position]
+    new_letter <span style="color:#666">=</span> random<span style="color:#666">.</span>choice(alphabet)
+    noiser <span style="color:#666">=</span> random<span style="color:#666">.</span>random()
+    fileid <span style="color:#666">=</span> <span style="color:#ba2121">&#34;{0:04d}_{1:1s}.png&#34;</span><span style="color:#666">.</span>format(counter, new_letter)
+    <span style="color:#008000;font-weight:bold">if</span> new_letter <span style="color:#666">==</span> next_letter <span style="color:#a2f;font-weight:bold">and</span> noiser <span style="color:#666">&lt;</span> <span style="color:#666">0.9</span>:
+        image <span style="color:#666">=</span> make_fundus(crao<span style="color:#666">=</span>True)
+        <span style="color:#008000;font-weight:bold">print</span>(<span style="color:#ba2121">&#34;POSITION {}, COUNTER {}&#34;</span><span style="color:#666">.</span>format(position, counter))
+        position <span style="color:#666">+=</span> <span style="color:#666">1</span>
+    <span style="color:#008000;font-weight:bold">else</span>:
+        image <span style="color:#666">=</span> make_fundus()
+    image <span style="color:#666">=</span> image<span style="color:#666">.</span>resize((<span style="color:#666">75</span>, <span style="color:#666">75</span>))
+    image<span style="color:#666">.</span>save(save_directory <span style="color:#666">+</span> fileid)
+    counter <span style="color:#666">+=</span> <span style="color:#666">1</span>
+
+<span style="color:#408080;font-style:italic">## Fill up to 1000.</span>
+<span style="color:#008000;font-weight:bold">while</span> counter <span style="color:#666">&lt;=</span> <span style="color:#666">1000</span>:
+    new_letter <span style="color:#666">=</span> random<span style="color:#666">.</span>choice(alphabet)
+    fileid <span style="color:#666">=</span> <span style="color:#ba2121">&#34;{0:04d}_{1:1s}.png&#34;</span><span style="color:#666">.</span>format(counter, new_letter)
+    image <span style="color:#666">=</span> make_fundus()
+    image <span style="color:#666">=</span> image<span style="color:#666">.</span>resize((<span style="color:#666">75</span>, <span style="color:#666">75</span>))
+    image<span style="color:#666">.</span>save(save_directory <span style="color:#666">+</span> fileid)
+    counter <span style="color:#666">+=</span> <span style="color:#666">1</span>
+</code></pre></div>
+            </section>
+
+        </article>
+    </section>
+
+    
+    <footer>Contact us at <code> contact at cigmah dot org </code>.
+</footer>
+    
+
+</section>
+
+
+        </main>
+
+
+    </body>
+</html>

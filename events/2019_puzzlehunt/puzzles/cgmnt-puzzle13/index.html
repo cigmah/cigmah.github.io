@@ -1,0 +1,518 @@
+
+<!DOCTYPE html>
+<html><head>
+    
+    
+    <title> CIGMAH - Allele Inference </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="2019 Puzzle Hunt - Puzzle 13C">
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" href="https://cigmah.org/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cigmah.org/js/toggles.js"></script>
+    <link type="text/css" rel="stylesheet" href=https://cigmah.org/sass/main.css>
+    <link rel="canonical" href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle13/">
+</head>
+<body>
+        <header>
+
+            <nav id="nav-menu-toggle" onClick="toggleNav()">
+                <div id="menu-text">☰</div>
+                <div id="cigmah-brand">
+                    <div id="cigmah-icon">
+                        <img src="https://cigmah.org/img/cigmah-icon.png">
+                    </div>
+                    <div id="cigmah-text">
+                        CIGMAH
+                    </div>
+                </div>
+            </nav>
+
+            <nav id="nav-bar">
+
+<ul id="nav-link-list" onClick="()">
+
+    <li
+        class="nav-link-list-item "
+    >
+        <a
+            class="nav-link-list-link "
+            id="nav-cigmah-link"
+            href=https://cigmah.org/
+        >
+            <img id="nav-cigmah-link-icon" src="/img/cigmah-icon-small.png">
+            <div>CIGMAH</div>
+        </a>
+    </li>
+
+  
+    <li
+        class="nav-link-list-item "
+        >
+        <a
+            class="nav-link-list-link "
+            href=https://cigmah.org/about/
+        >
+            About
+        </a>
+    </li>
+    
+    <li
+        class="nav-link-list-item "
+        >
+        <a
+            class="nav-link-list-link "
+            href=https://cigmah.org/events/
+        >
+            Events
+        </a>
+    </li>
+    
+    <li
+        class="nav-link-list-item "
+        >
+        <a
+            class="nav-link-list-link "
+            href=https://cigmah.org/tools/
+        >
+            Tools
+        </a>
+    </li>
+    
+    <li
+        class="nav-link-list-item "
+        >
+        <a
+            class="nav-link-list-link "
+            href=https://cigmah.org/resources/
+        >
+            Resources
+        </a>
+    </li>
+    
+    <li
+        class="nav-link-list-item "
+        >
+        <a
+            class="nav-link-list-link "
+            href=https://cigmah.org/blog/
+        >
+            Blog
+        </a>
+    </li>
+    
+    <li
+        class="nav-link-list-item "
+        >
+        <a
+            class="nav-link-list-link "
+            href=https://cigmah.org/contact/
+        >
+            Contact
+        </a>
+    </li>
+    
+
+    <li
+        class="nav-link-list-item"
+        id="nav-right-item"
+        >
+        <a
+            href="https://aorta.cigmah.org"
+            id="nav-aorta-link"
+            class="nav-link-list-link"
+        >
+            <img id="nav-aorta-link-icon" src="/img/aorta-icon.png">
+            <div id="nav-aorta-link">AORTA</div>
+        </a>
+    </li>
+</ul>
+</nav>
+
+        </header>
+
+        <main>
+
+
+
+<section class="normal-page">
+    <article id="side-navigation">
+        <article id="toggle-side-navigation-container">
+
+            
+            <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle12/" id="back"> &lt;&lt; </a>
+            
+
+            <button id="toggle-side-navigation" onClick="toggleSideNav()">Show Articles</button>
+
+            
+            <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle14/" id="next"> &gt;&gt; </a>
+            
+
+        </article>
+
+        <ul id="side-navigation-list">
+
+            
+            <li class="side-navigation-parent">
+                <a href="https://cigmah.org/events/">Events</a>
+            </li>
+            
+
+
+            <li class="side-navigation-section">
+                <a href="https://cigmah.org/events/2019_puzzlehunt/">
+                    2019 Puzzle Hunt
+                </a>
+            </li>
+
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle01/">Lost in a Library</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle02/">Metabolic Mayhem</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle03/">Combo Catcher</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle04/">Troubled Test</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle05/">Out of Sync</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle06/">While You&#39;re Waiting</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle07/">Infectious Network</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle08/">Tarsal Tumble</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle09/">Fundal Flow</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle10/">Bite Cell Scouting</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle11/">NeuroLogic</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle12/">Reschedule All</a>
+            </li>
+            
+            <li
+                class="side-navigation-item  active "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle13/">Allele Inference</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle14/">Base in Balance</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle15/">Worst Offender</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle16/">STI Bugs&#39;n&#39;Drugs</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle17/">What Dipstick?</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle18/">Peak Flow Diary</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle19/">HPV Profiling</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle20/">Code Broadcast</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle21/">Genetic Thrift</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle22/">Neural Decoding</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle23/">Run! (Preclinical)</a>
+            </li>
+            
+            <li
+                class="side-navigation-item "
+            >
+                <a href="https://cigmah.org/events/2019_puzzlehunt/puzzles/cgmnt-puzzle24/">Run! (Clinical)</a>
+            </li>
+            
+
+        </ul>
+
+    </article>
+
+    <section id="container">
+
+        <article id="content">
+            <header id="content-header">
+            <h1 id="content-title"> Allele Inference </h1>
+
+            
+                <div id="subtitle">
+                    <div> 2019 Puzzle Hunt - Puzzle 13C </div>
+                </div>
+            
+
+            </div>
+
+            </header>
+
+            <section id="content-body">
+                <blockquote>
+<p>This puzzle was released on 2019-05-11, and was the Challenge puzzle for the theme <em>A Little Logic</em>.</p>
+</blockquote>
+<p>Who ever thought a giant library of identical rooms was a good idea?</p>
+<p>It&rsquo;s 3:40am. Facing North, you walk through the corridor on the 5th wall.</p>
+<p><img src="https://i.imgur.com/BoYYqxg.gif" alt="Image"></p>
+<p>The puzzle of this room is <em>Allele Inference</em>.</p>
+<ol>
+<li>
+<p>A genetic disease runs through the Babel Imperial Family.</p>
+</li>
+<li>
+<p>This genetic disease is inherited through a <em>single</em> gene on an autosomal
+chromosome.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Here&#39;s a short refresher on inheritance.
+
+ALLELES: 2 types.
+1) RECESSIVE, or
+2) DOMINANT.
+
+Each person has 2 alleles; one inherited from each parent.
+
+Since each person has 2 alleles, they can have one of three genotypes:
+
+GENOTYPES: 3 types.
+1) Homozygous recessive (2x recessive alleles)
+2) Heterozygous (1x dominant, 1x recessive)
+3) Homozygous dominant (2x dominant alleles)
+</code></pre></div><p>An important part to note here is that there are only three possible genotypes:
+homozygous recessive, heterozygous or homozygous dominant.</p>
+</li>
+<li>
+<p>Your task is to determine how many members of the Babel Imperial Family are
+<strong>homozygous dominant</strong> for this gene.</p>
+</li>
+<li>
+<p>You are given four pieces of information:</p>
+<ol>
+<li>The 100 known members of the Imperial Family. (<code>cgmnt13_people.txt</code>)</li>
+<li>The parent relations of a subset of the Imperial Family.
+(<code>cgmnt13_relations.txt</code>)</li>
+<li>A list of all the people with a <strong>heterozygous</strong> genotype.
+(<code>cgmnt13_heterozygous.txt</code>)
+Those with a heterozygous genotype are easily distinguishable from the
+homozygous recessive and dominant genotypes, so <strong>this file is exhasutive.</strong>
+i.e. <strong>any family member not in this list has either a homozygous dominant
+or recessive genotype.</strong></li>
+<li>A list of a select number of members with known homozygous genotypes.
+(<code>cgmnt13_known.txt</code>). This list is not exhaustive.</li>
+</ol>
+</li>
+<li>
+<p>From these files, you will need to use Mendelian inheritance logic to deduce
+the remaining 30 or so unknown genotypes. You already have a sizeable amount.</p>
+</li>
+<li>
+<p>Once you have determined the genotypes of all 100 members of the imperial
+family, <strong>count the number of family members with a homozygous <em>dominant</em> genotype
+and submit is as your answer.</strong></p>
+</li>
+<li>
+<p>There is only one solution, and it is definitively deducible from the data
+and information you have been provided.</p>
+</li>
+</ol>
+<h1 id="input">Input</h1>
+<ul>
+<li><a href="https://drive.google.com/drive/folders/17BHi9E84w3fYcOuHa9t-wVtEKEMK4N2R?usp=sharing">All files.</a></li>
+<li><a href="https://drive.google.com/file/d/1XsIDMI2KF2tQquZd5lMy7ivAP_-rqNNo/view?usp=sharing">cgmnt13_people.txt</a> (718B)</li>
+<li><a href="https://drive.google.com/file/d/18K9ugyQpw0z9Nq6i7e_nBvs15DSH3VyF/view?usp=sharing">cgmnt13_relations.txt</a> (3KB)</li>
+<li><a href="https://drive.google.com/file/d/1YNVkHvkx4tvspngjKiGtVRiya3GM3uic/view?usp=sharing">cgmnt13_heterozygous.txt</a> (228B)</li>
+<li><a href="https://drive.google.com/file/d/11ccf7VuUPiLd8fvQ0AsQ9M41b6_94VwH/view?usp=sharing">cgmnt13_known.txt</a> (927B)</li>
+</ul>
+<h1 id="statement">Statement</h1>
+<p>State the total number of members in the Imperial Family who have a <em>homozygous dominant</em> genotype.</p>
+<h1 id="references">References</h1>
+<p>Written by the CIGMAH Puzzle Hunt Team.</p>
+<hr>
+<h1 id="answer">Answer</h1>
+<p>The correct solution was <code>36</code>.</p>
+<h1 id="explanation">Explanation</h1>
+<h2 id="map-hint">Map Hint</h2>
+<p>You are proud of your ability to deduce, but realise that life is not usually
+this deterministic. You reflect on your powerlessness to confront the messiness
+of the world.</p>
+<p>You open the file <code>map_hint.txt</code>.</p>
+<pre><code>The key is:
+
+enalgunanaqueldealgunhexagonorazonaronloshombresdebeexistirunlibroquesealacifrayelcompendioperfectodetodoslosdemasalgunbibliotecarioloharecorridoyesanalogoaundios
+
+When deciphering, preserve the capitalisation of the original map text and skip
+non alphabetic characters, leaving them as they are.
+
+</code></pre><p>Well this is finally useful. You experience a feeling of deja vu of a feeling
+of deja vu.</p>
+<h2 id="writers-notes">Writer&rsquo;s Notes</h2>
+<p>We sincerely apologise, but our Writer&rsquo;s Notes for this month are very sparse.
+We have provided our solutions, but that&rsquo;s it for now. A proper writeup
+including the data generation will come in due course.</p>
+<p>We had a lot of trouble with generating data for this particular puzzle.
+Designing the puzzle to be solvable purely with deterministic logic was more
+difficult than we thought. We learned some important lessons, but for another time&hellip;</p>
+<p>This puzzle wasn&rsquo;t originally intended as a constraint puzzle (since we&rsquo;ve done
+that a few other times), but we realised it was easier than what we originally
+tried with miniKanren, so we rolled with it.</p>
+<h3 id="example-solution">Example Solution</h3>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">re</span>
+<span style="color:#008000;font-weight:bold">from</span> <span style="color:#00f;font-weight:bold">pathlib</span> <span style="color:#008000;font-weight:bold">import</span> Path
+<span style="color:#008000;font-weight:bold">from</span> <span style="color:#00f;font-weight:bold">itertools</span> <span style="color:#008000;font-weight:bold">import</span> product
+<span style="color:#008000;font-weight:bold">from</span> <span style="color:#00f;font-weight:bold">constraint</span> <span style="color:#008000;font-weight:bold">import</span> <span style="color:#666">*</span>
+<span style="color:#408080;font-style:italic">##</span>
+<span style="color:#408080;font-style:italic">## Data load and preprocessing</span>
+people       <span style="color:#666">=</span> Path(<span style="color:#ba2121">&#39;./cgmnt13_people.txt&#39;</span>)<span style="color:#666">.</span>read_text()<span style="color:#666">.</span>splitlines()
+reparent     <span style="color:#666">=</span> re<span style="color:#666">.</span>compile(<span style="color:#ba2121">r</span><span style="color:#ba2121">&#39;(\w+) is the child of (\w+) and (\w+).&#39;</span>)
+parents      <span style="color:#666">=</span> reparent<span style="color:#666">.</span>findall(Path(<span style="color:#ba2121">&#39;./cgmnt13_relations.txt&#39;</span>)<span style="color:#666">.</span>read_text())
+heterozygous <span style="color:#666">=</span> <span style="color:#008000">set</span>(Path(<span style="color:#ba2121">&#39;./cgmnt13_heterozygous.txt&#39;</span>)<span style="color:#666">.</span>read_text()<span style="color:#666">.</span>splitlines())
+reknown      <span style="color:#666">=</span> re<span style="color:#666">.</span>compile(<span style="color:#ba2121">r</span><span style="color:#ba2121">&#39;(\w+) is homozygous (\w+).&#39;</span>)
+known        <span style="color:#666">=</span> reknown<span style="color:#666">.</span>findall(Path(<span style="color:#ba2121">&#39;./cgmnt13_known.txt&#39;</span>)<span style="color:#666">.</span>read_text())
+
+<span style="color:#408080;font-style:italic">## Possible genotypes assuming each person has 2 alleles for a gene, represented as number of dominant alleles.</span>
+genotypes <span style="color:#666">=</span> <span style="color:#008000">tuple</span>(<span style="color:#008000">set</span>(<span style="color:#008000">map</span>(<span style="color:#008000">sum</span>, product((<span style="color:#666">0</span>,<span style="color:#666">1</span>), repeat<span style="color:#666">=</span><span style="color:#666">2</span>))))
+
+<span style="color:#408080;font-style:italic">## Possible children for each genotype</span>
+parentcombos    <span style="color:#666">=</span> <span style="color:#008000">list</span>((product(product((<span style="color:#666">0</span>,<span style="color:#666">1</span>), repeat<span style="color:#666">=</span><span style="color:#666">2</span>), repeat<span style="color:#666">=</span><span style="color:#666">2</span>)))
+parentgenotypes <span style="color:#666">=</span> <span style="color:#008000">list</span>(<span style="color:#008000">map</span>(<span style="color:#008000;font-weight:bold">lambda</span> p: <span style="color:#008000">tuple</span>(<span style="color:#008000">set</span>(<span style="color:#008000">map</span>(<span style="color:#008000">sum</span>, p))), parentcombos))
+childgenotypes  <span style="color:#666">=</span> [<span style="color:#008000">tuple</span>(<span style="color:#008000">set</span>(<span style="color:#008000">map</span>(<span style="color:#008000">sum</span>, product(<span style="color:#666">*</span>p)))) <span style="color:#008000;font-weight:bold">for</span> p <span style="color:#a2f;font-weight:bold">in</span> parentcombos]
+validchildtype  <span style="color:#666">=</span> {combo: child <span style="color:#008000;font-weight:bold">for</span> combo, child <span style="color:#a2f;font-weight:bold">in</span> <span style="color:#008000">set</span>(<span style="color:#008000">zip</span>(parentgenotypes, childgenotypes))}
+
+<span style="color:#408080;font-style:italic">## Add problem and variables</span>
+problem <span style="color:#666">=</span> Problem()
+problem<span style="color:#666">.</span>addVariables(people, genotypes)
+
+<span style="color:#408080;font-style:italic">## Define constraint that child genotype must be valid given parent genotypes</span>
+<span style="color:#008000;font-weight:bold">def</span> <span style="color:#00f">addParentConstraint</span>(ch, par1, par2):
+    problem<span style="color:#666">.</span>addConstraint(<span style="color:#008000;font-weight:bold">lambda</span> c, p1, p2: c <span style="color:#a2f;font-weight:bold">in</span> validchildtype[<span style="color:#008000">tuple</span>(<span style="color:#008000">set</span>((p1,p2)))], (ch, par1, par2))
+
+<span style="color:#408080;font-style:italic">## Add valid child genotype constraint</span>
+[addParentConstraint(<span style="color:#666">*</span>relation) <span style="color:#008000;font-weight:bold">for</span> relation <span style="color:#a2f;font-weight:bold">in</span> parents]
+
+<span style="color:#408080;font-style:italic">## Genotype constraints.</span>
+addHeterozygousConstraint <span style="color:#666">=</span> <span style="color:#008000;font-weight:bold">lambda</span> person: problem<span style="color:#666">.</span>addConstraint(<span style="color:#008000;font-weight:bold">lambda</span> p: p <span style="color:#666">==</span> <span style="color:#666">1</span>, (person,))
+addHomozygousConstraint   <span style="color:#666">=</span> <span style="color:#008000;font-weight:bold">lambda</span> person: problem<span style="color:#666">.</span>addConstraint(<span style="color:#008000;font-weight:bold">lambda</span> p: p <span style="color:#666">==</span> <span style="color:#666">0</span> <span style="color:#a2f;font-weight:bold">or</span> p <span style="color:#666">==</span> <span style="color:#666">2</span>, (person,))
+addKnownGenotype          <span style="color:#666">=</span> <span style="color:#008000;font-weight:bold">lambda</span> person, genotype: problem<span style="color:#666">.</span>addConstraint(<span style="color:#008000;font-weight:bold">lambda</span> p: p <span style="color:#666">==</span> genotype, (person,))
+
+<span style="color:#408080;font-style:italic">## Add known heterozygous members.</span>
+[addHeterozygousConstraint(person) <span style="color:#008000;font-weight:bold">for</span> person <span style="color:#a2f;font-weight:bold">in</span> heterozygous]
+
+<span style="color:#408080;font-style:italic">## Other known genotypes</span>
+knowntotype <span style="color:#666">=</span> {<span style="color:#ba2121">&#34;recessive&#34;</span>: <span style="color:#666">0</span>, <span style="color:#ba2121">&#34;dominant&#34;</span>: <span style="color:#666">2</span>}
+[addKnownGenotype(d[<span style="color:#666">0</span>], knowntotype[d[<span style="color:#666">1</span>]]) <span style="color:#008000;font-weight:bold">for</span> d <span style="color:#a2f;font-weight:bold">in</span> known]
+
+<span style="color:#408080;font-style:italic">## Restrict the remainder to homozygous.</span>
+[addHomozygousConstraint(person) <span style="color:#008000;font-weight:bold">for</span> person <span style="color:#a2f;font-weight:bold">in</span> people <span style="color:#008000;font-weight:bold">if</span> person <span style="color:#a2f;font-weight:bold">not</span> <span style="color:#a2f;font-weight:bold">in</span> heterozygous]
+
+solution <span style="color:#666">=</span> problem<span style="color:#666">.</span>getSolution()
+
+<span style="color:#408080;font-style:italic">## Count the homozygous dominant genotype</span>
+<span style="color:#008000;font-weight:bold">print</span>(<span style="color:#008000">len</span>([name <span style="color:#008000;font-weight:bold">for</span> name, genotype <span style="color:#a2f;font-weight:bold">in</span> solution<span style="color:#666">.</span>items() <span style="color:#008000;font-weight:bold">if</span> genotype <span style="color:#666">==</span> <span style="color:#666">2</span>]))
+
+<span style="color:#408080;font-style:italic">## To verify one solution only.</span>
+<span style="color:#408080;font-style:italic">## solutions = problem.getSolutions()</span>
+<span style="color:#408080;font-style:italic">## print(solutions)</span>
+<span style="color:#408080;font-style:italic">## print(len(solutions))</span>
+</code></pre></div>
+            </section>
+
+        </article>
+    </section>
+
+    
+    <footer>Contact us at <code> contact at cigmah dot org </code>.
+</footer>
+    
+
+</section>
+
+
+        </main>
+
+
+    </body>
+</html>

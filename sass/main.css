@@ -30,9 +30,9 @@ header {
 
 footer {
   padding: 1rem;
-  padding-bottom: 2rem;
-  max-width: 1260px;
-  margin: auto;
+  padding-bottom: 1rem;
+  margin-top: 2rem;
+  margin-left: 312px;
   z-index: 50;
   text-align: right;
   border-top: 1px dotted #696969; }
@@ -41,7 +41,8 @@ footer {
       display: none; } }
   @media only screen and (max-width: 760px) {
     footer {
-      padding: 1rem; } }
+      padding: 1rem;
+      margin-left: 0; } }
 a {
   color: black; }
   a:hover {
@@ -324,7 +325,7 @@ pre, code {
     #landing-button {
       font-size: 1.4rem;
       letter-spacing: -0.5px;
-      margin: 2rem 0 0.5rem 0; } }
+      margin: 1.5rem 0 0.25rem 0; } }
   #landing-button:hover {
     background: black;
     color: white; }
@@ -409,17 +410,14 @@ pre, code {
       text-decoration: none; }
 
 #container {
-  margin-left: 260px;
-  padding-left: 3rem;
+  margin-left: 312px;
   min-height: 72vh; }
   @media print {
     #container {
-      margin-left: 0;
-      padding-left: 0; } }
+      margin-left: 0; } }
   @media only screen and (max-width: 760px) {
     #container {
       margin-left: 0;
-      padding-left: 0;
       padding: 0.1rem; } }
 #content-header {
   margin-bottom: 2rem; }
@@ -487,8 +485,18 @@ pre, code {
     margin-bottom: 1rem; }
   #content-body hr {
     border: none;
-    border-top: 1px solid #696969;
-    margin: 3rem 0; }
+    border-top: 3px double #696969;
+    margin: 4rem 0;
+    position: relative; }
+    #content-body hr:after {
+      content: "§";
+      position: absolute;
+      top: -1em;
+      left: 45%;
+      text-align: center;
+      background: white;
+      margin: auto;
+      width: 10%; }
   #content-body details {
     border: 1px dotted #696969;
     margin: 1rem 0;
